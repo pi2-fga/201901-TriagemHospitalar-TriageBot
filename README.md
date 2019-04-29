@@ -98,6 +98,7 @@ Acesse o notebook em `localhost:8888`
 ## Tutorial para levantar toda a stack
 
 ```sh
+./docker/build-base.sh 
 sudo docker-compose up coach
 sudo make train
 sudo docker-compose up -d kibana
