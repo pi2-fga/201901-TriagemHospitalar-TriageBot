@@ -16,9 +16,10 @@ caso precise de permissão root para utilizar o 'docker-compose' deve rodar util
 $ sudo ./build-base.sh
 ```
 
-Além disso, rode o comando train para treinar o bot:
+Além disso, rode o comando train e up do trainer para treinar o bot:
 
 ```
+$ sudo make train
 $ sudo docker-compose up trainer
 ```
 
