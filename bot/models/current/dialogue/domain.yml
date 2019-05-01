@@ -1,28 +1,22 @@
-intents:
-- dor_de_cabeca
-- dor_de_cabeça_outros_sintomas
-- sim
-
-#entities:
-#- name
-
-
-#slots:
-#  name:
-#    type: text
-
-
+%YAML 1.1
+---
 actions:
 - utter_dor_de_cabeca
 - utter_outros_sintomas
-
-
-
-
+config:
+  store_entities_as_slots: true
+entities: []
+forms: []
+intents:
+- dor_de_cabeca:
+    use_entities: true
+- dor_de_cabeça_outros_sintomas:
+    use_entities: true
+- sim:
+    use_entities: true
+slots: {}
 templates:
   utter_dor_de_cabeca:
   - text: "{text: 'Algum médico,já o diagnosticou com enxaqueca?', 'yes_or_no'}"
-  
   utter_outros_sintomas:
   - text: "{text: 'Está sentindo outros sintomas?', 'text'}"
-  

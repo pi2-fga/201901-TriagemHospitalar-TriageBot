@@ -1,0 +1,16 @@
+{
+  "states": [
+    "intent_dor_de_cabeca",
+    "intent_dor_de_cabe\u00e7a_outros_sintomas",
+    "intent_sim",
+    "prev_action_listen",
+    "prev_action_restart",
+    "prev_action_default_fallback",
+    "prev_action_deactivate_form",
+    "prev_action_revert_fallback_events",
+    "prev_action_default_ask_affirmation",
+    "prev_action_default_ask_rephrase",
+    "prev_utter_dor_de_cabeca",
+    "prev_utter_outros_sintomas"
+  ]
+}
