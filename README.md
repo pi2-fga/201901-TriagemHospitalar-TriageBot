@@ -62,9 +62,9 @@ pipeline: spacy_sklearn
 - **policies.yml** arquivo que contém as políticas de treinamento da model do Rasa core.
 
 ## Comandos make
-1. You can train the Rasa NLU model by running:
+1. Você pode treinar uma model do Rasa NLU rodando:
 ```make train-nlu```
-This will train the Rasa NLU model and store it inside the `/models/current/nlu` folder of your project directory.
+Isso vai treinar as models e armazenar `/models/current/nlu` dentro da pasta bot.
 
 2. Train the Rasa Core model by running:
 ```make train-core```
@@ -75,5 +75,5 @@ This will train the Rasa Core model and store it inside the `/models/current/dia
 This will start the server for emulating the custom action.
 
 4. Test the assistant by running:
-```make cmdline```
-This will load the assistant in your terminal for you to chat.
+```make run-api```
+Carrega o bot na API

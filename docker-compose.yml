@@ -22,8 +22,7 @@ services:
 
   trainer:
     image: trainer:latest
-    command: make train-nlu
-    command: make train-core
+    command: make train
     volumes:
       - ./bot:/bot
 
