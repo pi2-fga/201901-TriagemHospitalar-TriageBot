@@ -16,15 +16,14 @@ services:
     ports:
       - 5005:5005
       - 5002:5002
-    depends_on:
-      - trainer
     volumes:
       - ./bot:/bot
     command: make run-api
 
   trainer:
     image: trainer:latest
-    command: cp -a /src_models/. /models/
+    command: make train-nlu
+    command: make train-core
     volumes:
       - ./bot:/bot
 

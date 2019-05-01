@@ -9,10 +9,17 @@ Para rodar esse projeto os programas docker e docker-compose devem estar previam
 
 ## Setup e Instalação
 
-Para instalação das dependências do projeto deve-se executar o script build-base.sh, caso precise de permissão root para utilizar o 'docker-compose' deve rodar utilizando sudo:
+Para instalação das dependências do projeto deve-se executar o script build-base.sh,
+caso precise de permissão root para utilizar o 'docker-compose' deve rodar utilizando sudo:
 
 ```
 $ sudo ./build-base.sh
+```
+
+Além disso, rode o comando train para treinar o bot:
+
+```
+$ sudo docker-compose up trainer
 ```
 
 Depois, basta subir o container do bot para que ele funcione usando:
