@@ -3,31 +3,24 @@
 Um bot api utilizado para categorizar o risco de um paciente de emergência de acordo
 com o Protocolo de Manchester.
 
+## Pré requisitos
 
+Para rodar esse projeto os programas docker e docker-compose devem estar previamente instalados.
 
-## Bot
+## Setup e Instalação
 
-### API
+Para instalação das dependências do projeto deve-se executar o script build-base.sh, caso precise de permissão root para utilizar o 'docker-compose' deve rodar utilizando sudo:
 
-```sh
-sudo docker-compose up bot
+```
+$ sudo ./build-base.sh
 ```
 
-Para que a assistente virtual inicie a conversa você deve criar um `trigger`.
-Para isso, entre no rocketchat como `admin`, e vá no painel do Livechat na
-seção de Triggers, clique em `New Trigger`. Preencha o Trigger da seguinte forma:
-
-```yaml
-Enabled: Yes
-Name: Start Talk
-Description: Start Talk
-Condition: Visitor time on site
-    Value: 3
-Action: Send Message
- Value: Impersonate next agent from queue
- Value: Olá!
+Depois, basta subir o container do bot para que ele funcione usando:
+```
+$ sudo docker-compose up bot
 ```
 
+Em outro terminal, pode ser enviada uma requisição para api do bot:
 ```sh
 curl --request POST \
   --url http://localhost:5005/webhooks/rest/webhook \
@@ -37,72 +30,42 @@ curl --request POST \
   }'
 ```
 
+## Como contribuir
 
+O bot foi implementado usando o Rasa Stack (Rasa Core + Rasa NLU)
 
+### Arquivos para Rasa NLU model
 
-### Console
+- **data/intents/*.md** arquivos que definem as intents, isto é, o que se espera que o usuário dirá
 
-```sh
-sudo docker-compose run --rm bot make train
-sudo docker-compose run --rm bot make run-console
+- **nlu_config.yml** arquivo contém a configuração do pipeline do NLU:
+```yaml
+language: "pt"
+
+pipeline: spacy_sklearn
 ```
 
-### Train Online
+### Arquivos para Rasa Core model
 
-```
-sudo make train
-sudo docker-compose run --rm bot make train-online
-```
+- **data/stories/*.md** arquivos que tem as histórias para serem treinadas, que são as conversas entre usuário e o bot.
+- **domain.yml** arquivo descreve o domínio do bot, que inclue intentes, entities, slots, templates e actions que o bot deve ter consciência.
+- **actions.py** onde são declaradas ações realizadas pelo bot que vão além de responder o usuário com texto
+- **endpoints.yml** arquivo que contém a configuração do webhook para uma ação personalizada
+- **policies.yml** arquivo que contém as políticas de treinamento da model do Rasa core.
 
-## Analytics
+## Comandos make
+1. You can train the Rasa NLU model by running:
+```make train-nlu```
+This will train the Rasa NLU model and store it inside the `/models/current/nlu` folder of your project directory.
 
-### Setup
+2. Train the Rasa Core model by running:
+```make train-core```
+This will train the Rasa Core model and store it inside the `/models/current/dialogue` folder of your project directory.
 
-```
-sudo docker-compose run --rm -v $PWD/analytics:/analytics bot python /analytics/setup_elastic.py
-sudo docker-compose up -d elasticsearch
-```
+3. In a new terminal start the server for the custom action by running:
+```make action-server```
+This will start the server for emulating the custom action.
 
-Lembre-se de setar as seguintes variaveis de ambiente no `docker-compose`.
-
-```
-ENVIRONMENT_NAME=localhost
-BOT_VERSION=last-commit-hash
-```
-
-### Visualização
-
-```
-sudo docker-compose up -d kibana
-```
-
-Você pode acessar o kibana no `locahost:5601`
-
-
-
-
-## Notebooks - Análise de dados
-
-### Setup
-
-Levante o container `notebooks`
-
-```sh
-docker-compose up -d notebooks
-```
-
-Acesse o notebook em `localhost:8888`
-
-
-
-## Tutorial para levantar toda a stack
-
-```sh
-./docker/build-base.sh 
-sudo docker-compose up coach
-sudo make train
-sudo docker-compose up -d kibana
-sudo docker-compose run --rm -v $PWD/analytics:/analytics bot python /analytics/setup_elastic.py
-
-sudo docker-compose up -d bot
-```
+4. Test the assistant by running:
+```make cmdline```
+This will load the assistant in your terminal for you to chat.

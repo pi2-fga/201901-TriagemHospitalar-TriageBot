@@ -4,13 +4,6 @@ volumes:
   models:
 
 services:
-  mongo:
-    image: mongo:3.2
-    restart: unless-stopped
-    volumes:
-      - ./data/db:/data/db
-    command: mongod --smallfiles --oplogSize 128
-
   # ================================= Bot =====================================
   bot:
     image: bot
@@ -24,31 +17,16 @@ services:
       - 5005:5005
       - 5002:5002
     depends_on:
-      - actions
-      - coach
+      - trainer
     volumes:
       - ./bot:/bot
-      - ./scripts:/scripts
+    command: make run-api
 
-  coach:
-    image: coach:latest
+  trainer:
+    image: trainer:latest
     command: cp -a /src_models/. /models/
     volumes:
-      - models:/models/
-      - ./coach:/coach
-      - ./scripts:/scripts
-
-  actions:
-    build:
-      context: .
-      dockerfile: ./docker/actions.Dockerfile
-    ports:
-      - 5055:5055
-    volumes:
-      - ./bot/actions:/bot/actions
-      - ./bot/Makefile:/bot/Makefile
-    command: sh -c "make run-actions"
-
+      - ./bot:/bot
 
   # =============================== Notebooks =================================
   notebooks:
@@ -60,3 +38,11 @@ services:
       - ./notebooks:/work/notebooks
     ports:
       - 8888:8888
+
+  # =============================== Elastic Stack TODO =================================
+  mongo:
+    image: mongo:3.2
+    restart: unless-stopped
+    volumes:
+      - ./data/db:/data/db
+    command: mongod --smallfiles --oplogSize 128
