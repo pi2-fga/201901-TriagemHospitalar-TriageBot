@@ -14,6 +14,7 @@ style:
 
 test:
   before_script:
+    - apt update && apt install -y gcc make
     - pip install -r docker/requirements.txt
     - pip install pytest==3.5.1
     - pip install rasa_nlu --upgrade

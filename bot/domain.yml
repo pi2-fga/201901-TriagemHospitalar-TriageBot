@@ -2,6 +2,7 @@ intents:
 - dor_de_cabeca
 - dor_de_cabeça_outros_sintomas
 - sim
+- nao
 
 #entities:
 #- name
@@ -21,8 +22,7 @@ actions:
 
 templates:
   utter_dor_de_cabeca:
-  - text: "{text: 'Algum médico,já o diagnosticou com enxaqueca?', 'yes_or_no'}"
-  
+  - text: "{text: 'Algum médico já o diagnosticou com enxaqueca?', 'type': 'yes_or_no'}"
+
   utter_outros_sintomas:
-  - text: "{text: 'Está sentindo outros sintomas?', 'text'}"
-  
+  - text: "{text: 'Está sentindo outros sintomas?', 'type': 'text'}"
