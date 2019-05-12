@@ -66,14 +66,13 @@ pipeline: spacy_sklearn
 ```make train-nlu```
 Isso vai treinar as models e armazenar `/models/current/nlu` dentro da pasta bot.
 
-2. Train the Rasa Core model by running:
+2. Você pode treinar as models do Core rodando:
 ```make train-core```
-This will train the Rasa Core model and store it inside the `/models/current/dialogue` folder of your project directory.
 
-3. In a new terminal start the server for the custom action by running:
+3. Começa o servidor de actions em um terminal diferente:
 ```make action-server```
-This will start the server for emulating the custom action.
 
-4. Test the assistant by running:
+
+4. Disponibiliza o bot na API (localhost:5005):
 ```make run-api```
-Carrega o bot na API
+
