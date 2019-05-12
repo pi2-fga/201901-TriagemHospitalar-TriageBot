@@ -1,27 +1,29 @@
 # -*- coding: utf-8 -*-
-from __future__ import absolute_import
-from __future__ import division
-from __future__ import print_function
-from __future__ import unicode_literals
-
-import logging
-import requests
-import json
+import ast
+from rasa_core_sdk.events import SlotSet
 from rasa_core_sdk import Action
 
-logger = logging.getLogger(__name__)
 
+class TriageForm(Action):
+    """Triage custom form action"""
 
-class ActionJoke(Action):
     def name(self):
-        # define the name of the action which can then be included in training stories
-        return "action_joke"
+        # type: () -> Text
+        """Unique identifier of the form"""
+
+        return "action_complete_triage_form"
 
     def run(self, dispatcher, tracker, domain):
-        # what your action should do
-        request = json.loads(
-            requests.get("https://api.chucknorris.io/jokes/random").text
-        )  # make an api call
-        joke = request["value"]  # extract a joke from returned json response
-        dispatcher.utter_message(joke)  # send the message back to the user
-        return []
+        """
+        Gets user entry and registers slots there are in it
+        """
+        message = tracker.latest_message.text
+        message = message.split("estes são meus dados: ", 1)[1]
+        slot_keys_values = ast.literal_eval(message)
+        slots = None
+        print(message)
+        for key in slot_keys_values.keys():
+            slot = SlotSet(key, slot_keys_values[key])
+            slots.append(slot)
+            print(slot)
+        return slots

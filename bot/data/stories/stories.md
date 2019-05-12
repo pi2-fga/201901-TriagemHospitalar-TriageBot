@@ -11,4 +11,12 @@
   * nao
   - utter_outros_sintomas
   * dor_de_cabeça_outros_sintomas
-  - utter_dor_de_cabeca
+  - utter_escala_de_dor
+
+
+## usando formulário
+  * dados
+  - action_complete_triage_form
+  - utter_slots_values
+
+<!-- -action_restart restarts bot -->

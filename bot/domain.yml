@@ -2,27 +2,66 @@ intents:
 - dor_de_cabeca
 - dor_de_cabeça_outros_sintomas
 - sim
-- nao
+- negativo
+- dados
 
 #entities:
 #- name
 
-
-#slots:
-#  name:
-#    type: text
-
+slots:
+  body_temperature:
+    type: unfeaturized
+    auto_fill: false
+  age:
+    type: unfeaturized
+    auto_fill: false
+  gender:
+    type: unfeaturized
+    auto_fill: false
+  weight:
+    type: unfeaturized
+    auto_fill: false
+  glucose:
+    type: unfeaturized
+    auto_fill: false
+  height:
+    type: unfeaturized
+  blood_pressure:
+    type: unfeaturized
+    auto_fill: false
+  alergies:
+    type: unfeaturized
+    auto_fill: false
+  medication:
+    type: unfeaturized
+    auto_fill: false
+  oxygen_level:
+    type: unfeaturized
+    auto_fill: false
+  previous_diseases:
+    type: unfeaturized
+    auto_fill: false
 
 actions:
 - utter_dor_de_cabeca
 - utter_outros_sintomas
-
-
-
+- utter_escala_de_dor
+- utter_slots_values
+- action_complete_triage_form
 
 templates:
   utter_dor_de_cabeca:
   - text: "{text: 'Algum médico já o diagnosticou com enxaqueca?', 'type': 'yes_or_no'}"
 
   utter_outros_sintomas:
-  - text: "{text: 'Está sentindo outros sintomas?', 'type': 'text'}"
+  - text: "{text: 'O que mais você está sentindo?', 'type': 'text'}"
+
+  utter_escala_de_dor:
+    - text: "{'type': 'pain_scale'}"
+
+  utter_slots_values:
+  - text: "Values: {body_temperature}\n
+           - age: {age}\n
+           - weight: {weight}\n
+           - height: {height}\n
+           - alergies: {alergies}"

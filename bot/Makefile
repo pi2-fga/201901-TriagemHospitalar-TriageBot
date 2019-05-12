@@ -24,7 +24,7 @@ clean:
 	rm -rf *.egg-info
 	rm -rf docs/_build
 
-train: train-nlu train-core
+train: train-nlu train-core action-server
 
 
 train-nlu:
@@ -38,3 +38,6 @@ run-api:
 
 action-server:
 	python -m rasa_core_sdk.endpoint --actions actions
+
+visualize:
+	python -m rasa.core.visualize -s data/stories.md -d domain.yml -o story_graph.html

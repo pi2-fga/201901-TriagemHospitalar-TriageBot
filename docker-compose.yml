@@ -21,6 +21,8 @@ services:
     command: make run-api
 
   trainer:
+    ports:
+      - 5055:5055
     image: trainer:latest
     command: make train
     volumes:
