@@ -37,7 +37,7 @@ run-api:
 	python -m rasa_core.run -d models/current/dialogue -u models/current/nlu --endpoints endpoints.yml --debug --enable_api
 
 action-server:
-	python -m rasa_core_sdk.endpoint --actions actions
+	python -m rasa_core_sdk.endpoint --actions actions.actions
 
 visualize:
 	python -m rasa.core.visualize -s data/stories.md -d domain.yml -o story_graph.html

@@ -1,12 +1,15 @@
 intents:
 - dor_de_cabeca
-- dor_de_cabeça_outros_sintomas
+- outros_sintomas
 - sim
 - negativo
 - dados
+- escala_de_dor
+- persistencia_dor
 
-#entities:
-#- name
+entities:
+  - pain_scale
+  - pain_persistance
 
 slots:
   body_temperature:
@@ -41,27 +44,52 @@ slots:
   previous_diseases:
     type: unfeaturized
     auto_fill: false
+  pain_scale:
+    type: unfeaturized
+    auto_fill: false
+  pain_persistance:
+    type: unfeaturized
+    auto_fill: false
+  other_symptoms:
+    type: unfeaturized
+    auto_fill: false
+  migrain:
+    type: unfeaturized
+    auto_fill: false
 
 actions:
-- utter_dor_de_cabeca
-- utter_outros_sintomas
-- utter_escala_de_dor
+- utter_ask_pain_scale
+- utter_ask_other_symptoms
+- utter_ask_migrain
+- utter_ask_pain_persistance
 - utter_slots_values
+- utter_erro_escala_de_dor
+- utter_erro_persistencia_dor
+- utter_submit
 - action_complete_triage_form
 
+forms:
+- headache_form
+
 templates:
-  utter_dor_de_cabeca:
-  - text: "{text: 'Algum médico já o diagnosticou com enxaqueca?', 'type': 'yes_or_no'}"
-
-  utter_outros_sintomas:
-  - text: "{text: 'O que mais você está sentindo?', 'type': 'text'}"
-
-  utter_escala_de_dor:
+  utter_ask_pain_scale:
     - text: "{'type': 'pain_scale'}"
-
+  utter_ask_other_symptoms:
+    - text: "{text: 'O que mais você está sentindo?', 'type': 'text'}"
+  utter_ask_migrain:
+  - text: "{text: 'Algum médico já o diagnosticou com enxaqueca?', 'type': 'yes_or_no'}"
+  utter_ask_pain_persistance:
+    # TODO: Verificar outra forma que esta pergunta pode ser feita
+    - text: "{text: 'Qual é a persistência da dor?', 'type': 'text'}"
   utter_slots_values:
   - text: "Values: {body_temperature}\n
            - age: {age}\n
            - weight: {weight}\n
            - height: {height}\n
            - alergies: {alergies}"
+  utter_erro_escala_de_dor:
+    - text: "{'type': 'pain_scale', 'text': 'Valor enviado foi inválido'}"
+  utter_erro_persistencia_dor:
+    - text: "{text: 'Não consegui entender qual é a persistência da dor', 'type': 'text'}"
+  utter_submit:
+    - text: "{'type': 'info', 'text': 'Certo, estou calculando aqui seu risco.'}"

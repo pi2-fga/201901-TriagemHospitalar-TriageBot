@@ -7,7 +7,7 @@ from rasa_core.dispatcher import Dispatcher
 from rasa_core.channels import CollectingOutputChannel
 from rasa_core.nlg import TemplatedNaturalLanguageGenerator
 
-from actions import ActionJoke
+from bot.actions import TriageForm
 import uuid
 
 
@@ -36,7 +36,7 @@ def test_action():
     uid = str(uuid.uuid1())
     tracker = DialogueStateTracker(uid, domain.slots)
 
-    action = ActionJoke()
+    action = TriageForm()
     action.run(dispatcher, tracker, domain)
 
     assert "norris" in dispatcher.output_channel.latest_output()["text"].lower()

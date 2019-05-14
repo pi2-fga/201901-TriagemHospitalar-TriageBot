@@ -2,6 +2,7 @@
 import ast
 from rasa_core_sdk.events import SlotSet
 from rasa_core_sdk import Action
+from headache_forms import HeadacheForm
 
 
 class TriageForm(Action):
@@ -21,9 +22,8 @@ class TriageForm(Action):
         message = message.split("estes são meus dados: ", 1)[1]
         slot_keys_values = ast.literal_eval(message)
         slots = []
-        print(message)
+
         for key in slot_keys_values.keys():
             slot = SlotSet(key, slot_keys_values[key])
             slots.append(slot)
-            print(slot)
         return slots

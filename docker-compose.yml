@@ -21,13 +21,13 @@ services:
     command: make run-api
 
   trainer:
-    ports:
-      - 5055:5055
+    build:
+      context: .
+      dockerfile: ./docker/trainer.Dockerfile
     image: trainer:latest
     command: make train
     volumes:
       - ./bot:/bot
-
   # =============================== Notebooks =================================
   notebooks:
     build:
