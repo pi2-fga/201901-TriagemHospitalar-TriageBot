@@ -38,7 +38,8 @@ class HeadacheForm(FormAction):
                                       .from_entity(entity="pain_persistance",
                                                    intent="persistencia_dor"))
                                      ],
-                "other_symptoms": [self.from_intent(intent='outros_sintomas'),
+                "other_symptoms": [self.from_entity(entity="other_symptoms",
+                                                    intent='outros_sintomas'),
                                    self.from_intent(intent='negativo',
                                                     value=False),
                                    self.from_text()]}

@@ -2,7 +2,7 @@
 import ast
 from rasa_core_sdk.events import SlotSet
 from rasa_core_sdk import Action
-from headache_forms import HeadacheForm
+from .headache_forms import HeadacheForm
 
 
 class TriageForm(Action):

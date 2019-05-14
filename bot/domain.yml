@@ -10,6 +10,7 @@ intents:
 entities:
   - pain_scale
   - pain_persistance
+  - other_symptoms
 
 slots:
   body_temperature:

@@ -27,19 +27,19 @@
   - nada
 
 ## intent:dados
-  - estes são meus dados: (data)
+  - estes são meus sinais vitais (data)
 
 ## intent:escala_de_dor
-  - nivel de dor: [10](pain_scale)
-  - nivel de dor: [9](pain_scale)
-  - nivel de dor: [8](pain_scale)
-  - nivel de dor: [7](pain_scale)
-  - nivel de dor: [6](pain_scale)
-  - nivel de dor: [5](pain_scale)
-  - nivel de dor: [4](pain_scale)
-  - nivel de dor: [3](pain_scale)
-  - nivel de dor: [2](pain_scale)
-  - nivel de dor: [1](pain_scale)
+  - [dez](pain_scale:10)
+  - [nove](pain_scale:9)
+  - [oito](pain_scale:8)
+  - [sete](pain_scale:7)
+  - [seis](pain_scale:6)
+  - [cinco](pain_scale:5)
+  - [quatro](pain_scale:4)
+  - [tres](pain_scale:3)
+  - [dois](pain_scale:2)
+  - [um](pain_scale:1)
 
 ## intent:persistencia_dor
   - [constante](pain_persistance:constant)
