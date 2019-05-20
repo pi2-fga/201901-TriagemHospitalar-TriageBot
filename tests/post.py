@@ -10,12 +10,13 @@ import json
 
 post_url = "http://localhost:5005/webhooks/rest/webhook"
 
-headers = {'content-type': 'application/json'}
+headers = {"content-type": "application/json"}
 
 params = {
     "message": "estes são meus dados: {'body_temperature':  37, 'age':  39, 'gender': 'f', 'weight': 90, 'glucose': 100, 'height': 1.98, 'blood_pressure': '12/9', 'alergies': 'remedio', 'medication': 'remedio', 'oxygen_level': 'nenhum', 'previous_diseases': 'uma ai'}"
 }
 
+params = {"message": "constante"}
 
 r = requests.post(post_url, data=json.dumps(params), headers=headers)
 

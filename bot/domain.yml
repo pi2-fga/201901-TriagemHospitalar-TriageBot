@@ -6,6 +6,7 @@ intents:
 - dados
 - escala_de_dor
 - persistencia_dor
+- intoxicacao
 
 entities:
   - pain_scale
@@ -49,13 +50,13 @@ slots:
   pain_scale:
     type: unfeaturized
     auto_fill: false
-  pain_persistance:
-    type: unfeaturized
-    auto_fill: false
   other_symptoms:
     type: unfeaturized
     auto_fill: false
   migrain:
+    type: unfeaturized
+    auto_fill: false
+  pain_persistance:
     type: unfeaturized
     auto_fill: false
 

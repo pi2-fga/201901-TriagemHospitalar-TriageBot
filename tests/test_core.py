@@ -22,7 +22,7 @@ def test_agent_and_persist():
 
     loaded = Agent.load("./tests/models/dialogue")
 
-    assert agent.handle_text("/greet") is not None
+    assert agent.handle_text("/dor_de_cabeca") is not None
     assert loaded.domain.action_names == agent.domain.action_names
     assert loaded.domain.intents == agent.domain.intents
     assert loaded.domain.entities == agent.domain.entities
@@ -39,4 +39,7 @@ def test_action():
     action = TriageForm()
     action.run(dispatcher, tracker, domain)
 
-    assert "norris" in dispatcher.output_channel.latest_output()["text"].lower()
+    assert (
+        "yes_or_no Algum médico já o diagnosticou com enxaqueca?"
+        in dispatcher.output_channel.latest_output()["text"].lower()
+    )

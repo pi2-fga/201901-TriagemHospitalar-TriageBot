@@ -16,6 +16,7 @@
   - estou enjoado
   - estou com tontura
   - estou enjoada
+  - dor na nuca
 
 ## intent: sim
   - sim
@@ -54,3 +55,18 @@
   - a dor é [constante](pain_persistance:constant)
   - a dor [não vai embora](pain_persistance:constant)
   - a dor [não para](pain_persistance:constant)
+
+## intent:intoxicacao
+  - eu tomei (substancia)
+  - eu engoli (substancia)
+  - tomei (substancia)
+  - engoli (substancia)
+  - tomei uma caixa de (substancia)
+  - eu tomei veneno
+  - tomei mais comprimidos do que deveria
+  - tomei muito comprimido
+  - tomei a dosagem errada do meu remédio
+  - tomei a dosagem errada
+  - eu confundi o remédio
+  - confundi o remédio
+  - confundi meu remédio
