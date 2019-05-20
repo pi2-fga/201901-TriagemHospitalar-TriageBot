@@ -9,6 +9,6 @@
     - headache_form
     - form{"name": "headache_form"}
     - form{"name": null}
-    - utter_slots_values
+    - action_headache_risk
 
 <!-- -action_restart restarts bot -->

@@ -11,6 +11,7 @@ entities:
   - pain_scale
   - pain_persistance
   - other_symptoms
+  - migrain
 
 slots:
   body_temperature:
@@ -67,21 +68,26 @@ actions:
 - utter_erro_escala_de_dor
 - utter_erro_persistencia_dor
 - utter_submit
+- utter_risco_vermelho
+- utter_risco_amarelo
+- utter_risco_verde
+- utter_risco_azul
 - action_complete_triage_form
+- action_headache_risk
+
 
 forms:
 - headache_form
 
 templates:
   utter_ask_pain_scale:
-    - text: "{'type': 'pain_scale'}"
+    - text: "pain_scale Em uma escala de 1 a 10, qual é a intensidade da sua dor?"
   utter_ask_other_symptoms:
-    - text: "{text: 'O que mais você está sentindo?', 'type': 'text'}"
+    - text: "text O que mais você está sentindo?"
   utter_ask_migrain:
-  - text: "{text: 'Algum médico já o diagnosticou com enxaqueca?', 'type': 'yes_or_no'}"
+  - text: "yes_or_no Algum médico já o diagnosticou com enxaqueca?"
   utter_ask_pain_persistance:
-    # TODO: Verificar outra forma que esta pergunta pode ser feita
-    - text: "{text: 'Qual é a persistência da dor?', 'type': 'text'}"
+    - text: "text Qual é a persistência da dor?"
   utter_slots_values:
   - text: "Values: {body_temperature}\n
            - age: {age}\n
@@ -89,8 +95,16 @@ templates:
            - height: {height}\n
            - alergies: {alergies}"
   utter_erro_escala_de_dor:
-    - text: "{'type': 'pain_scale', 'text': 'Valor enviado foi inválido'}"
+    - text: "pain_scale Valor enviado foi inválido"
   utter_erro_persistencia_dor:
-    - text: "{text: 'Não consegui entender qual é a persistência da dor', 'type': 'text'}"
+    - text: "text Não consegui entender qual é a persistência da dor"
   utter_submit:
-    - text: "{'type': 'info', 'text': 'Certo, estou calculando aqui seu risco.'}"
+    - text: "info Certo, estou calculando aqui seu risco."
+  utter_risco_vermelho:
+    - text: "risk red"
+  utter_risco_amarelo:
+    - text: "risk yellow"
+  utter_risco_verde:
+    - text: "risk green"
+  utter_risco_azul:
+    - text: "risk blue"

@@ -18,7 +18,7 @@ class HeadacheForm(FormAction):
     @staticmethod
     def required_slots(tracker: Tracker) -> List[Text]:
         """A list of required slots that the form has to fill"""
-        return ["migrain", "pain_persistence", "other_symptoms", "pain_scale"]
+        return ["migrain", "pain_scale", "other_symptoms"]
 
     def slot_mappings(self):
         # type: () -> Dict[Text: Union[Dict, List[Dict]]]
@@ -29,15 +29,10 @@ class HeadacheForm(FormAction):
             or a list of them, where a first match will be picked"""
 
         return {
-                "pain_scale": [self.from_entity(entity="pain_scale",
-                                                intent="escala_de_dor"),
-                               self.from_entity(entity="number")],
+                "pain_scale": self.from_entity(entity="pain_scale",
+                                               intent="escala_de_dor"),
                 "migrain": [self.from_intent(intent='sim', value=True),
                             self.from_intent(intent='negativo', value=False)],
-                "pain_persistance": [(self
-                                      .from_entity(entity="pain_persistance",
-                                                   intent="persistencia_dor"))
-                                     ],
                 "other_symptoms": [self.from_entity(entity="other_symptoms",
                                                     intent='outros_sintomas'),
                                    self.from_intent(intent='negativo',
@@ -65,28 +60,6 @@ class HeadacheForm(FormAction):
         else:
             dispatcher.utter_template('utter_erro_escala_de_dor', tracker)
             # validation failed, set slot to None
-            return None
-
-    @staticmethod
-    def pain_persistance_db():
-        # type: () -> List[Text]
-        """Database of supported pain persistance"""
-        return ["not_constant", "constant"]
-
-    def validate_pain_persistance(self,
-                                  value: Text,
-                                  dispatcher: CollectingDispatcher,
-                                  tracker: Tracker,
-                                  domain: Dict[Text, Any]) -> Optional[Text]:
-        """Validate pain_persistance value."""
-
-        if value.lower() in self.cuisine_db():
-            # validation succeeded
-            return value
-        else:
-            dispatcher.utter_template('utter_erro_persistencia_dor', tracker)
-            # validation failed, set this slot to None, meaning the
-            # user will be asked for the slot again
             return None
 
     @staticmethod
