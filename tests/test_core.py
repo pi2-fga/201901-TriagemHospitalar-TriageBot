@@ -7,7 +7,7 @@ from rasa_core.dispatcher import Dispatcher
 from rasa_core.channels import CollectingOutputChannel
 from rasa_core.nlg import TemplatedNaturalLanguageGenerator
 
-from bot.actions import TriageForm
+from bot.actions import HeadacheForm
 import uuid
 
 
@@ -16,7 +16,7 @@ def test_agent_and_persist():
     policies[0] = KerasPolicy(epochs=2)  # Keep training times low
 
     agent = Agent("./bot/domain.yml", policies=policies)
-    training_data = agent.load_data("./data/stories.md")
+    training_data = agent.load_data("./data/stories/stories.md")
     agent.train(training_data, validation_split=0.0)
     agent.persist("./tests/models/dialogue")
 
@@ -36,7 +36,7 @@ def test_action():
     uid = str(uuid.uuid1())
     tracker = DialogueStateTracker(uid, domain.slots)
 
-    action = TriageForm()
+    action = HeadacheForm()
     action.run(dispatcher, tracker, domain)
 
     assert (
