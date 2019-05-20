@@ -16,7 +16,7 @@ def test_agent_and_persist():
     policies[0] = KerasPolicy(epochs=2)  # Keep training times low
 
     agent = Agent("./bot/domain.yml", policies=policies)
-    training_data = agent.load_data("./data/stories/stories.md")
+    training_data = agent.load_data("./bot/data/stories/stories.md")
     agent.train(training_data, validation_split=0.0)
     agent.persist("./tests/models/dialogue")
 
@@ -41,5 +41,5 @@ def test_action():
 
     assert (
         "yes_or_no Algum médico já o diagnosticou com enxaqueca?"
-        in dispatcher.output_channel.latest_output()["text"].lower()
+        == dispatcher.output_channel.latest_output()["text"].lower()
     )
