@@ -41,5 +41,5 @@ def test_action():
 
     assert (
         "yes_or_no Algum médico já o diagnosticou com enxaqueca?"
-        == dispatcher.output_channel.latest_output()["text"].lower()
+        == dispatcher.output_channel.latest_output()["text"]
     )
