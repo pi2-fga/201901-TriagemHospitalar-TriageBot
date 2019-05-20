@@ -12,11 +12,11 @@ import uuid
 
 
 def test_agent_and_persist():
-    policies = config.load("policies.yml")
+    policies = config.load("./bot/policies.yml")
     policies[0] = KerasPolicy(epochs=2)  # Keep training times low
 
-    agent = Agent("bot/domain.yml", policies=policies)
-    training_data = agent.load_data("data/stories.md")
+    agent = Agent("./bot/domain.yml", policies=policies)
+    training_data = agent.load_data("./data/stories.md")
     agent.train(training_data, validation_split=0.0)
     agent.persist("./tests/models/dialogue")
 
@@ -30,7 +30,7 @@ def test_agent_and_persist():
 
 
 def test_action():
-    domain = Domain.load("domain.yml")
+    domain = Domain.load("./bot/domain.yml")
     nlg = TemplatedNaturalLanguageGenerator(domain.templates)
     dispatcher = Dispatcher("my-sender", CollectingOutputChannel(), nlg)
     uid = str(uuid.uuid1())
