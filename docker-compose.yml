@@ -19,7 +19,8 @@ services:
     volumes:
       - ./bot:/bot
     command: make run-api
-
+    depends_on:
+      - trainer
   trainer:
     build:
       context: .
@@ -28,21 +29,3 @@ services:
     command: make train
     volumes:
       - ./bot:/bot
-  # =============================== Notebooks =================================
-  notebooks:
-    build:
-      context: .
-      dockerfile: ./docker/notebooks.Dockerfile
-    volumes:
-      - ./bot:/work/bot
-      - ./notebooks:/work/notebooks
-    ports:
-      - 8888:8888
-
-  # =============================== Elastic Stack TODO =================================
-  mongo:
-    image: mongo:3.2
-    restart: unless-stopped
-    volumes:
-      - ./data/db:/data/db
-    command: mongod --smallfiles --oplogSize 128
