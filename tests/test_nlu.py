@@ -25,12 +25,17 @@ def test_nlu_interpreter_dor_de_cabeça(interpreter):
     parsing = interpreter.parse("dor de cabeça")
     assert parsing["intent"]["name"] == "dor_de_cabeca"
 
+    parsing = interpreter.parse("Estou com dor de cabeça")
+    assert parsing["intent"]["name"] == "dor_de_cabeca"
+
 
 def test_nlu_interpreter_intoxicacao(interpreter):
     parsing = interpreter.parse("tomei uma caixa de remedio")
     assert parsing["intent"]["name"] == "intoxicacao"
+    parsing = interpreter.parse("tomei produto de limpeza")
+    assert parsing["intent"]["name"] == "intoxicacao"
 
 
 def test_interpreter_dir(trainer):
-    interpreter_dir = trainer.persist()
+    interpreter_dir = trainer.persist(MODELS_DIR)
     assert interpreter_dir

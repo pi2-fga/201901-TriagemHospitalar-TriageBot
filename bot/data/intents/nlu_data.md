@@ -5,6 +5,7 @@
   - Enxaqueca
   - Estou com enxaqueca
   - Cefaleia
+  - dor de cabeça e enjoo
 
 ## intent:outros_sintomas <!--- The label of the intent -->
   - nausea
@@ -70,3 +71,7 @@
   - eu confundi o remédio
   - confundi o remédio
   - confundi meu remédio
+  - inalei produto de limpeza
+  - respirei muito produto de limpeza
+  - inalei (substancia)
+  - respirei (substancia)
