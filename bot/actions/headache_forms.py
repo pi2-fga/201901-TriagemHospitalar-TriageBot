@@ -115,6 +115,4 @@ class HeadacheForm(FormAction):
         """Define what the form has to do
             after all required slots are filled"""
 
-        # utter submit template
-        dispatcher.utter_template("utter_submit", tracker)
         return []
