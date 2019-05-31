@@ -18,7 +18,7 @@ class HeadacheForm(FormAction):
     @staticmethod
     def required_slots(tracker: Tracker) -> List[Text]:
         """A list of required slots that the form has to fill"""
-        return ["migrain", "pain_scale", "other_symptoms", "pain_persistance"]
+        return ["migrain", "pain_scale", "pain_persistance", "other_symptoms"]
 
     def slot_mappings(self):
         # type: () -> Dict[Text: Union[Dict, List[Dict]]]
@@ -90,22 +90,6 @@ class HeadacheForm(FormAction):
             # validation failed, set slot to None
             return None
 
-    def validate_other_symptoms(
-        self,
-        value: Text,
-        dispatcher: CollectingDispatcher,
-        tracker: Tracker,
-        domain: Dict[Text, Any],
-    ) -> Any:
-        """Validate other_symptoms value."""
-
-        if isinstance(value, str):
-            return value
-        else:
-            dispatcher.utter_template("utter_erro_outros_sintomas", tracker)
-            # validation failed, set slot to None
-            return None
-
     def submit(
         self,
         dispatcher: CollectingDispatcher,
@@ -114,5 +98,4 @@ class HeadacheForm(FormAction):
     ) -> List[Dict]:
         """Define what the form has to do
             after all required slots are filled"""
-
         return []
