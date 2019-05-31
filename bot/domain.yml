@@ -7,18 +7,21 @@ intents:
 - escala_de_dor
 - persistencia_dor
 - intoxicacao
+- idade
+- medicacao
+- alergias
 
 entities:
   - pain_scale
   - pain_persistance
   - other_symptoms
   - migrain
+  - alergies
+  - age
+  - continuous_medication
 
 slots:
   body_temperature:
-    type: unfeaturized
-    auto_fill: false
-  age:
     type: unfeaturized
     auto_fill: false
   gender:
@@ -33,12 +36,6 @@ slots:
   height:
     type: unfeaturized
   blood_pressure:
-    type: unfeaturized
-    auto_fill: false
-  alergies:
-    type: unfeaturized
-    auto_fill: false
-  medication:
     type: unfeaturized
     auto_fill: false
   oxygen_level:
@@ -59,6 +56,15 @@ slots:
   pain_persistance:
     type: unfeaturized
     auto_fill: false
+  age:
+    type: unfeaturized
+    auto_fill: false
+  continuous_medication:
+    type: unfeaturized
+    auto_fill: false
+  alergies:
+    type: unfeaturized
+    auto_fill: false
 
 actions:
 - utter_ask_pain_scale
@@ -73,12 +79,21 @@ actions:
 - utter_risco_amarelo
 - utter_risco_verde
 - utter_risco_azul
+- utter_cadeira_de_rodas
+- utter_medicao_peso_altura
+- utter_medicao_pressao
+- utter_medicao_temperatura_oximetro
+- utter_erro_idade
+- utter_ask_age
+- utter_ask_continuous_medication
+- utter_ask_alergies
 - action_complete_triage_form
 - action_headache_risk
-
+- action_complete_initial_form
 
 forms:
 - headache_form
+- initial_form
 
 templates:
   utter_ask_pain_scale:
@@ -109,3 +124,19 @@ templates:
     - text: "risk green"
   utter_risco_azul:
     - text: "risk blue"
+  utter_cadeira_de_rodas:
+    - text: "yes_or_no Você é usuário de cadeira de rodas?"
+  utter_medicao_peso_altura:
+    - text: "info Posicione seus pés na marca e espere o sinal, como mostrado a abaixo, para medirmos seu peso e altura."
+  utter_medicao_temperatura_oximetro:
+    - text: "info Posicione o seu braço, como mostrado abaixo, para medirmos seus dados vitais."
+  utter_medicao_pressao:
+    - text: "info Posicione seu braço na braçadeira, como mostrado abaixo, para medirmos sua pressão."
+  utter_erro_idade:
+    - text: "text A idade que você forneceu não é valida, tente novamente."
+  utter_ask_age:
+    -text: "text Qual é a sua idade?"
+  utter_ask_continuous_medication:
+    -text: "text Você usa medicação contínua? Se sim, cite quais."
+  utter_ask_alergies:
+    -text: "text Você possui alergia a alguma medicação? Se sim, cite a quais."

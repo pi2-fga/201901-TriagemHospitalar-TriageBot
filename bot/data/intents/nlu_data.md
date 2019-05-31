@@ -27,6 +27,8 @@
 ## intent:negativo
   - não
   - nada
+  - nadinha
+  - de forma alguma
 
 ## intent:dados
   - estes são meus sinais vitais (data)
@@ -75,3 +77,23 @@
   - respirei muito produto de limpeza
   - inalei (substancia)
   - respirei (substancia)
+
+## intent:idade
+ - Qual é a sua idade? (age)
+ - Qual é a sua idade? Minha idade é (age)
+ - Qual é a sua idade? Tenho (age) anos
+ - Qual é a sua idade? Tenho (age)
+
+## intent:medicacao
+ - Você usa medicação contínua? Se sim, cite quais.  [Não](continuos_medication) uso
+ - Você usa medicação contínua? Se sim, cite quais.  [não](continuos_medication) uso
+ - Você usa medicação contínua? Se sim, cite quais.  [Não] (continuos_medication)
+ - Você usa medicação contínua? Se sim, cite quais.  [Não] (continuos_medication) tomo remédio
+ - Você usa medicação contínua? Se sim, cite quais.  [Não] (continuos_medication) tomo
+ - Você usa medicação contínua? Se sim, cite quais.  Sim uso (continuos_medication)
+ - Você usa medicação contínua? Se sim, cite quais.  Sim tomo (continuos_medication)
+ - Você usa medicação contínua? Se sim, cite quais.  Tomo (continuos_medication)
+ - Você usa medicação contínua? Se sim, cite quais. (continuous_medication)
+
+##intent:alergias
+- Você possui alergia a alguma medicação? Se sim, cite a quais. (alergies)

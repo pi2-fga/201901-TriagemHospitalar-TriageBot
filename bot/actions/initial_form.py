@@ -6,19 +6,24 @@ from rasa_core_sdk.executor import CollectingDispatcher
 from rasa_core_sdk.forms import FormAction
 
 
-class HeadacheForm(FormAction):
-    """Example of a custom form action"""
+class InitialForm(FormAction):
+    """
+    Form used to ask necessary initial questions, no matter what pacient
+    is feeling.
+
+    Required slots are: age, continuous_medication and alergies.
+    """
 
     def name(self):
         # type: () -> Text
         """Unique identifier of the form"""
 
-        return "headache_form"
+        return "initial_form"
 
     @staticmethod
     def required_slots(tracker: Tracker) -> List[Text]:
         """A list of required slots that the form has to fill"""
-        return ["migrain", "pain_scale", "pain_persistance", "other_symptoms"]
+        return ["age", "continuous_medication", "alergies"]
 
     def slot_mappings(self):
         # type: () -> Dict[Text: Union[Dict, List[Dict]]]
@@ -29,19 +34,16 @@ class HeadacheForm(FormAction):
             or a list of them, where a first match will be picked"""
 
         return {
-            "pain_scale": self.from_entity(entity="pain_scale", intent="escala_de_dor"),
-            "migrain": [
-                self.from_intent(intent="sim", value=True),
+            "age": self.from_entity(entity="age", intent="idade"),
+            "continuous_medication": [
                 self.from_intent(intent="negativo", value=False),
+                self.from_entity(entity="continuous_medication",
+                                 intent="medicacao"),
             ],
-            "other_symptoms": [
-                self.from_entity(entity="other_symptoms", intent="outros_sintomas"),
+            "alergies": [
                 self.from_intent(intent="negativo", value=False),
-                self.from_text(),
+                self.from_entity(entity="alergies", intent="alergias"),
             ],
-            "pain_persistance": self.from_entity(
-                entity="pain_persistance", intent="persistencia_dor"
-            ),
         }
 
     @staticmethod
@@ -53,7 +55,7 @@ class HeadacheForm(FormAction):
         except ValueError:
             return False
 
-    def validate_pain_scale(
+    def validate_age(
         self,
         value: Text,
         dispatcher: CollectingDispatcher,
@@ -62,32 +64,10 @@ class HeadacheForm(FormAction):
     ) -> Optional[Text]:
         """Validate pain_scale value."""
 
-        if self.is_int(value) and int(value) > 0:
+        if self.is_int(value) and int(value) >= 0:
             return value
         else:
-            dispatcher.utter_template("utter_erro_escala_de_dor", tracker)
-            # validation failed, set slot to None
-            return None
-
-    @staticmethod
-    def pain_persistance_db():
-        # type: () -> List[Text]
-        """Database of supported pain persistance"""
-        return ["not_constant", "constant"]
-
-    def validate_pain_persistance(
-        self,
-        value: Text,
-        dispatcher: CollectingDispatcher,
-        tracker: Tracker,
-        domain: Dict[Text, Any],
-    ) -> Any:
-        """Validate other_symptoms value."""
-        if value in self.pain_persistance_db():
-            return value
-        else:
-            dispatcher.utter_template("utter_erro_persistencia_dor", tracker)
-            # validation failed, set slot to None
+            dispatcher.utter_template("utter_erro_idade", tracker)
             return None
 
     def submit(
@@ -98,4 +78,9 @@ class HeadacheForm(FormAction):
     ) -> List[Dict]:
         """Define what the form has to do
             after all required slots are filled"""
+        age = tracker.get_slot("age")
+        continuous_medication = tracker.get_slot("continuous_medication")
+        alergies = tracker.get_slot("alergies")
+        elements = f"data {'age': {age}, 'continuos_medication': {continuous_medication}, 'alergies': {alergies}}"
+        dispatcher.utter_custom_message(elements, tracker)
         return []
