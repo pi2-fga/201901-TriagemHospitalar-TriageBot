@@ -7,6 +7,11 @@
   - Cefaleia
   - dor de cabeça e enjoo
 
+## intent:queimadura
+  - Queimei minha perna
+  - Me queimei
+  - Queimei meu rosto
+
 ## intent:outros_sintomas <!--- The label of the intent -->
   - nausea
   - Naúsea

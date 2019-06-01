@@ -1,4 +1,5 @@
 from rasa_core_sdk import Action
+from .utils import are_vital_signs_normal
 
 
 class HeadacheRisk(Action):
@@ -38,8 +39,14 @@ class HeadacheRisk(Action):
         has_other_symptoms = other_symptoms in self.other_symptoms_db()
         is_pain_scale_high = int(pain_scale) > 7
 
+        pressure = tracker.get_slot("blood_pressure")
+        oxygen_level = tracker.get_slot("blood_oxygen_level")
+        temperature = tracker.get_slot("body_temperature")
+        vitals = are_vital_signs_normal(pressure, oxygen_level, temperature)
+
         if (is_pain_scale_high and not migrain and has_other_symptoms) or (
-            is_pain_scale_high and pain_persistance is "constant"
+            is_pain_scale_high and pain_persistance is "constant" or
+            not vitals
         ):
             dispatcher.utter_template("utter_risco_amarelo", tracker)
         else:
