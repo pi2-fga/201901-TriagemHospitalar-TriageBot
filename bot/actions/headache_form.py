@@ -7,7 +7,12 @@ from rasa_core_sdk.forms import FormAction
 
 
 class HeadacheForm(FormAction):
-    """Example of a custom form action"""
+    """
+    Form used to ask necessary questions to categorize patient with a headache.
+
+    Required slots are: migrain, pain_scale, pain_persistance, others symptoms
+
+    """
 
     def name(self):
         # type: () -> Text

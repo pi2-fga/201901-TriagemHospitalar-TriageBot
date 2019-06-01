@@ -27,9 +27,34 @@
 ## intent:negativo
   - não
   - nada
+  - nadinha
+  - de forma alguma
+
+## regex:vital
+  - ([0-9]{2}.[0-9])
+
+## regex:height
+  - ([0-1].[0-9]{2})
 
 ## intent:dados
-  - estes são meus sinais vitais (data)
+  - estes são meus sinais vitais {(data)}
+  - estes são meus sinais vitais {'temperature': [vital], 'blood_oxygen_level': [vital]}
+  - estes são meus sinais vitais {'temperature': 38.0, 'blood_oxygen_level': 95.0}
+  - estes são meus sinais vitais {'temperature': 36.0, 'blood_oxygen_level': 92.0}
+  - estes são meus sinais vitais {'temperature': 36.5, 'blood_oxygen_level': 93.0}
+  - estes são meus sinais vitais {'temperature': 40.0, 'blood_oxygen_level': 90.0}
+  - estes são meus sinais vitais {'temperature': 39.5, 'blood_oxygen_level': 91.0}
+  - estes são meus sinais vitais {'temperature': 37.5, 'blood_oxygen_level': 97.0}
+  - estes são meus sinais vitais {'temperature': 35.0, 'blood_oxygen_level': 89.0}
+  - estes são meus sinais vitais {'height':[height], 'body_mass': 53}
+  - estes são meus sinais vitais {'height': 1.70, 'body_mass': 100}
+  - estes são meus sinais vitais {'height': 1.48, 'body_mass': 60}
+  - estes são meus sinais vitais {'height': 1.58, 'body_mass': 53}
+  - estes são meus sinais vitais {'height': 1.80, 'body_mass': 80}
+  - estes são meus sinais vitais {'height': 1.65, 'body_mass': 67}
+  - estes são meus sinais vitais {'height': 1.58, 'body_mass': 53}
+  - estes são meus sinais vitais {'blood_pressure': "\[\"120\", \"81\"\]"}
+  - estes são meus sinais vitais {'blood_pressure': "\[\"170\", \"81\"\]"}
 
 ## intent:escala_de_dor
   - [dez](pain_scale:10)
@@ -39,6 +64,7 @@
   - [seis](pain_scale:6)
   - [cinco](pain_scale:5)
   - [quatro](pain_scale:4)
+  - [três](pain_scale:3)
   - [tres](pain_scale:3)
   - [dois](pain_scale:2)
   - [um](pain_scale:1)
@@ -75,3 +101,50 @@
   - respirei muito produto de limpeza
   - inalei (substancia)
   - respirei (substancia)
+
+## regex:age_number
+- ([0-9]{3})
+
+## intent:idade
+ - Qual é a sua idade? [1](age)
+ - Qual é a sua idade? [3](age)
+ - Qual é a sua idade? [14](age)
+ - Qual é a sua idade? [60](age)
+ - Qual é a sua idade? [8](age)
+ - Qual é a sua idade? [99](age)
+ - Qual é a sua idade? [23](age)
+ - Qual é a sua idade? [85](age)
+ - Qual é a sua idade? [45](age)
+ - Qual é a sua idade? [32](age)
+ - Qual é a sua idade? [age_number](age)
+ - Qual é a sua idade? Minha idade é [age_number](age)
+ - Qual é a sua idade? Tenho [age_number](age) anos
+ - Qual é a sua idade? Tenho [age_number](age)
+
+ ## regex:medication_name
+ - ([a-z]{50})
+
+
+ ## regex:alergie_name
+ - ([a-z]{60})
+
+##intent:alergias
+- Você possui alergia a alguma medicação? Se sim, cite a quais. [Não](alergies:False) tenho alergia
+- Você possui alergia a alguma medicação? Se sim, cite a quais. [não](alergies:False) tenho alergia
+- Você possui alergia a alguma medicação? Se sim, cite a quais. [Não](alergies:False)
+- Você possui alergia a alguma medicação? Se sim, cite a quais. [Não](alergies:False) tenho
+- Você possui alergia a alguma medicação? Se sim, cite a quais. [buspirona](alergies)
+- Você possui alergia a alguma medicação? Se sim, cite a quais. [galvus](alergies)
+- Você possui alergia a alguma medicação? Se sim, cite a quais. [adenpas](alergies)
+- Você possui alergia a alguma medicação? Se sim, cite a quais. [aloxidil](alergies)
+- Você possui alergia a alguma medicação? Se sim, cite a quais. [sinvastatina](alergies)
+- Você possui alergia a alguma medicação? Se sim, cite a quais. [reducofem](alergies)
+- Você possui alergia a alguma medicação? Se sim, cite a quais. [amoxilina](alergies)
+- Você possui alergia a alguma medicação? Se sim, cite a quais. [amoxicilina](alergies)
+- Você possui alergia a alguma medicação? Se sim, cite a quais. [sertralina](alergies)
+- Você possui alergia a alguma medicação? Se sim, cite a quais. [ziprazidona](alergies)
+- Você possui alergia a alguma medicação? Se sim, cite a quais. [alergie_name](alergies)
+- Você possui alergia a alguma medicação? Se sim, cite a quais. Tenho alergia a [remedio](alergies)
+- Você possui alergia a alguma medicação? Se sim, cite a quais. Tenho alergia a [remédio](alergies)
+- Você possui alergia a alguma medicação? Se sim, cite a quais. Tenho alergia a [alergie_name](alergies)
+- Você possui alergia a alguma medicação? Se sim, cite a quais. Tenho alergia a [alergie_name](alergies)

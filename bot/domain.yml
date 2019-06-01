@@ -7,18 +7,21 @@ intents:
 - escala_de_dor
 - persistencia_dor
 - intoxicacao
+- idade
+- medicacao
+- alergias
+- age_number
 
 entities:
   - pain_scale
   - pain_persistance
   - other_symptoms
   - migrain
+  - alergies
+  - age
 
 slots:
   body_temperature:
-    type: unfeaturized
-    auto_fill: false
-  age:
     type: unfeaturized
     auto_fill: false
   gender:
@@ -33,12 +36,6 @@ slots:
   height:
     type: unfeaturized
   blood_pressure:
-    type: unfeaturized
-    auto_fill: false
-  alergies:
-    type: unfeaturized
-    auto_fill: false
-  medication:
     type: unfeaturized
     auto_fill: false
   oxygen_level:
@@ -59,8 +56,16 @@ slots:
   pain_persistance:
     type: unfeaturized
     auto_fill: false
+  age:
+    type: unfeaturized
+    auto_fill: false
+  alergies:
+    type: unfeaturized
+    auto_fill: false
 
 actions:
+- utter_ask_age
+- utter_ask_alergies
 - utter_ask_pain_scale
 - utter_ask_other_symptoms
 - utter_ask_migrain
@@ -73,28 +78,33 @@ actions:
 - utter_risco_amarelo
 - utter_risco_verde
 - utter_risco_azul
+- utter_cadeira_de_rodas
+- utter_medicao_peso_altura
+- utter_medicao_pressao
+- utter_medicao_temperatura_oximetro
+- utter_erro_idade
 - action_complete_triage_form
 - action_headache_risk
 
-
 forms:
 - headache_form
+- initial_form
 
 templates:
+  utter_ask_age:
+    - text: "textr Qual é a sua idade?"
+  utter_ask_alergies:
+    - text: "textr Você possui alergia a alguma medicação? Se sim, cite a quais."
   utter_ask_pain_scale:
-    - text: "pain_scale Em uma escala de 1 a 10, qual é a intensidade da sua dor?"
+  - text: "pain_scale Em uma escala de 1 a 10, qual é a intensidade da sua dor?"
   utter_ask_other_symptoms:
     - text: "text O que mais você está sentindo?"
   utter_ask_migrain:
   - text: "yes_or_no Algum médico já o diagnosticou com enxaqueca?"
   utter_ask_pain_persistance:
-    - text: "text Qual é a persistência da dor?"
+  - text: "text Qual é a persistência da dor?"
   utter_slots_values:
-  - text: "Values: {body_temperature}\n
-           - age: {age}\n
-           - weight: {weight}\n
-           - height: {height}\n
-           - alergies: {alergies}"
+  - text: "data age {age} alergies {alergies} ."
   utter_erro_escala_de_dor:
     - text: "pain_scale Valor enviado foi inválido"
   utter_erro_persistencia_dor:
@@ -109,3 +119,13 @@ templates:
     - text: "risk green"
   utter_risco_azul:
     - text: "risk blue"
+  utter_cadeira_de_rodas:
+    - text: "yes_or_no Você é usuário de cadeira de rodas?"
+  utter_medicao_peso_altura:
+    - text: "info Posicione seus pés na marca e espere o sinal, como mostrado a abaixo, para medirmos seu peso e altura."
+  utter_medicao_temperatura_oximetro:
+    - text: "info Posicione o seu braço, como mostrado abaixo, para medirmos seus dados vitais."
+  utter_medicao_pressao:
+    - text: "info Posicione seu braço na braçadeira, como mostrado abaixo, para medirmos sua pressão."
+  utter_erro_idade:
+    - text: "text A idade que você forneceu não é valida, tente novamente."
