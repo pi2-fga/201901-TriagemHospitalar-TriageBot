@@ -34,15 +34,13 @@ class HeadacheForm(FormAction):
             or a list of them, where a first match will be picked"""
 
         return {
-            "pain_scale": self.from_entity(entity="pain_scale",
-                                           intent="escala_de_dor"),
+            "pain_scale": self.from_entity(entity="pain_scale", intent="escala_de_dor"),
             "migrain": [
                 self.from_intent(intent="sim", value=True),
                 self.from_intent(intent="negativo", value=False),
             ],
             "other_symptoms": [
-                self.from_entity(entity="other_symptoms",
-                                 intent="outros_sintomas"),
+                self.from_entity(entity="other_symptoms", intent="outros_sintomas"),
                 self.from_intent(intent="negativo", value=False),
                 self.from_text(),
             ],

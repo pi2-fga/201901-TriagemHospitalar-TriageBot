@@ -78,22 +78,62 @@
   - inalei (substancia)
   - respirei (substancia)
 
+## regex:age_number
+- ([0-9]{3})
+
 ## intent:idade
- - Qual é a sua idade? (age)
- - Qual é a sua idade? Minha idade é (age)
- - Qual é a sua idade? Tenho (age) anos
- - Qual é a sua idade? Tenho (age)
+ - Qual é a sua idade? [1](age)
+ - Qual é a sua idade? [3](age)
+ - Qual é a sua idade? [14](age)
+ - Qual é a sua idade? [60](age)
+ - Qual é a sua idade? [8](age)
+ - Qual é a sua idade? [99](age)
+ - Qual é a sua idade? [23](age)
+ - Qual é a sua idade? [85](age)
+ - Qual é a sua idade? [45](age)
+ - Qual é a sua idade? [32](age)
+ - Qual é a sua idade? [age_number](age)
+ - Qual é a sua idade? Minha idade é [age_number](age)
+ - Qual é a sua idade? Tenho [age_number](age) anos
+ - Qual é a sua idade? Tenho [age_number](age)
+
+ ## regex:medication_name
+ - ([a-z]{50})
 
 ## intent:medicacao
- - Você usa medicação contínua? Se sim, cite quais.  [Não](continuos_medication) uso
- - Você usa medicação contínua? Se sim, cite quais.  [não](continuos_medication) uso
- - Você usa medicação contínua? Se sim, cite quais.  [Não] (continuos_medication)
- - Você usa medicação contínua? Se sim, cite quais.  [Não] (continuos_medication) tomo remédio
- - Você usa medicação contínua? Se sim, cite quais.  [Não] (continuos_medication) tomo
- - Você usa medicação contínua? Se sim, cite quais.  Sim uso (continuos_medication)
- - Você usa medicação contínua? Se sim, cite quais.  Sim tomo (continuos_medication)
- - Você usa medicação contínua? Se sim, cite quais.  Tomo (continuos_medication)
- - Você usa medicação contínua? Se sim, cite quais. (continuous_medication)
+ - Você usa medicação contínua? Se sim, cite quais. [Não](continuos_medication) uso
+ - Você usa medicação contínua? Se sim, cite quais. [não](continuos_medication) uso
+ - Você usa medicação contínua? Se sim, cite quais. [Não](continuos_medication)
+ - Você usa medicação contínua? Se sim, cite quais. [Não](continuos_medication) tomo remédio
+ - Você usa medicação contínua? Se sim, cite quais. [Não](continuos_medication) tomo
+ - Você usa medicação contínua? Se sim, cite quais. [buspirona](continuous_medication)
+ - Você usa medicação contínua? Se sim, cite quais. [galvus](continuous_medication)
+ - Você usa medicação contínua? Se sim, cite quais. [adenpas](continuous_medication)
+ - Você usa medicação contínua? Se sim, cite quais. [aloxidil](continuous_medication)
+ - Você usa medicação contínua? Se sim, cite quais. [sinvastatina](continuous_medication)
+ - Você usa medicação contínua? Se sim, cite quais. [reducofem](continuous_medication)
+ - Você usa medicação contínua? Se sim, cite quais. [sertralina](continuous_medication)
+ - Você usa medicação contínua? Se sim, cite quais. [ziprazidona](continuous_medication)
+ - Você usa medicação contínua? Se sim, cite quais. Sim uso [medication_name](continuos_medication)
+ - Você usa medicação contínua? Se sim, cite quais. Sim uso [medication_name](continuos_medication)
+ - Você usa medicação contínua? Se sim, cite quais. Sim tomo [medication_name](continuos_medication)
+ - Você usa medicação contínua? Se sim, cite quais. Tomo [medication_name](continuos_medication)
+ - Você usa medicação contínua? Se sim, cite quais. [medication_name](continuous_medication)
 
 ##intent:alergias
-- Você possui alergia a alguma medicação? Se sim, cite a quais. (alergies)
+- Você possui alergia a alguma medicação? Se sim, cite a quais. [Não](alergies) tenho alergia
+- Você possui alergia a alguma medicação? Se sim, cite a quais. [Não](alergies)
+- Você possui alergia a alguma medicação? Se sim, cite a quais. [Não](alergies) tenho
+- Você possui alergia a alguma medicação? Se sim, cite a quais. [buspirona](alergies)
+- Você possui alergia a alguma medicação? Se sim, cite a quais. [galvus](alergies)
+- Você possui alergia a alguma medicação? Se sim, cite a quais. [adenpas](alergies)
+- Você possui alergia a alguma medicação? Se sim, cite a quais. [aloxidil](alergies)
+- Você possui alergia a alguma medicação? Se sim, cite a quais. [sinvastatina](alergies)
+- Você possui alergia a alguma medicação? Se sim, cite a quais. [reducofem](alergies)
+- Você possui alergia a alguma medicação? Se sim, cite a quais. [amoxilina](alergies)
+- Você possui alergia a alguma medicação? Se sim, cite a quais. [amoxicilina](alergies)
+- Você possui alergia a alguma medicação? Se sim, cite a quais. [sertralina](alergies)
+- Você possui alergia a alguma medicação? Se sim, cite a quais. [ziprazidona](alergies)
+- Você possui alergia a alguma medicação? Se sim, cite a quais. [medication_name](alergies)
+- Você possui alergia a alguma medicação? Se sim, cite a quais. Tenho alergia a [medication_name](alergies)
+- Você possui alergia a alguma medicação? Se sim, cite a quais. Tenho alergia a [medication_name](alergies)

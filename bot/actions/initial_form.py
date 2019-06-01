@@ -37,8 +37,7 @@ class InitialForm(FormAction):
             "age": self.from_entity(entity="age", intent="idade"),
             "continuous_medication": [
                 self.from_intent(intent="negativo", value=False),
-                self.from_entity(entity="continuous_medication",
-                                 intent="medicacao"),
+                self.from_entity(entity="continuous_medication", intent="medicacao"),
             ],
             "alergies": [
                 self.from_intent(intent="negativo", value=False),

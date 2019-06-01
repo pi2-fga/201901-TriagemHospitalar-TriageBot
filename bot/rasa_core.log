@@ -1,0 +1,3180 @@
+Rasa process starting
+Restoring parameters from models/current/nlu/intent_classifier_tensorflow_embedding.ckpt
+Available web server routes: 
+hello                                              GET, OPTIONS, HEAD             /
+list_trackers                                      GET, OPTIONS, HEAD             /conversations
+execute_action                                     POST, OPTIONS                  /conversations/[sender_id]/execute
+log_message                                        POST, OPTIONS                  /conversations/[sender_id]/messages
+predict                                            POST, OPTIONS                  /conversations/[sender_id]/predict
+respond                                            GET, POST, OPTIONS, HEAD       /conversations/[sender_id]/respond
+retrieve_story                                     GET, OPTIONS, HEAD             /conversations/[sender_id]/story
+retrieve_tracker                                   GET, OPTIONS, HEAD             /conversations/[sender_id]/tracker
+replace_events                                     OPTIONS, PUT                   /conversations/[sender_id]/tracker/events
+get_domain                                         GET, OPTIONS, HEAD             /domain
+evaluate_stories                                   POST, OPTIONS                  /evaluate
+continue_training                                  POST, OPTIONS                  /finetune
+load_model                                         POST, OPTIONS                  /model
+tracker_predict                                    POST, OPTIONS                  /predict
+static                                             GET, OPTIONS, HEAD             /static/[filename]
+status                                             GET, OPTIONS, HEAD             /status
+version                                            GET, OPTIONS, HEAD             /version
+custom_webhook_CmdlineInput.health                 GET, OPTIONS, HEAD             /webhooks/rest/
+custom_webhook_CmdlineInput.receive                POST, OPTIONS                  /webhooks/rest/webhook
+Rasa Core server is up and running on http://localhost:5005
+Creating a new tracker for id 'default'.
+Received user message 'dor de cabeça' with intent '{'name': 'dor_de_cabeca', 'confidence': 0.968204140663147}' and entities '[]'
+Logged UserUtterance - tracker now has 2 events
+Current slot values: 
+	age: None
+	alergies: None
+	blood_pressure: None
+	body_temperature: None
+	continuous_medication: None
+	gender: None
+	glucose: None
+	height: None
+	migrain: None
+	other_symptoms: None
+	oxygen_level: None
+	pain_persistance: None
+	pain_scale: None
+	previous_diseases: None
+	requested_slot: None
+	weight: None
+Current tracker state [None, None, None, {}, {'intent_dor_de_cabeca': 1.0, 'prev_action_listen': 1.0}]
+There is a memorised next action '30'
+There is no active form
+Predicted next action using policy_2_MemoizationPolicy
+Predicted next action 'headache_form' with prob 1.00.
+Calling action endpoint to run action 'headache_form'.
+Action 'headache_form' ended with events '['Form(headache_form)', 'SlotSet(key: requested_slot, value: migrain)']'
+Bot utterance 'BotUttered(text: yes_or_no Algum médico já o diagnosticou com enxaqueca?, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [None, None, None, {}, {'intent_dor_de_cabeca': 1.0, 'prev_action_listen': 1.0}]
+There is a memorised next action '30'
+There is an active form 'headache_form'
+Predicted next action using policy_3_FormPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Rasa process starting
+Restoring parameters from models/current/nlu/intent_classifier_tensorflow_embedding.ckpt
+Available web server routes: 
+hello                                              OPTIONS, GET, HEAD             /
+list_trackers                                      OPTIONS, GET, HEAD             /conversations
+execute_action                                     OPTIONS, POST                  /conversations/[sender_id]/execute
+log_message                                        OPTIONS, POST                  /conversations/[sender_id]/messages
+predict                                            OPTIONS, POST                  /conversations/[sender_id]/predict
+respond                                            OPTIONS, GET, POST, HEAD       /conversations/[sender_id]/respond
+retrieve_story                                     OPTIONS, GET, HEAD             /conversations/[sender_id]/story
+retrieve_tracker                                   OPTIONS, GET, HEAD             /conversations/[sender_id]/tracker
+replace_events                                     OPTIONS, PUT                   /conversations/[sender_id]/tracker/events
+get_domain                                         OPTIONS, GET, HEAD             /domain
+evaluate_stories                                   OPTIONS, POST                  /evaluate
+continue_training                                  OPTIONS, POST                  /finetune
+load_model                                         OPTIONS, POST                  /model
+tracker_predict                                    OPTIONS, POST                  /predict
+static                                             OPTIONS, GET, HEAD             /static/[filename]
+status                                             OPTIONS, GET, HEAD             /status
+version                                            OPTIONS, GET, HEAD             /version
+custom_webhook_CmdlineInput.health                 OPTIONS, GET, HEAD             /webhooks/rest/
+custom_webhook_CmdlineInput.receive                OPTIONS, POST                  /webhooks/rest/webhook
+Rasa Core server is up and running on http://localhost:5005
+Creating a new tracker for id 'default'.
+Received user message 'dor de cabeça' with intent '{'name': 'dor_de_cabeca', 'confidence': 0.9716506004333496}' and entities '[]'
+Logged UserUtterance - tracker now has 2 events
+Current slot values: 
+	age: None
+	alergies: None
+	blood_pressure: None
+	body_temperature: None
+	continuous_medication: None
+	gender: None
+	glucose: None
+	height: None
+	migrain: None
+	other_symptoms: None
+	oxygen_level: None
+	pain_persistance: None
+	pain_scale: None
+	previous_diseases: None
+	requested_slot: None
+	weight: None
+Current tracker state [None, None, None, {}, {'prev_action_listen': 1.0, 'intent_dor_de_cabeca': 1.0}]
+There is a memorised next action '30'
+There is no active form
+Predicted next action using policy_2_MemoizationPolicy
+Predicted next action 'initial_form' with prob 1.00.
+Calling action endpoint to run action 'initial_form'.
+Action 'initial_form' ended with events '['Form(initial_form)', 'SlotSet(key: requested_slot, value: age)']'
+Bot utterance 'BotUttered(text: -text, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [None, None, None, {}, {'prev_action_listen': 1.0, 'intent_dor_de_cabeca': 1.0}]
+There is a memorised next action '30'
+There is an active form 'initial_form'
+Predicted next action using policy_3_FormPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Rasa process starting
+Restoring parameters from models/current/nlu/intent_classifier_tensorflow_embedding.ckpt
+Available web server routes: 
+hello                                              GET, HEAD, OPTIONS             /
+list_trackers                                      GET, HEAD, OPTIONS             /conversations
+execute_action                                     POST, OPTIONS                  /conversations/[sender_id]/execute
+log_message                                        POST, OPTIONS                  /conversations/[sender_id]/messages
+predict                                            POST, OPTIONS                  /conversations/[sender_id]/predict
+respond                                            GET, POST, HEAD, OPTIONS       /conversations/[sender_id]/respond
+retrieve_story                                     GET, HEAD, OPTIONS             /conversations/[sender_id]/story
+retrieve_tracker                                   GET, HEAD, OPTIONS             /conversations/[sender_id]/tracker
+replace_events                                     PUT, OPTIONS                   /conversations/[sender_id]/tracker/events
+get_domain                                         GET, HEAD, OPTIONS             /domain
+evaluate_stories                                   POST, OPTIONS                  /evaluate
+continue_training                                  POST, OPTIONS                  /finetune
+load_model                                         POST, OPTIONS                  /model
+tracker_predict                                    POST, OPTIONS                  /predict
+static                                             GET, HEAD, OPTIONS             /static/[filename]
+status                                             GET, HEAD, OPTIONS             /status
+version                                            GET, HEAD, OPTIONS             /version
+custom_webhook_CmdlineInput.health                 GET, HEAD, OPTIONS             /webhooks/rest/
+custom_webhook_CmdlineInput.receive                POST, OPTIONS                  /webhooks/rest/webhook
+Rasa Core server is up and running on http://localhost:5005
+Creating a new tracker for id 'default'.
+Received user message 'dor de cabeça' with intent '{'name': 'dor_de_cabeca', 'confidence': 0.9520711898803711}' and entities '[]'
+Logged UserUtterance - tracker now has 2 events
+Current slot values: 
+	age: None
+	alergies: None
+	blood_pressure: None
+	body_temperature: None
+	continuous_medication: None
+	gender: None
+	glucose: None
+	height: None
+	migrain: None
+	other_symptoms: None
+	oxygen_level: None
+	pain_persistance: None
+	pain_scale: None
+	previous_diseases: None
+	requested_slot: None
+	weight: None
+Current tracker state [None, None, None, {}, {'prev_action_listen': 1.0, 'intent_dor_de_cabeca': 1.0}]
+There is a memorised next action '30'
+There is no active form
+Predicted next action using policy_2_MemoizationPolicy
+Predicted next action 'initial_form' with prob 1.00.
+Calling action endpoint to run action 'initial_form'.
+Action 'initial_form' ended with events '['Form(initial_form)', 'SlotSet(key: requested_slot, value: age)']'
+Bot utterance 'BotUttered(text: -text, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [None, None, None, {}, {'prev_action_listen': 1.0, 'intent_dor_de_cabeca': 1.0}]
+There is a memorised next action '30'
+There is an active form 'initial_form'
+Predicted next action using policy_3_FormPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Rasa process starting
+Restoring parameters from models/current/nlu/intent_classifier_tensorflow_embedding.ckpt
+Available web server routes: 
+hello                                              OPTIONS, GET, HEAD             /
+list_trackers                                      OPTIONS, GET, HEAD             /conversations
+execute_action                                     POST, OPTIONS                  /conversations/[sender_id]/execute
+log_message                                        POST, OPTIONS                  /conversations/[sender_id]/messages
+predict                                            POST, OPTIONS                  /conversations/[sender_id]/predict
+respond                                            POST, HEAD, GET, OPTIONS       /conversations/[sender_id]/respond
+retrieve_story                                     OPTIONS, GET, HEAD             /conversations/[sender_id]/story
+retrieve_tracker                                   OPTIONS, GET, HEAD             /conversations/[sender_id]/tracker
+replace_events                                     OPTIONS, PUT                   /conversations/[sender_id]/tracker/events
+get_domain                                         OPTIONS, GET, HEAD             /domain
+evaluate_stories                                   POST, OPTIONS                  /evaluate
+continue_training                                  POST, OPTIONS                  /finetune
+load_model                                         POST, OPTIONS                  /model
+tracker_predict                                    POST, OPTIONS                  /predict
+static                                             OPTIONS, GET, HEAD             /static/[filename]
+status                                             OPTIONS, GET, HEAD             /status
+version                                            OPTIONS, GET, HEAD             /version
+custom_webhook_CmdlineInput.health                 OPTIONS, GET, HEAD             /webhooks/rest/
+custom_webhook_CmdlineInput.receive                POST, OPTIONS                  /webhooks/rest/webhook
+Rasa Core server is up and running on http://localhost:5005
+Creating a new tracker for id 'default'.
+Received user message 'dor de cabeça' with intent '{'name': 'dor_de_cabeca', 'confidence': 0.9685945510864258}' and entities '[]'
+Logged UserUtterance - tracker now has 2 events
+Current slot values: 
+	age: None
+	alergies: None
+	blood_pressure: None
+	body_temperature: None
+	continuous_medication: None
+	gender: None
+	glucose: None
+	height: None
+	migrain: None
+	other_symptoms: None
+	oxygen_level: None
+	pain_persistance: None
+	pain_scale: None
+	previous_diseases: None
+	requested_slot: None
+	weight: None
+Current tracker state [None, None, None, {}, {'intent_dor_de_cabeca': 1.0, 'prev_action_listen': 1.0}]
+There is a memorised next action '30'
+There is no active form
+Predicted next action using policy_2_MemoizationPolicy
+Predicted next action 'initial_form' with prob 1.00.
+Calling action endpoint to run action 'initial_form'.
+Action 'initial_form' ended with events '['Form(initial_form)', 'SlotSet(key: requested_slot, value: age)']'
+Bot utterance 'BotUttered(text: -text, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [None, None, None, {}, {'intent_dor_de_cabeca': 1.0, 'prev_action_listen': 1.0}]
+There is a memorised next action '30'
+There is an active form 'initial_form'
+Predicted next action using policy_3_FormPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Rasa process starting
+Restoring parameters from models/current/nlu/intent_classifier_tensorflow_embedding.ckpt
+Available web server routes: 
+hello                                              GET, OPTIONS, HEAD             /
+list_trackers                                      GET, OPTIONS, HEAD             /conversations
+execute_action                                     POST, OPTIONS                  /conversations/[sender_id]/execute
+log_message                                        POST, OPTIONS                  /conversations/[sender_id]/messages
+predict                                            POST, OPTIONS                  /conversations/[sender_id]/predict
+respond                                            GET, POST, OPTIONS, HEAD       /conversations/[sender_id]/respond
+retrieve_story                                     GET, OPTIONS, HEAD             /conversations/[sender_id]/story
+retrieve_tracker                                   GET, OPTIONS, HEAD             /conversations/[sender_id]/tracker
+replace_events                                     PUT, OPTIONS                   /conversations/[sender_id]/tracker/events
+get_domain                                         GET, OPTIONS, HEAD             /domain
+evaluate_stories                                   POST, OPTIONS                  /evaluate
+continue_training                                  POST, OPTIONS                  /finetune
+load_model                                         POST, OPTIONS                  /model
+tracker_predict                                    POST, OPTIONS                  /predict
+static                                             GET, OPTIONS, HEAD             /static/[filename]
+status                                             GET, OPTIONS, HEAD             /status
+version                                            GET, OPTIONS, HEAD             /version
+custom_webhook_CmdlineInput.health                 GET, OPTIONS, HEAD             /webhooks/rest/
+custom_webhook_CmdlineInput.receive                POST, OPTIONS                  /webhooks/rest/webhook
+Rasa Core server is up and running on http://localhost:5005
+Creating a new tracker for id 'default'.
+Received user message 'dor de cabeça' with intent '{'name': 'dor_de_cabeca', 'confidence': 0.9800808429718018}' and entities '[]'
+Logged UserUtterance - tracker now has 2 events
+Current slot values: 
+	age: None
+	alergies: None
+	blood_pressure: None
+	body_temperature: None
+	continuous_medication: None
+	gender: None
+	glucose: None
+	height: None
+	migrain: None
+	other_symptoms: None
+	oxygen_level: None
+	pain_persistance: None
+	pain_scale: None
+	previous_diseases: None
+	requested_slot: None
+	weight: None
+Current tracker state [None, None, None, {}, {'intent_dor_de_cabeca': 1.0, 'prev_action_listen': 1.0}]
+There is a memorised next action '30'
+There is no active form
+Predicted next action using policy_2_MemoizationPolicy
+Predicted next action 'initial_form' with prob 1.00.
+Calling action endpoint to run action 'initial_form'.
+Action 'initial_form' ended with events '['Form(initial_form)', 'SlotSet(key: requested_slot, value: alergies)']'
+Bot utterance 'BotUttered(text: -text, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [None, None, None, {}, {'intent_dor_de_cabeca': 1.0, 'prev_action_listen': 1.0}]
+There is a memorised next action '30'
+There is an active form 'initial_form'
+Predicted next action using policy_3_FormPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Rasa process starting
+Restoring parameters from models/current/nlu/intent_classifier_tensorflow_embedding.ckpt
+Available web server routes: 
+hello                                              HEAD, OPTIONS, GET             /
+list_trackers                                      HEAD, OPTIONS, GET             /conversations
+execute_action                                     OPTIONS, POST                  /conversations/[sender_id]/execute
+log_message                                        OPTIONS, POST                  /conversations/[sender_id]/messages
+predict                                            OPTIONS, POST                  /conversations/[sender_id]/predict
+respond                                            GET, OPTIONS, POST, HEAD       /conversations/[sender_id]/respond
+retrieve_story                                     HEAD, OPTIONS, GET             /conversations/[sender_id]/story
+retrieve_tracker                                   HEAD, OPTIONS, GET             /conversations/[sender_id]/tracker
+replace_events                                     OPTIONS, PUT                   /conversations/[sender_id]/tracker/events
+get_domain                                         HEAD, OPTIONS, GET             /domain
+evaluate_stories                                   OPTIONS, POST                  /evaluate
+continue_training                                  OPTIONS, POST                  /finetune
+load_model                                         OPTIONS, POST                  /model
+tracker_predict                                    OPTIONS, POST                  /predict
+static                                             HEAD, OPTIONS, GET             /static/[filename]
+status                                             HEAD, OPTIONS, GET             /status
+version                                            HEAD, OPTIONS, GET             /version
+custom_webhook_CmdlineInput.health                 HEAD, OPTIONS, GET             /webhooks/rest/
+custom_webhook_CmdlineInput.receive                OPTIONS, POST                  /webhooks/rest/webhook
+Rasa Core server is up and running on http://localhost:5005
+Creating a new tracker for id 'default'.
+Received user message 'dor de cabeça' with intent '{'name': 'dor_de_cabeca', 'confidence': 0.9708598852157593}' and entities '[]'
+Logged UserUtterance - tracker now has 2 events
+Current slot values: 
+	age: None
+	alergies: None
+	blood_pressure: None
+	body_temperature: None
+	continuous_medication: None
+	gender: None
+	glucose: None
+	height: None
+	migrain: None
+	other_symptoms: None
+	oxygen_level: None
+	pain_persistance: None
+	pain_scale: None
+	previous_diseases: None
+	requested_slot: None
+	weight: None
+Current tracker state [None, None, None, {}, {'intent_dor_de_cabeca': 1.0, 'prev_action_listen': 1.0}]
+There is a memorised next action '30'
+There is no active form
+Predicted next action using policy_2_MemoizationPolicy
+Predicted next action 'initial_form' with prob 1.00.
+Calling action endpoint to run action 'initial_form'.
+Action 'initial_form' ended with events '['Form(initial_form)', 'SlotSet(key: requested_slot, value: alergies)']'
+Bot utterance 'BotUttered(text: text Você possui alergia a alguma medicação? Se sim, cite a quais., data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [None, None, None, {}, {'intent_dor_de_cabeca': 1.0, 'prev_action_listen': 1.0}]
+There is a memorised next action '30'
+There is an active form 'initial_form'
+Predicted next action using policy_3_FormPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Rasa process starting
+Restoring parameters from models/current/nlu/intent_classifier_tensorflow_embedding.ckpt
+Available web server routes: 
+hello                                              OPTIONS, HEAD, GET             /
+list_trackers                                      OPTIONS, HEAD, GET             /conversations
+execute_action                                     OPTIONS, POST                  /conversations/[sender_id]/execute
+log_message                                        OPTIONS, POST                  /conversations/[sender_id]/messages
+predict                                            OPTIONS, POST                  /conversations/[sender_id]/predict
+respond                                            OPTIONS, HEAD, POST, GET       /conversations/[sender_id]/respond
+retrieve_story                                     OPTIONS, HEAD, GET             /conversations/[sender_id]/story
+retrieve_tracker                                   OPTIONS, HEAD, GET             /conversations/[sender_id]/tracker
+replace_events                                     OPTIONS, PUT                   /conversations/[sender_id]/tracker/events
+get_domain                                         OPTIONS, HEAD, GET             /domain
+evaluate_stories                                   OPTIONS, POST                  /evaluate
+continue_training                                  OPTIONS, POST                  /finetune
+load_model                                         OPTIONS, POST                  /model
+tracker_predict                                    OPTIONS, POST                  /predict
+static                                             OPTIONS, HEAD, GET             /static/[filename]
+status                                             OPTIONS, HEAD, GET             /status
+version                                            OPTIONS, HEAD, GET             /version
+custom_webhook_CmdlineInput.health                 OPTIONS, HEAD, GET             /webhooks/rest/
+custom_webhook_CmdlineInput.receive                OPTIONS, POST                  /webhooks/rest/webhook
+Rasa Core server is up and running on http://localhost:5005
+Creating a new tracker for id 'default'.
+Received user message 'dor de cabeça' with intent '{'name': 'dor_de_cabeca', 'confidence': 0.9477311968803406}' and entities '[]'
+Logged UserUtterance - tracker now has 2 events
+Current slot values: 
+	age: None
+	alergies: None
+	blood_pressure: None
+	body_temperature: None
+	continuous_medication: None
+	gender: None
+	glucose: None
+	height: None
+	migrain: None
+	other_symptoms: None
+	oxygen_level: None
+	pain_persistance: None
+	pain_scale: None
+	previous_diseases: None
+	requested_slot: None
+	weight: None
+Current tracker state [None, None, None, {}, {'intent_dor_de_cabeca': 1.0, 'prev_action_listen': 1.0}]
+There is a memorised next action '30'
+There is no active form
+Predicted next action using policy_2_MemoizationPolicy
+Predicted next action 'initial_form' with prob 1.00.
+Calling action endpoint to run action 'initial_form'.
+Action 'initial_form' ended with events '['Form(initial_form)', 'SlotSet(key: requested_slot, value: alergies)']'
+Bot utterance 'BotUttered(text: text Você possui alergia a alguma medicação? Se sim, cite a quais., data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [None, None, None, {}, {'intent_dor_de_cabeca': 1.0, 'prev_action_listen': 1.0}]
+There is a memorised next action '30'
+There is an active form 'initial_form'
+Predicted next action using policy_3_FormPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'default'
+Received user message 'não' with intent '{'name': 'negativo', 'confidence': 0.9681217670440674}' and entities '[]'
+Logged UserUtterance - tracker now has 8 events
+Current slot values: 
+	age: None
+	alergies: None
+	blood_pressure: None
+	body_temperature: None
+	continuous_medication: None
+	gender: None
+	glucose: None
+	height: None
+	migrain: None
+	other_symptoms: None
+	oxygen_level: None
+	pain_persistance: None
+	pain_scale: None
+	previous_diseases: None
+	requested_slot: alergies
+	weight: None
+Current tracker state [None, None, None, {}, {'intent_dor_de_cabeca': 1.0, 'prev_action_listen': 1.0}]
+There is a memorised next action '30'
+There is an active form 'initial_form'
+Predicted next action using policy_3_FormPolicy
+Predicted next action 'initial_form' with prob 1.00.
+Calling action endpoint to run action 'initial_form'.
+Action 'initial_form' ended with events '['SlotSet(key: alergies, value: False)', 'SlotSet(key: requested_slot, value: age)']'
+Bot utterance 'BotUttered(text: text Qual é a sua idade?, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [None, None, None, {}, {'intent_dor_de_cabeca': 1.0, 'prev_action_listen': 1.0}]
+There is a memorised next action '30'
+There is an active form 'initial_form'
+Predicted next action using policy_3_FormPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'default'
+Received user message '23' with intent '{'name': None, 'confidence': 0.0}' and entities '[]'
+Logged UserUtterance - tracker now has 14 events
+Current slot values: 
+	age: None
+	alergies: False
+	blood_pressure: None
+	body_temperature: None
+	continuous_medication: None
+	gender: None
+	glucose: None
+	height: None
+	migrain: None
+	other_symptoms: None
+	oxygen_level: None
+	pain_persistance: None
+	pain_scale: None
+	previous_diseases: None
+	requested_slot: age
+	weight: None
+NLU confidence 0.0 is lower than NLU threshold 0.3. 
+Current tracker state [None, None, None, {}, {'intent_dor_de_cabeca': 1.0, 'prev_action_listen': 1.0}]
+There is a memorised next action '30'
+There is an active form 'initial_form'
+Predicted next action using policy_3_FormPolicy
+Predicted next action 'initial_form' with prob 1.00.
+Calling action endpoint to run action 'initial_form'.
+Failed to validate slot age with action initial_form
+NLU confidence 0.0 is lower than NLU threshold 0.3. 
+Current tracker state [None, {}, {'intent_dor_de_cabeca': 1.0, 'prev_action_listen': 1.0}, {'active_form_initial_form': 1.0, 'intent_dor_de_cabeca': 1.0, 'prev_initial_form': 1.0}, {'active_form_initial_form': 1.0, 'prev_action_listen': 1.0}]
+There is no memorised next action
+There is an active form 'initial_form'
+Predicted next action using policy_1_FallbackPolicy
+Predicted next action 'action_default_fallback' with prob 1.00.
+Action 'action_default_fallback' ended with events '['UserUtteranceReverted()']'
+Current tracker state [None, None, None, {}, {'intent_dor_de_cabeca': 1.0, 'prev_action_listen': 1.0}]
+There is a memorised next action '30'
+There is an active form 'initial_form'
+Predicted next action using policy_3_FormPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Rasa process starting
+Restoring parameters from models/current/nlu/intent_classifier_tensorflow_embedding.ckpt
+Available web server routes: 
+hello                                              OPTIONS, HEAD, GET             /
+list_trackers                                      OPTIONS, HEAD, GET             /conversations
+execute_action                                     OPTIONS, POST                  /conversations/[sender_id]/execute
+log_message                                        OPTIONS, POST                  /conversations/[sender_id]/messages
+predict                                            OPTIONS, POST                  /conversations/[sender_id]/predict
+respond                                            OPTIONS, HEAD, GET, POST       /conversations/[sender_id]/respond
+retrieve_story                                     OPTIONS, HEAD, GET             /conversations/[sender_id]/story
+retrieve_tracker                                   OPTIONS, HEAD, GET             /conversations/[sender_id]/tracker
+replace_events                                     OPTIONS, PUT                   /conversations/[sender_id]/tracker/events
+get_domain                                         OPTIONS, HEAD, GET             /domain
+evaluate_stories                                   OPTIONS, POST                  /evaluate
+continue_training                                  OPTIONS, POST                  /finetune
+load_model                                         OPTIONS, POST                  /model
+tracker_predict                                    OPTIONS, POST                  /predict
+static                                             OPTIONS, HEAD, GET             /static/[filename]
+status                                             OPTIONS, HEAD, GET             /status
+version                                            OPTIONS, HEAD, GET             /version
+custom_webhook_CmdlineInput.health                 OPTIONS, HEAD, GET             /webhooks/rest/
+custom_webhook_CmdlineInput.receive                OPTIONS, POST                  /webhooks/rest/webhook
+Rasa Core server is up and running on http://localhost:5005
+Creating a new tracker for id 'default'.
+Received user message 'dor de cabeça' with intent '{'name': 'dor_de_cabeca', 'confidence': 0.9674385190010071}' and entities '[]'
+Logged UserUtterance - tracker now has 2 events
+Current slot values: 
+	age: None
+	alergies: None
+	blood_pressure: None
+	body_temperature: None
+	continuous_medication: None
+	gender: None
+	glucose: None
+	height: None
+	migrain: None
+	other_symptoms: None
+	oxygen_level: None
+	pain_persistance: None
+	pain_scale: None
+	previous_diseases: None
+	requested_slot: None
+	weight: None
+Current tracker state [None, None, None, {}, {'intent_dor_de_cabeca': 1.0, 'prev_action_listen': 1.0}]
+There is a memorised next action '30'
+There is no active form
+Predicted next action using policy_2_MemoizationPolicy
+Predicted next action 'initial_form' with prob 1.00.
+Calling action endpoint to run action 'initial_form'.
+Action 'initial_form' ended with events '['Form(initial_form)', 'SlotSet(key: requested_slot, value: alergies)']'
+Bot utterance 'BotUttered(text: text Você possui alergia a alguma medicação? Se sim, cite a quais., data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [None, None, None, {}, {'intent_dor_de_cabeca': 1.0, 'prev_action_listen': 1.0}]
+There is a memorised next action '30'
+There is an active form 'initial_form'
+Predicted next action using policy_3_FormPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'default'
+Received user message 'EU tomo remédio' with intent '{'name': 'intoxicacao', 'confidence': 0.9212192296981812}' and entities '[]'
+Logged UserUtterance - tracker now has 8 events
+Current slot values: 
+	age: None
+	alergies: None
+	blood_pressure: None
+	body_temperature: None
+	continuous_medication: None
+	gender: None
+	glucose: None
+	height: None
+	migrain: None
+	other_symptoms: None
+	oxygen_level: None
+	pain_persistance: None
+	pain_scale: None
+	previous_diseases: None
+	requested_slot: alergies
+	weight: None
+Current tracker state [None, None, None, {}, {'intent_dor_de_cabeca': 1.0, 'prev_action_listen': 1.0}]
+There is a memorised next action '30'
+There is an active form 'initial_form'
+Predicted next action using policy_3_FormPolicy
+Predicted next action 'initial_form' with prob 1.00.
+Calling action endpoint to run action 'initial_form'.
+Failed to validate slot alergies with action initial_form
+Current tracker state [None, {}, {'intent_dor_de_cabeca': 1.0, 'prev_action_listen': 1.0}, {'active_form_initial_form': 1.0, 'intent_dor_de_cabeca': 1.0, 'prev_initial_form': 1.0}, {'active_form_initial_form': 1.0, 'intent_intoxicacao': 1.0, 'prev_action_listen': 1.0}]
+There is no memorised next action
+There is an active form 'initial_form'
+Predicted next action using policy_0_KerasPolicy
+Predicted next action 'utter_risco_vermelho' with prob 0.49.
+Action 'utter_risco_vermelho' ended with events '[]'
+Bot utterance 'BotUttered(text: risk red, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [{}, {'intent_dor_de_cabeca': 1.0, 'prev_action_listen': 1.0}, {'active_form_initial_form': 1.0, 'intent_dor_de_cabeca': 1.0, 'prev_initial_form': 1.0}, {'active_form_initial_form': 1.0, 'intent_intoxicacao': 1.0, 'prev_action_listen': 1.0}, {'prev_utter_risco_vermelho': 1.0, 'active_form_initial_form': 1.0, 'intent_intoxicacao': 1.0}]
+There is no memorised next action
+There is an active form 'initial_form'
+Predicted next action using policy_0_KerasPolicy
+Predicted next action 'action_restart' with prob 0.46.
+Action 'action_restart' ended with events '['Restarted()']'
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Rasa process starting
+Restoring parameters from models/current/nlu/intent_classifier_tensorflow_embedding.ckpt
+Available web server routes: 
+hello                                              GET, OPTIONS, HEAD             /
+list_trackers                                      GET, OPTIONS, HEAD             /conversations
+execute_action                                     POST, OPTIONS                  /conversations/[sender_id]/execute
+log_message                                        POST, OPTIONS                  /conversations/[sender_id]/messages
+predict                                            POST, OPTIONS                  /conversations/[sender_id]/predict
+respond                                            POST, GET, OPTIONS, HEAD       /conversations/[sender_id]/respond
+retrieve_story                                     GET, OPTIONS, HEAD             /conversations/[sender_id]/story
+retrieve_tracker                                   GET, OPTIONS, HEAD             /conversations/[sender_id]/tracker
+replace_events                                     OPTIONS, PUT                   /conversations/[sender_id]/tracker/events
+get_domain                                         GET, OPTIONS, HEAD             /domain
+evaluate_stories                                   POST, OPTIONS                  /evaluate
+continue_training                                  POST, OPTIONS                  /finetune
+load_model                                         POST, OPTIONS                  /model
+tracker_predict                                    POST, OPTIONS                  /predict
+static                                             GET, OPTIONS, HEAD             /static/[filename]
+status                                             GET, OPTIONS, HEAD             /status
+version                                            GET, OPTIONS, HEAD             /version
+custom_webhook_CmdlineInput.health                 GET, OPTIONS, HEAD             /webhooks/rest/
+custom_webhook_CmdlineInput.receive                POST, OPTIONS                  /webhooks/rest/webhook
+Rasa Core server is up and running on http://localhost:5005
+Creating a new tracker for id 'default'.
+Received user message 'dor de cabeça' with intent '{'name': 'dor_de_cabeca', 'confidence': 0.9691179990768433}' and entities '[]'
+Logged UserUtterance - tracker now has 2 events
+Current slot values: 
+	age: None
+	alergies: None
+	blood_pressure: None
+	body_temperature: None
+	continuous_medication: None
+	gender: None
+	glucose: None
+	height: None
+	migrain: None
+	other_symptoms: None
+	oxygen_level: None
+	pain_persistance: None
+	pain_scale: None
+	previous_diseases: None
+	requested_slot: None
+	weight: None
+Current tracker state [None, None, None, {}, {'prev_action_listen': 1.0, 'intent_dor_de_cabeca': 1.0}]
+There is a memorised next action '30'
+There is no active form
+Predicted next action using policy_2_MemoizationPolicy
+Predicted next action 'initial_form' with prob 1.00.
+Calling action endpoint to run action 'initial_form'.
+Action 'initial_form' ended with events '['Form(initial_form)', 'SlotSet(key: requested_slot, value: alergies)']'
+Bot utterance 'BotUttered(text: textr Você possui alergia a alguma medicação? Se sim, cite a quais., data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [None, None, None, {}, {'prev_action_listen': 1.0, 'intent_dor_de_cabeca': 1.0}]
+There is a memorised next action '30'
+There is an active form 'initial_form'
+Predicted next action using policy_3_FormPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'default'
+Received user message 'Você possui alergia a alguma medicação? Se sim, cite a quais.Eu tomo remédio' with intent '{'name': 'alergias', 'confidence': 0.830575168132782}' and entities '[]'
+Logged UserUtterance - tracker now has 8 events
+Current slot values: 
+	age: None
+	alergies: None
+	blood_pressure: None
+	body_temperature: None
+	continuous_medication: None
+	gender: None
+	glucose: None
+	height: None
+	migrain: None
+	other_symptoms: None
+	oxygen_level: None
+	pain_persistance: None
+	pain_scale: None
+	previous_diseases: None
+	requested_slot: alergies
+	weight: None
+Current tracker state [None, None, None, {}, {'prev_action_listen': 1.0, 'intent_dor_de_cabeca': 1.0}]
+There is a memorised next action '30'
+There is an active form 'initial_form'
+Predicted next action using policy_3_FormPolicy
+Predicted next action 'initial_form' with prob 1.00.
+Calling action endpoint to run action 'initial_form'.
+Failed to validate slot alergies with action initial_form
+Current tracker state [None, {}, {'prev_action_listen': 1.0, 'intent_dor_de_cabeca': 1.0}, {'active_form_initial_form': 1.0, 'intent_dor_de_cabeca': 1.0, 'prev_initial_form': 1.0}, {'active_form_initial_form': 1.0, 'prev_action_listen': 1.0, 'intent_alergias': 1.0}]
+There is no memorised next action
+There is an active form 'initial_form'
+Predicted next action using policy_1_FallbackPolicy
+Predicted next action 'action_default_fallback' with prob 1.00.
+Action 'action_default_fallback' ended with events '['UserUtteranceReverted()']'
+Current tracker state [None, None, None, {}, {'prev_action_listen': 1.0, 'intent_dor_de_cabeca': 1.0}]
+There is a memorised next action '30'
+There is an active form 'initial_form'
+Predicted next action using policy_3_FormPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Rasa process starting
+Restoring parameters from models/current/nlu/intent_classifier_tensorflow_embedding.ckpt
+Available web server routes: 
+hello                                              GET, OPTIONS, HEAD             /
+list_trackers                                      GET, OPTIONS, HEAD             /conversations
+execute_action                                     POST, OPTIONS                  /conversations/[sender_id]/execute
+log_message                                        POST, OPTIONS                  /conversations/[sender_id]/messages
+predict                                            POST, OPTIONS                  /conversations/[sender_id]/predict
+respond                                            GET, POST, OPTIONS, HEAD       /conversations/[sender_id]/respond
+retrieve_story                                     GET, OPTIONS, HEAD             /conversations/[sender_id]/story
+retrieve_tracker                                   GET, OPTIONS, HEAD             /conversations/[sender_id]/tracker
+replace_events                                     PUT, OPTIONS                   /conversations/[sender_id]/tracker/events
+get_domain                                         GET, OPTIONS, HEAD             /domain
+evaluate_stories                                   POST, OPTIONS                  /evaluate
+continue_training                                  POST, OPTIONS                  /finetune
+load_model                                         POST, OPTIONS                  /model
+tracker_predict                                    POST, OPTIONS                  /predict
+static                                             GET, OPTIONS, HEAD             /static/[filename]
+status                                             GET, OPTIONS, HEAD             /status
+version                                            GET, OPTIONS, HEAD             /version
+custom_webhook_CmdlineInput.health                 GET, OPTIONS, HEAD             /webhooks/rest/
+custom_webhook_CmdlineInput.receive                POST, OPTIONS                  /webhooks/rest/webhook
+Rasa Core server is up and running on http://localhost:5005
+Creating a new tracker for id 'default'.
+Received user message 'dor de cabeça' with intent '{'name': 'dor_de_cabeca', 'confidence': 0.9762759804725647}' and entities '[]'
+Logged UserUtterance - tracker now has 2 events
+Current slot values: 
+	age: None
+	alergies: None
+	blood_pressure: None
+	body_temperature: None
+	continuous_medication: None
+	gender: None
+	glucose: None
+	height: None
+	migrain: None
+	other_symptoms: None
+	oxygen_level: None
+	pain_persistance: None
+	pain_scale: None
+	previous_diseases: None
+	requested_slot: None
+	weight: None
+Current tracker state [None, None, None, {}, {'prev_action_listen': 1.0, 'intent_dor_de_cabeca': 1.0}]
+There is a memorised next action '30'
+There is no active form
+Predicted next action using policy_2_MemoizationPolicy
+Predicted next action 'initial_form' with prob 1.00.
+Calling action endpoint to run action 'initial_form'.
+Action 'initial_form' ended with events '['Form(initial_form)', 'SlotSet(key: requested_slot, value: alergies)']'
+Bot utterance 'BotUttered(text: textr Você possui alergia a alguma medicação? Se sim, cite a quais., data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [None, None, None, {}, {'prev_action_listen': 1.0, 'intent_dor_de_cabeca': 1.0}]
+There is a memorised next action '30'
+There is an active form 'initial_form'
+Predicted next action using policy_3_FormPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'default'
+Received user message 'Você possui alergia a alguma medicação? Se sim, cite a quais.Tenho alergia a remédio' with intent '{'name': 'alergias', 'confidence': 0.9284597635269165}' and entities '[]'
+Logged UserUtterance - tracker now has 8 events
+Current slot values: 
+	age: None
+	alergies: None
+	blood_pressure: None
+	body_temperature: None
+	continuous_medication: None
+	gender: None
+	glucose: None
+	height: None
+	migrain: None
+	other_symptoms: None
+	oxygen_level: None
+	pain_persistance: None
+	pain_scale: None
+	previous_diseases: None
+	requested_slot: alergies
+	weight: None
+Current tracker state [None, None, None, {}, {'prev_action_listen': 1.0, 'intent_dor_de_cabeca': 1.0}]
+There is a memorised next action '30'
+There is an active form 'initial_form'
+Predicted next action using policy_3_FormPolicy
+Predicted next action 'initial_form' with prob 1.00.
+Calling action endpoint to run action 'initial_form'.
+Failed to validate slot alergies with action initial_form
+Current tracker state [None, {}, {'prev_action_listen': 1.0, 'intent_dor_de_cabeca': 1.0}, {'active_form_initial_form': 1.0, 'intent_dor_de_cabeca': 1.0, 'prev_initial_form': 1.0}, {'prev_action_listen': 1.0, 'active_form_initial_form': 1.0, 'intent_alergias': 1.0}]
+There is no memorised next action
+There is an active form 'initial_form'
+Action 'action_listen' was predicted after a user message using policy_0_KerasPolicy. Predicting fallback action: action_default_fallback
+Predicted next action using policy_1_FallbackPolicy
+Predicted next action 'action_default_fallback' with prob 1.00.
+Action 'action_default_fallback' ended with events '['UserUtteranceReverted()']'
+Current tracker state [None, None, None, {}, {'prev_action_listen': 1.0, 'intent_dor_de_cabeca': 1.0}]
+There is a memorised next action '30'
+There is an active form 'initial_form'
+Predicted next action using policy_3_FormPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Rasa process starting
+Restoring parameters from models/current/nlu/intent_classifier_tensorflow_embedding.ckpt
+Available web server routes: 
+hello                                              HEAD, GET, OPTIONS             /
+list_trackers                                      HEAD, GET, OPTIONS             /conversations
+execute_action                                     OPTIONS, POST                  /conversations/[sender_id]/execute
+log_message                                        OPTIONS, POST                  /conversations/[sender_id]/messages
+predict                                            OPTIONS, POST                  /conversations/[sender_id]/predict
+respond                                            HEAD, OPTIONS, GET, POST       /conversations/[sender_id]/respond
+retrieve_story                                     HEAD, GET, OPTIONS             /conversations/[sender_id]/story
+retrieve_tracker                                   HEAD, GET, OPTIONS             /conversations/[sender_id]/tracker
+replace_events                                     PUT, OPTIONS                   /conversations/[sender_id]/tracker/events
+get_domain                                         HEAD, GET, OPTIONS             /domain
+evaluate_stories                                   OPTIONS, POST                  /evaluate
+continue_training                                  OPTIONS, POST                  /finetune
+load_model                                         OPTIONS, POST                  /model
+tracker_predict                                    OPTIONS, POST                  /predict
+static                                             HEAD, GET, OPTIONS             /static/[filename]
+status                                             HEAD, GET, OPTIONS             /status
+version                                            HEAD, GET, OPTIONS             /version
+custom_webhook_CmdlineInput.health                 HEAD, GET, OPTIONS             /webhooks/rest/
+custom_webhook_CmdlineInput.receive                OPTIONS, POST                  /webhooks/rest/webhook
+Rasa Core server is up and running on http://localhost:5005
+Creating a new tracker for id 'default'.
+Received user message 'dor de cabeça' with intent '{'name': 'dor_de_cabeca', 'confidence': 0.9319696426391602}' and entities '[]'
+Logged UserUtterance - tracker now has 2 events
+Current slot values: 
+	age: None
+	alergies: None
+	blood_pressure: None
+	body_temperature: None
+	continuous_medication: None
+	gender: None
+	glucose: None
+	height: None
+	migrain: None
+	other_symptoms: None
+	oxygen_level: None
+	pain_persistance: None
+	pain_scale: None
+	previous_diseases: None
+	requested_slot: None
+	weight: None
+Current tracker state [None, None, None, {}, {'intent_dor_de_cabeca': 1.0, 'prev_action_listen': 1.0}]
+There is a memorised next action '30'
+There is no active form
+Predicted next action using policy_2_MemoizationPolicy
+Predicted next action 'initial_form' with prob 1.00.
+Calling action endpoint to run action 'initial_form'.
+Action 'initial_form' ended with events '['Form(initial_form)', 'SlotSet(key: requested_slot, value: alergies)']'
+Bot utterance 'BotUttered(text: textr Você possui alergia a alguma medicação? Se sim, cite a quais., data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [None, None, None, {}, {'intent_dor_de_cabeca': 1.0, 'prev_action_listen': 1.0}]
+There is a memorised next action '30'
+There is an active form 'initial_form'
+Predicted next action using policy_3_FormPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'default'
+Received user message 'Você possui alergia a alguma medicação? Se sim, cite a quais. Tenho alergia a remedio' with intent '{'name': 'alergias', 'confidence': 0.9651549458503723}' and entities '[]'
+Logged UserUtterance - tracker now has 8 events
+Current slot values: 
+	age: None
+	alergies: None
+	blood_pressure: None
+	body_temperature: None
+	continuous_medication: None
+	gender: None
+	glucose: None
+	height: None
+	migrain: None
+	other_symptoms: None
+	oxygen_level: None
+	pain_persistance: None
+	pain_scale: None
+	previous_diseases: None
+	requested_slot: alergies
+	weight: None
+Current tracker state [None, None, None, {}, {'intent_dor_de_cabeca': 1.0, 'prev_action_listen': 1.0}]
+There is a memorised next action '30'
+There is an active form 'initial_form'
+Predicted next action using policy_3_FormPolicy
+Predicted next action 'initial_form' with prob 1.00.
+Calling action endpoint to run action 'initial_form'.
+Failed to validate slot alergies with action initial_form
+Current tracker state [None, {}, {'intent_dor_de_cabeca': 1.0, 'prev_action_listen': 1.0}, {'prev_initial_form': 1.0, 'active_form_initial_form': 1.0, 'intent_dor_de_cabeca': 1.0}, {'intent_alergias': 1.0, 'prev_action_listen': 1.0, 'active_form_initial_form': 1.0}]
+There is no memorised next action
+There is an active form 'initial_form'
+Predicted next action using policy_1_FallbackPolicy
+Predicted next action 'action_default_fallback' with prob 1.00.
+Action 'action_default_fallback' ended with events '['UserUtteranceReverted()']'
+Current tracker state [None, None, None, {}, {'intent_dor_de_cabeca': 1.0, 'prev_action_listen': 1.0}]
+There is a memorised next action '30'
+There is an active form 'initial_form'
+Predicted next action using policy_3_FormPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Rasa process starting
+Restoring parameters from models/current/nlu/intent_classifier_tensorflow_embedding.ckpt
+Available web server routes: 
+hello                                              HEAD, OPTIONS, GET             /
+list_trackers                                      HEAD, OPTIONS, GET             /conversations
+execute_action                                     OPTIONS, POST                  /conversations/[sender_id]/execute
+log_message                                        OPTIONS, POST                  /conversations/[sender_id]/messages
+predict                                            OPTIONS, POST                  /conversations/[sender_id]/predict
+respond                                            HEAD, OPTIONS, POST, GET       /conversations/[sender_id]/respond
+retrieve_story                                     HEAD, OPTIONS, GET             /conversations/[sender_id]/story
+retrieve_tracker                                   HEAD, OPTIONS, GET             /conversations/[sender_id]/tracker
+replace_events                                     OPTIONS, PUT                   /conversations/[sender_id]/tracker/events
+get_domain                                         HEAD, OPTIONS, GET             /domain
+evaluate_stories                                   OPTIONS, POST                  /evaluate
+continue_training                                  OPTIONS, POST                  /finetune
+load_model                                         OPTIONS, POST                  /model
+tracker_predict                                    OPTIONS, POST                  /predict
+static                                             HEAD, OPTIONS, GET             /static/[filename]
+status                                             HEAD, OPTIONS, GET             /status
+version                                            HEAD, OPTIONS, GET             /version
+custom_webhook_CmdlineInput.health                 HEAD, OPTIONS, GET             /webhooks/rest/
+custom_webhook_CmdlineInput.receive                OPTIONS, POST                  /webhooks/rest/webhook
+Rasa Core server is up and running on http://localhost:5005
+Creating a new tracker for id 'default'.
+Received user message 'dor de cabeça' with intent '{'name': 'dor_de_cabeca', 'confidence': 0.9634018540382385}' and entities '[]'
+Logged UserUtterance - tracker now has 2 events
+Current slot values: 
+	age: None
+	alergies: None
+	blood_pressure: None
+	body_temperature: None
+	continuous_medication: None
+	gender: None
+	glucose: None
+	height: None
+	migrain: None
+	other_symptoms: None
+	oxygen_level: None
+	pain_persistance: None
+	pain_scale: None
+	previous_diseases: None
+	requested_slot: None
+	weight: None
+Current tracker state [None, None, None, {}, {'intent_dor_de_cabeca': 1.0, 'prev_action_listen': 1.0}]
+There is a memorised next action '30'
+There is no active form
+Predicted next action using policy_2_MemoizationPolicy
+Predicted next action 'initial_form' with prob 1.00.
+Calling action endpoint to run action 'initial_form'.
+Action 'initial_form' ended with events '['Form(initial_form)', 'SlotSet(key: requested_slot, value: alergies)']'
+Bot utterance 'BotUttered(text: textr Você possui alergia a alguma medicação? Se sim, cite a quais., data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [None, None, None, {}, {'intent_dor_de_cabeca': 1.0, 'prev_action_listen': 1.0}]
+There is a memorised next action '30'
+There is an active form 'initial_form'
+Predicted next action using policy_3_FormPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'default'
+Received user message 'Você possui alergia a alguma medicação? Se sim, cite a quais. Não' with intent '{'name': 'alergias', 'confidence': 0.935647189617157}' and entities '[{'start': 62, 'end': 65, 'value': 'Não', 'entity': 'continuos_medication', 'confidence': 0.7790539584679824, 'extractor': 'ner_crf'}]'
+Logged UserUtterance - tracker now has 8 events
+Current slot values: 
+	age: None
+	alergies: None
+	blood_pressure: None
+	body_temperature: None
+	continuous_medication: None
+	gender: None
+	glucose: None
+	height: None
+	migrain: None
+	other_symptoms: None
+	oxygen_level: None
+	pain_persistance: None
+	pain_scale: None
+	previous_diseases: None
+	requested_slot: alergies
+	weight: None
+Current tracker state [None, None, None, {}, {'intent_dor_de_cabeca': 1.0, 'prev_action_listen': 1.0}]
+There is a memorised next action '30'
+There is an active form 'initial_form'
+Predicted next action using policy_3_FormPolicy
+Predicted next action 'initial_form' with prob 1.00.
+Calling action endpoint to run action 'initial_form'.
+Failed to validate slot alergies with action initial_form
+Feature 'entity_continuos_medication' (value: '1.0') could not be found in feature map. Make sure you added all intents and entities to the domain
+Current tracker state [None, {}, {'intent_dor_de_cabeca': 1.0, 'prev_action_listen': 1.0}, {'prev_initial_form': 1.0, 'intent_dor_de_cabeca': 1.0, 'active_form_initial_form': 1.0}, {'intent_alergias': 1.0, 'entity_continuos_medication': 1.0, 'prev_action_listen': 1.0, 'active_form_initial_form': 1.0}]
+There is no memorised next action
+There is an active form 'initial_form'
+Action 'action_listen' was predicted after a user message using policy_0_KerasPolicy. Predicting fallback action: action_default_fallback
+Predicted next action using policy_1_FallbackPolicy
+Predicted next action 'action_default_fallback' with prob 1.00.
+Action 'action_default_fallback' ended with events '['UserUtteranceReverted()']'
+Current tracker state [None, None, None, {}, {'intent_dor_de_cabeca': 1.0, 'prev_action_listen': 1.0}]
+There is a memorised next action '30'
+There is an active form 'initial_form'
+Predicted next action using policy_3_FormPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Rasa process starting
+Restoring parameters from models/current/nlu/intent_classifier_tensorflow_embedding.ckpt
+Available web server routes: 
+hello                                              HEAD, GET, OPTIONS             /
+list_trackers                                      HEAD, GET, OPTIONS             /conversations
+execute_action                                     POST, OPTIONS                  /conversations/[sender_id]/execute
+log_message                                        POST, OPTIONS                  /conversations/[sender_id]/messages
+predict                                            POST, OPTIONS                  /conversations/[sender_id]/predict
+respond                                            HEAD, GET, POST, OPTIONS       /conversations/[sender_id]/respond
+retrieve_story                                     HEAD, GET, OPTIONS             /conversations/[sender_id]/story
+retrieve_tracker                                   HEAD, GET, OPTIONS             /conversations/[sender_id]/tracker
+replace_events                                     PUT, OPTIONS                   /conversations/[sender_id]/tracker/events
+get_domain                                         HEAD, GET, OPTIONS             /domain
+evaluate_stories                                   POST, OPTIONS                  /evaluate
+continue_training                                  POST, OPTIONS                  /finetune
+load_model                                         POST, OPTIONS                  /model
+tracker_predict                                    POST, OPTIONS                  /predict
+static                                             HEAD, GET, OPTIONS             /static/[filename]
+status                                             HEAD, GET, OPTIONS             /status
+version                                            HEAD, GET, OPTIONS             /version
+custom_webhook_CmdlineInput.health                 HEAD, GET, OPTIONS             /webhooks/rest/
+custom_webhook_CmdlineInput.receive                POST, OPTIONS                  /webhooks/rest/webhook
+Rasa Core server is up and running on http://localhost:5005
+Rasa process starting
+Restoring parameters from models/current/nlu/intent_classifier_tensorflow_embedding.ckpt
+Available web server routes: 
+hello                                              HEAD, GET, OPTIONS             /
+list_trackers                                      HEAD, GET, OPTIONS             /conversations
+execute_action                                     POST, OPTIONS                  /conversations/[sender_id]/execute
+log_message                                        POST, OPTIONS                  /conversations/[sender_id]/messages
+predict                                            POST, OPTIONS                  /conversations/[sender_id]/predict
+respond                                            HEAD, GET, POST, OPTIONS       /conversations/[sender_id]/respond
+retrieve_story                                     HEAD, GET, OPTIONS             /conversations/[sender_id]/story
+retrieve_tracker                                   HEAD, GET, OPTIONS             /conversations/[sender_id]/tracker
+replace_events                                     OPTIONS, PUT                   /conversations/[sender_id]/tracker/events
+get_domain                                         HEAD, GET, OPTIONS             /domain
+evaluate_stories                                   POST, OPTIONS                  /evaluate
+continue_training                                  POST, OPTIONS                  /finetune
+load_model                                         POST, OPTIONS                  /model
+tracker_predict                                    POST, OPTIONS                  /predict
+static                                             HEAD, GET, OPTIONS             /static/[filename]
+status                                             HEAD, GET, OPTIONS             /status
+version                                            HEAD, GET, OPTIONS             /version
+custom_webhook_CmdlineInput.health                 HEAD, GET, OPTIONS             /webhooks/rest/
+custom_webhook_CmdlineInput.receive                POST, OPTIONS                  /webhooks/rest/webhook
+Rasa Core server is up and running on http://localhost:5005
+Creating a new tracker for id 'default'.
+Received user message 'dor de cabeça' with intent '{'name': 'dor_de_cabeca', 'confidence': 0.9743102788925171}' and entities '[]'
+Logged UserUtterance - tracker now has 2 events
+Current slot values: 
+	age: None
+	alergies: None
+	blood_pressure: None
+	body_temperature: None
+	continuous_medication: None
+	gender: None
+	glucose: None
+	height: None
+	migrain: None
+	other_symptoms: None
+	oxygen_level: None
+	pain_persistance: None
+	pain_scale: None
+	previous_diseases: None
+	requested_slot: None
+	weight: None
+Current tracker state [None, None, None, {}, {'prev_action_listen': 1.0, 'intent_dor_de_cabeca': 1.0}]
+There is a memorised next action '30'
+There is no active form
+Predicted next action using policy_2_MemoizationPolicy
+Predicted next action 'initial_form' with prob 1.00.
+Calling action endpoint to run action 'initial_form'.
+Action 'initial_form' ended with events '['Form(initial_form)', 'SlotSet(key: requested_slot, value: age)']'
+Bot utterance 'BotUttered(text: textr Qual é a sua idade?, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [None, None, None, {}, {'prev_action_listen': 1.0, 'intent_dor_de_cabeca': 1.0}]
+There is a memorised next action '30'
+There is an active form 'initial_form'
+Predicted next action using policy_3_FormPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'default'
+Received user message 'Qual é a sua idade? 23' with intent '{'name': 'idade', 'confidence': 0.942671537399292}' and entities '[]'
+Logged UserUtterance - tracker now has 8 events
+Current slot values: 
+	age: None
+	alergies: None
+	blood_pressure: None
+	body_temperature: None
+	continuous_medication: None
+	gender: None
+	glucose: None
+	height: None
+	migrain: None
+	other_symptoms: None
+	oxygen_level: None
+	pain_persistance: None
+	pain_scale: None
+	previous_diseases: None
+	requested_slot: age
+	weight: None
+Current tracker state [None, None, None, {}, {'prev_action_listen': 1.0, 'intent_dor_de_cabeca': 1.0}]
+There is a memorised next action '30'
+There is an active form 'initial_form'
+Predicted next action using policy_3_FormPolicy
+Predicted next action 'initial_form' with prob 1.00.
+Calling action endpoint to run action 'initial_form'.
+Failed to validate slot age with action initial_form
+Current tracker state [None, {}, {'prev_action_listen': 1.0, 'intent_dor_de_cabeca': 1.0}, {'active_form_initial_form': 1.0, 'prev_initial_form': 1.0, 'intent_dor_de_cabeca': 1.0}, {'prev_action_listen': 1.0, 'intent_idade': 1.0, 'active_form_initial_form': 1.0}]
+There is no memorised next action
+There is an active form 'initial_form'
+Action 'action_listen' was predicted after a user message using policy_0_KerasPolicy. Predicting fallback action: action_default_fallback
+Predicted next action using policy_1_FallbackPolicy
+Predicted next action 'action_default_fallback' with prob 1.00.
+Action 'action_default_fallback' ended with events '['UserUtteranceReverted()']'
+Current tracker state [None, None, None, {}, {'prev_action_listen': 1.0, 'intent_dor_de_cabeca': 1.0}]
+There is a memorised next action '30'
+There is an active form 'initial_form'
+Predicted next action using policy_3_FormPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Rasa process starting
+Restoring parameters from models/current/nlu/intent_classifier_tensorflow_embedding.ckpt
+Available web server routes: 
+hello                                              OPTIONS, HEAD, GET             /
+list_trackers                                      OPTIONS, HEAD, GET             /conversations
+execute_action                                     POST, OPTIONS                  /conversations/[sender_id]/execute
+log_message                                        POST, OPTIONS                  /conversations/[sender_id]/messages
+predict                                            POST, OPTIONS                  /conversations/[sender_id]/predict
+respond                                            POST, OPTIONS, HEAD, GET       /conversations/[sender_id]/respond
+retrieve_story                                     OPTIONS, HEAD, GET             /conversations/[sender_id]/story
+retrieve_tracker                                   OPTIONS, HEAD, GET             /conversations/[sender_id]/tracker
+replace_events                                     PUT, OPTIONS                   /conversations/[sender_id]/tracker/events
+get_domain                                         OPTIONS, HEAD, GET             /domain
+evaluate_stories                                   POST, OPTIONS                  /evaluate
+continue_training                                  POST, OPTIONS                  /finetune
+load_model                                         POST, OPTIONS                  /model
+tracker_predict                                    POST, OPTIONS                  /predict
+static                                             OPTIONS, HEAD, GET             /static/[filename]
+status                                             OPTIONS, HEAD, GET             /status
+version                                            OPTIONS, HEAD, GET             /version
+custom_webhook_CmdlineInput.health                 OPTIONS, HEAD, GET             /webhooks/rest/
+custom_webhook_CmdlineInput.receive                POST, OPTIONS                  /webhooks/rest/webhook
+Rasa Core server is up and running on http://localhost:5005
+Rasa process starting
+Restoring parameters from models/current/nlu/intent_classifier_tensorflow_embedding.ckpt
+Available web server routes: 
+hello                                              OPTIONS, HEAD, GET             /
+list_trackers                                      OPTIONS, HEAD, GET             /conversations
+execute_action                                     OPTIONS, POST                  /conversations/[sender_id]/execute
+log_message                                        OPTIONS, POST                  /conversations/[sender_id]/messages
+predict                                            OPTIONS, POST                  /conversations/[sender_id]/predict
+respond                                            OPTIONS, POST, HEAD, GET       /conversations/[sender_id]/respond
+retrieve_story                                     OPTIONS, HEAD, GET             /conversations/[sender_id]/story
+retrieve_tracker                                   OPTIONS, HEAD, GET             /conversations/[sender_id]/tracker
+replace_events                                     OPTIONS, PUT                   /conversations/[sender_id]/tracker/events
+get_domain                                         OPTIONS, HEAD, GET             /domain
+evaluate_stories                                   OPTIONS, POST                  /evaluate
+continue_training                                  OPTIONS, POST                  /finetune
+load_model                                         OPTIONS, POST                  /model
+tracker_predict                                    OPTIONS, POST                  /predict
+static                                             OPTIONS, HEAD, GET             /static/[filename]
+status                                             OPTIONS, HEAD, GET             /status
+version                                            OPTIONS, HEAD, GET             /version
+custom_webhook_CmdlineInput.health                 OPTIONS, HEAD, GET             /webhooks/rest/
+custom_webhook_CmdlineInput.receive                OPTIONS, POST                  /webhooks/rest/webhook
+Rasa Core server is up and running on http://localhost:5005
+Creating a new tracker for id 'default'.
+Received user message 'dor de cabeça' with intent '{'name': 'dor_de_cabeca', 'confidence': 0.9652978777885437}' and entities '[]'
+Logged UserUtterance - tracker now has 2 events
+Current slot values: 
+	age: None
+	alergies: None
+	blood_pressure: None
+	body_temperature: None
+	continuous_medication: None
+	gender: None
+	glucose: None
+	height: None
+	migrain: None
+	other_symptoms: None
+	oxygen_level: None
+	pain_persistance: None
+	pain_scale: None
+	previous_diseases: None
+	requested_slot: None
+	weight: None
+Current tracker state [None, None, None, {}, {'intent_dor_de_cabeca': 1.0, 'prev_action_listen': 1.0}]
+There is a memorised next action '30'
+There is no active form
+Predicted next action using policy_2_MemoizationPolicy
+Predicted next action 'initial_form' with prob 1.00.
+Calling action endpoint to run action 'initial_form'.
+Action 'initial_form' ended with events '['Form(initial_form)', 'SlotSet(key: requested_slot, value: age)']'
+Bot utterance 'BotUttered(text: textr Qual é a sua idade?, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [None, None, None, {}, {'intent_dor_de_cabeca': 1.0, 'prev_action_listen': 1.0}]
+There is a memorised next action '30'
+There is an active form 'initial_form'
+Predicted next action using policy_3_FormPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'default'
+Received user message 'Qual é a sua idade? 2' with intent '{'name': 'idade', 'confidence': 0.9710384011268616}' and entities '[]'
+Logged UserUtterance - tracker now has 8 events
+Current slot values: 
+	age: None
+	alergies: None
+	blood_pressure: None
+	body_temperature: None
+	continuous_medication: None
+	gender: None
+	glucose: None
+	height: None
+	migrain: None
+	other_symptoms: None
+	oxygen_level: None
+	pain_persistance: None
+	pain_scale: None
+	previous_diseases: None
+	requested_slot: age
+	weight: None
+Current tracker state [None, None, None, {}, {'intent_dor_de_cabeca': 1.0, 'prev_action_listen': 1.0}]
+There is a memorised next action '30'
+There is an active form 'initial_form'
+Predicted next action using policy_3_FormPolicy
+Predicted next action 'initial_form' with prob 1.00.
+Calling action endpoint to run action 'initial_form'.
+Failed to validate slot age with action initial_form
+Current tracker state [None, {}, {'intent_dor_de_cabeca': 1.0, 'prev_action_listen': 1.0}, {'active_form_initial_form': 1.0, 'intent_dor_de_cabeca': 1.0, 'prev_initial_form': 1.0}, {'active_form_initial_form': 1.0, 'prev_action_listen': 1.0, 'intent_idade': 1.0}]
+There is no memorised next action
+There is an active form 'initial_form'
+Action 'action_listen' was predicted after a user message using policy_0_KerasPolicy. Predicting fallback action: action_default_fallback
+Predicted next action using policy_1_FallbackPolicy
+Predicted next action 'action_default_fallback' with prob 1.00.
+Action 'action_default_fallback' ended with events '['UserUtteranceReverted()']'
+Current tracker state [None, None, None, {}, {'intent_dor_de_cabeca': 1.0, 'prev_action_listen': 1.0}]
+There is a memorised next action '30'
+There is an active form 'initial_form'
+Predicted next action using policy_3_FormPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'default'
+Received user message 'Qual é a sua idade? 2' with intent '{'name': 'idade', 'confidence': 0.9710384011268616}' and entities '[]'
+Logged UserUtterance - tracker now has 13 events
+Current slot values: 
+	age: None
+	alergies: None
+	blood_pressure: None
+	body_temperature: None
+	continuous_medication: None
+	gender: None
+	glucose: None
+	height: None
+	migrain: None
+	other_symptoms: None
+	oxygen_level: None
+	pain_persistance: None
+	pain_scale: None
+	previous_diseases: None
+	requested_slot: age
+	weight: None
+Current tracker state [None, None, None, {}, {'intent_dor_de_cabeca': 1.0, 'prev_action_listen': 1.0}]
+There is a memorised next action '30'
+There is an active form 'initial_form'
+Predicted next action using policy_3_FormPolicy
+Predicted next action 'initial_form' with prob 1.00.
+Calling action endpoint to run action 'initial_form'.
+Failed to validate slot age with action initial_form
+Current tracker state [None, {}, {'intent_dor_de_cabeca': 1.0, 'prev_action_listen': 1.0}, {'active_form_initial_form': 1.0, 'intent_dor_de_cabeca': 1.0, 'prev_initial_form': 1.0}, {'active_form_initial_form': 1.0, 'prev_action_listen': 1.0, 'intent_idade': 1.0}]
+There is no memorised next action
+There is an active form 'initial_form'
+Action 'action_listen' was predicted after a user message using policy_0_KerasPolicy. Predicting fallback action: action_default_fallback
+Predicted next action using policy_1_FallbackPolicy
+Predicted next action 'action_default_fallback' with prob 1.00.
+Action 'action_default_fallback' ended with events '['UserUtteranceReverted()']'
+Current tracker state [None, None, None, {}, {'intent_dor_de_cabeca': 1.0, 'prev_action_listen': 1.0}]
+There is a memorised next action '30'
+There is an active form 'initial_form'
+Predicted next action using policy_3_FormPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'default'
+Received user message 'Qual é a sua idade? 1' with intent '{'name': 'idade', 'confidence': 0.9710384011268616}' and entities '[]'
+Logged UserUtterance - tracker now has 18 events
+Current slot values: 
+	age: None
+	alergies: None
+	blood_pressure: None
+	body_temperature: None
+	continuous_medication: None
+	gender: None
+	glucose: None
+	height: None
+	migrain: None
+	other_symptoms: None
+	oxygen_level: None
+	pain_persistance: None
+	pain_scale: None
+	previous_diseases: None
+	requested_slot: age
+	weight: None
+Current tracker state [None, None, None, {}, {'intent_dor_de_cabeca': 1.0, 'prev_action_listen': 1.0}]
+There is a memorised next action '30'
+There is an active form 'initial_form'
+Predicted next action using policy_3_FormPolicy
+Predicted next action 'initial_form' with prob 1.00.
+Calling action endpoint to run action 'initial_form'.
+Failed to validate slot age with action initial_form
+Current tracker state [None, {}, {'intent_dor_de_cabeca': 1.0, 'prev_action_listen': 1.0}, {'active_form_initial_form': 1.0, 'intent_dor_de_cabeca': 1.0, 'prev_initial_form': 1.0}, {'active_form_initial_form': 1.0, 'prev_action_listen': 1.0, 'intent_idade': 1.0}]
+There is no memorised next action
+There is an active form 'initial_form'
+Action 'action_listen' was predicted after a user message using policy_0_KerasPolicy. Predicting fallback action: action_default_fallback
+Predicted next action using policy_1_FallbackPolicy
+Predicted next action 'action_default_fallback' with prob 1.00.
+Action 'action_default_fallback' ended with events '['UserUtteranceReverted()']'
+Current tracker state [None, None, None, {}, {'intent_dor_de_cabeca': 1.0, 'prev_action_listen': 1.0}]
+There is a memorised next action '30'
+There is an active form 'initial_form'
+Predicted next action using policy_3_FormPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Rasa process starting
+Restoring parameters from models/current/nlu/intent_classifier_tensorflow_embedding.ckpt
+Available web server routes: 
+hello                                              HEAD, OPTIONS, GET             /
+list_trackers                                      HEAD, OPTIONS, GET             /conversations
+execute_action                                     POST, OPTIONS                  /conversations/[sender_id]/execute
+log_message                                        POST, OPTIONS                  /conversations/[sender_id]/messages
+predict                                            POST, OPTIONS                  /conversations/[sender_id]/predict
+respond                                            POST, HEAD, OPTIONS, GET       /conversations/[sender_id]/respond
+retrieve_story                                     HEAD, OPTIONS, GET             /conversations/[sender_id]/story
+retrieve_tracker                                   HEAD, OPTIONS, GET             /conversations/[sender_id]/tracker
+replace_events                                     PUT, OPTIONS                   /conversations/[sender_id]/tracker/events
+get_domain                                         HEAD, OPTIONS, GET             /domain
+evaluate_stories                                   POST, OPTIONS                  /evaluate
+continue_training                                  POST, OPTIONS                  /finetune
+load_model                                         POST, OPTIONS                  /model
+tracker_predict                                    POST, OPTIONS                  /predict
+static                                             HEAD, OPTIONS, GET             /static/[filename]
+status                                             HEAD, OPTIONS, GET             /status
+version                                            HEAD, OPTIONS, GET             /version
+custom_webhook_CmdlineInput.health                 HEAD, OPTIONS, GET             /webhooks/rest/
+custom_webhook_CmdlineInput.receive                POST, OPTIONS                  /webhooks/rest/webhook
+Rasa Core server is up and running on http://localhost:5005
+Creating a new tracker for id 'default'.
+Received user message 'dor de cabeça' with intent '{'name': 'dor_de_cabeca', 'confidence': 0.9580183029174805}' and entities '[]'
+Logged UserUtterance - tracker now has 2 events
+Current slot values: 
+	age: None
+	alergies: None
+	blood_pressure: None
+	body_temperature: None
+	continuous_medication: None
+	gender: None
+	glucose: None
+	height: None
+	migrain: None
+	other_symptoms: None
+	oxygen_level: None
+	pain_persistance: None
+	pain_scale: None
+	previous_diseases: None
+	requested_slot: None
+	weight: None
+Current tracker state [None, None, None, {}, {'intent_dor_de_cabeca': 1.0, 'prev_action_listen': 1.0}]
+There is a memorised next action '30'
+There is no active form
+Predicted next action using policy_2_MemoizationPolicy
+Predicted next action 'initial_form' with prob 1.00.
+Calling action endpoint to run action 'initial_form'.
+Action 'initial_form' ended with events '['Form(initial_form)', 'SlotSet(key: requested_slot, value: age)']'
+Bot utterance 'BotUttered(text: textr Qual é a sua idade?, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [None, None, None, {}, {'intent_dor_de_cabeca': 1.0, 'prev_action_listen': 1.0}]
+There is a memorised next action '30'
+There is an active form 'initial_form'
+Predicted next action using policy_3_FormPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'default'
+Received user message 'Qual é a sua idade? 1' with intent '{'name': 'idade', 'confidence': 0.9565839767456055}' and entities '[{'start': 20, 'end': 21, 'value': '1', 'entity': 'age', 'confidence': 0.7494431111433119, 'extractor': 'ner_crf'}]'
+Logged UserUtterance - tracker now has 8 events
+Current slot values: 
+	age: None
+	alergies: None
+	blood_pressure: None
+	body_temperature: None
+	continuous_medication: None
+	gender: None
+	glucose: None
+	height: None
+	migrain: None
+	other_symptoms: None
+	oxygen_level: None
+	pain_persistance: None
+	pain_scale: None
+	previous_diseases: None
+	requested_slot: age
+	weight: None
+Current tracker state [None, None, None, {}, {'intent_dor_de_cabeca': 1.0, 'prev_action_listen': 1.0}]
+There is a memorised next action '30'
+There is an active form 'initial_form'
+Predicted next action using policy_3_FormPolicy
+Predicted next action 'initial_form' with prob 1.00.
+Calling action endpoint to run action 'initial_form'.
+Action 'initial_form' ended with events '['SlotSet(key: age, value: 1)', 'SlotSet(key: requested_slot, value: alergies)']'
+Bot utterance 'BotUttered(text: textr Você possui alergia a alguma medicação? Se sim, cite a quais., data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [None, None, None, {}, {'intent_dor_de_cabeca': 1.0, 'prev_action_listen': 1.0}]
+There is a memorised next action '30'
+There is an active form 'initial_form'
+Predicted next action using policy_3_FormPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Rasa process starting
+Restoring parameters from models/current/nlu/intent_classifier_tensorflow_embedding.ckpt
+Available web server routes: 
+hello                                              OPTIONS, HEAD, GET             /
+list_trackers                                      OPTIONS, HEAD, GET             /conversations
+execute_action                                     OPTIONS, POST                  /conversations/[sender_id]/execute
+log_message                                        OPTIONS, POST                  /conversations/[sender_id]/messages
+predict                                            OPTIONS, POST                  /conversations/[sender_id]/predict
+respond                                            OPTIONS, HEAD, POST, GET       /conversations/[sender_id]/respond
+retrieve_story                                     OPTIONS, HEAD, GET             /conversations/[sender_id]/story
+retrieve_tracker                                   OPTIONS, HEAD, GET             /conversations/[sender_id]/tracker
+replace_events                                     OPTIONS, PUT                   /conversations/[sender_id]/tracker/events
+get_domain                                         OPTIONS, HEAD, GET             /domain
+evaluate_stories                                   OPTIONS, POST                  /evaluate
+continue_training                                  OPTIONS, POST                  /finetune
+load_model                                         OPTIONS, POST                  /model
+tracker_predict                                    OPTIONS, POST                  /predict
+static                                             OPTIONS, HEAD, GET             /static/[filename]
+status                                             OPTIONS, HEAD, GET             /status
+version                                            OPTIONS, HEAD, GET             /version
+custom_webhook_CmdlineInput.health                 OPTIONS, HEAD, GET             /webhooks/rest/
+custom_webhook_CmdlineInput.receive                OPTIONS, POST                  /webhooks/rest/webhook
+Rasa Core server is up and running on http://localhost:5005
+Creating a new tracker for id 'default'.
+Received user message 'dor de cabeça' with intent '{'name': 'dor_de_cabeca', 'confidence': 0.9747588634490967}' and entities '[]'
+Logged UserUtterance - tracker now has 2 events
+Current slot values: 
+	age: None
+	alergies: None
+	blood_pressure: None
+	body_temperature: None
+	continuous_medication: None
+	gender: None
+	glucose: None
+	height: None
+	migrain: None
+	other_symptoms: None
+	oxygen_level: None
+	pain_persistance: None
+	pain_scale: None
+	previous_diseases: None
+	requested_slot: None
+	weight: None
+Current tracker state [None, None, None, {}, {'intent_dor_de_cabeca': 1.0, 'prev_action_listen': 1.0}]
+There is a memorised next action '30'
+There is no active form
+Predicted next action using policy_2_MemoizationPolicy
+Predicted next action 'initial_form' with prob 1.00.
+Calling action endpoint to run action 'initial_form'.
+Action 'initial_form' ended with events '['Form(initial_form)', 'SlotSet(key: requested_slot, value: age)']'
+Bot utterance 'BotUttered(text: textr Qual é a sua idade?, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [None, None, None, {}, {'intent_dor_de_cabeca': 1.0, 'prev_action_listen': 1.0}]
+There is a memorised next action '30'
+There is an active form 'initial_form'
+Predicted next action using policy_3_FormPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'default'
+Received user message 'Qual é a sua idade? 1' with intent '{'name': 'idade', 'confidence': 0.94708651304245}' and entities '[{'start': 20, 'end': 21, 'value': '1', 'entity': 'age', 'confidence': 0.7494431111433119, 'extractor': 'ner_crf'}]'
+Logged UserUtterance - tracker now has 8 events
+Current slot values: 
+	age: None
+	alergies: None
+	blood_pressure: None
+	body_temperature: None
+	continuous_medication: None
+	gender: None
+	glucose: None
+	height: None
+	migrain: None
+	other_symptoms: None
+	oxygen_level: None
+	pain_persistance: None
+	pain_scale: None
+	previous_diseases: None
+	requested_slot: age
+	weight: None
+Current tracker state [None, None, None, {}, {'intent_dor_de_cabeca': 1.0, 'prev_action_listen': 1.0}]
+There is a memorised next action '30'
+There is an active form 'initial_form'
+Predicted next action using policy_3_FormPolicy
+Predicted next action 'initial_form' with prob 1.00.
+Calling action endpoint to run action 'initial_form'.
+Action 'initial_form' ended with events '['SlotSet(key: age, value: 1)', 'SlotSet(key: requested_slot, value: alergies)']'
+Bot utterance 'BotUttered(text: textr Você possui alergia a alguma medicação? Se sim, cite a quais., data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [None, None, None, {}, {'intent_dor_de_cabeca': 1.0, 'prev_action_listen': 1.0}]
+There is a memorised next action '30'
+There is an active form 'initial_form'
+Predicted next action using policy_3_FormPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Rasa process starting
+Restoring parameters from models/current/nlu/intent_classifier_tensorflow_embedding.ckpt
+Available web server routes: 
+hello                                              HEAD, GET, OPTIONS             /
+list_trackers                                      HEAD, GET, OPTIONS             /conversations
+execute_action                                     OPTIONS, POST                  /conversations/[sender_id]/execute
+log_message                                        OPTIONS, POST                  /conversations/[sender_id]/messages
+predict                                            OPTIONS, POST                  /conversations/[sender_id]/predict
+respond                                            HEAD, GET, OPTIONS, POST       /conversations/[sender_id]/respond
+retrieve_story                                     HEAD, GET, OPTIONS             /conversations/[sender_id]/story
+retrieve_tracker                                   HEAD, GET, OPTIONS             /conversations/[sender_id]/tracker
+replace_events                                     OPTIONS, PUT                   /conversations/[sender_id]/tracker/events
+get_domain                                         HEAD, GET, OPTIONS             /domain
+evaluate_stories                                   OPTIONS, POST                  /evaluate
+continue_training                                  OPTIONS, POST                  /finetune
+load_model                                         OPTIONS, POST                  /model
+tracker_predict                                    OPTIONS, POST                  /predict
+static                                             HEAD, GET, OPTIONS             /static/[filename]
+status                                             HEAD, GET, OPTIONS             /status
+version                                            HEAD, GET, OPTIONS             /version
+custom_webhook_CmdlineInput.health                 HEAD, GET, OPTIONS             /webhooks/rest/
+custom_webhook_CmdlineInput.receive                OPTIONS, POST                  /webhooks/rest/webhook
+Rasa Core server is up and running on http://localhost:5005
+Creating a new tracker for id 'default'.
+Received user message 'dor de cabeça' with intent '{'name': 'dor_de_cabeca', 'confidence': 0.9627118110656738}' and entities '[]'
+Logged UserUtterance - tracker now has 2 events
+Current slot values: 
+	age: None
+	alergies: None
+	blood_pressure: None
+	body_temperature: None
+	continuous_medication: None
+	gender: None
+	glucose: None
+	height: None
+	migrain: None
+	other_symptoms: None
+	oxygen_level: None
+	pain_persistance: None
+	pain_scale: None
+	previous_diseases: None
+	requested_slot: None
+	weight: None
+Current tracker state [None, None, None, {}, {'intent_dor_de_cabeca': 1.0, 'prev_action_listen': 1.0}]
+There is a memorised next action '30'
+There is no active form
+Predicted next action using policy_2_MemoizationPolicy
+Predicted next action 'initial_form' with prob 1.00.
+Calling action endpoint to run action 'initial_form'.
+Action 'initial_form' ended with events '['Form(initial_form)', 'SlotSet(key: requested_slot, value: age)']'
+Bot utterance 'BotUttered(text: textr Qual é a sua idade?, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [None, None, None, {}, {'intent_dor_de_cabeca': 1.0, 'prev_action_listen': 1.0}]
+There is a memorised next action '30'
+There is an active form 'initial_form'
+Predicted next action using policy_3_FormPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'default'
+Received user message 'Qual é a sua idade? 2' with intent '{'name': 'idade', 'confidence': 0.9591488838195801}' and entities '[]'
+Logged UserUtterance - tracker now has 8 events
+Current slot values: 
+	age: None
+	alergies: None
+	blood_pressure: None
+	body_temperature: None
+	continuous_medication: None
+	gender: None
+	glucose: None
+	height: None
+	migrain: None
+	other_symptoms: None
+	oxygen_level: None
+	pain_persistance: None
+	pain_scale: None
+	previous_diseases: None
+	requested_slot: age
+	weight: None
+Current tracker state [None, None, None, {}, {'intent_dor_de_cabeca': 1.0, 'prev_action_listen': 1.0}]
+There is a memorised next action '30'
+There is an active form 'initial_form'
+Predicted next action using policy_3_FormPolicy
+Predicted next action 'initial_form' with prob 1.00.
+Calling action endpoint to run action 'initial_form'.
+Failed to validate slot age with action initial_form
+Current tracker state [None, {}, {'intent_dor_de_cabeca': 1.0, 'prev_action_listen': 1.0}, {'intent_dor_de_cabeca': 1.0, 'prev_initial_form': 1.0, 'active_form_initial_form': 1.0}, {'intent_idade': 1.0, 'active_form_initial_form': 1.0, 'prev_action_listen': 1.0}]
+There is no memorised next action
+There is an active form 'initial_form'
+Predicted next action using policy_1_FallbackPolicy
+Predicted next action 'action_default_fallback' with prob 1.00.
+Action 'action_default_fallback' ended with events '['UserUtteranceReverted()']'
+Current tracker state [None, None, None, {}, {'intent_dor_de_cabeca': 1.0, 'prev_action_listen': 1.0}]
+There is a memorised next action '30'
+There is an active form 'initial_form'
+Predicted next action using policy_3_FormPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Rasa process starting
+Restoring parameters from models/current/nlu/intent_classifier_tensorflow_embedding.ckpt
+Available web server routes: 
+hello                                              GET, HEAD, OPTIONS             /
+list_trackers                                      GET, HEAD, OPTIONS             /conversations
+execute_action                                     POST, OPTIONS                  /conversations/[sender_id]/execute
+log_message                                        POST, OPTIONS                  /conversations/[sender_id]/messages
+predict                                            POST, OPTIONS                  /conversations/[sender_id]/predict
+respond                                            POST, GET, HEAD, OPTIONS       /conversations/[sender_id]/respond
+retrieve_story                                     GET, HEAD, OPTIONS             /conversations/[sender_id]/story
+retrieve_tracker                                   GET, HEAD, OPTIONS             /conversations/[sender_id]/tracker
+replace_events                                     OPTIONS, PUT                   /conversations/[sender_id]/tracker/events
+get_domain                                         GET, HEAD, OPTIONS             /domain
+evaluate_stories                                   POST, OPTIONS                  /evaluate
+continue_training                                  POST, OPTIONS                  /finetune
+load_model                                         POST, OPTIONS                  /model
+tracker_predict                                    POST, OPTIONS                  /predict
+static                                             GET, HEAD, OPTIONS             /static/[filename]
+status                                             GET, HEAD, OPTIONS             /status
+version                                            GET, HEAD, OPTIONS             /version
+custom_webhook_CmdlineInput.health                 GET, HEAD, OPTIONS             /webhooks/rest/
+custom_webhook_CmdlineInput.receive                POST, OPTIONS                  /webhooks/rest/webhook
+Rasa Core server is up and running on http://localhost:5005
+Rasa process starting
+Restoring parameters from models/current/nlu/intent_classifier_tensorflow_embedding.ckpt
+Available web server routes: 
+hello                                              HEAD, OPTIONS, GET             /
+list_trackers                                      HEAD, OPTIONS, GET             /conversations
+execute_action                                     POST, OPTIONS                  /conversations/[sender_id]/execute
+log_message                                        POST, OPTIONS                  /conversations/[sender_id]/messages
+predict                                            POST, OPTIONS                  /conversations/[sender_id]/predict
+respond                                            HEAD, POST, OPTIONS, GET       /conversations/[sender_id]/respond
+retrieve_story                                     HEAD, OPTIONS, GET             /conversations/[sender_id]/story
+retrieve_tracker                                   HEAD, OPTIONS, GET             /conversations/[sender_id]/tracker
+replace_events                                     OPTIONS, PUT                   /conversations/[sender_id]/tracker/events
+get_domain                                         HEAD, OPTIONS, GET             /domain
+evaluate_stories                                   POST, OPTIONS                  /evaluate
+continue_training                                  POST, OPTIONS                  /finetune
+load_model                                         POST, OPTIONS                  /model
+tracker_predict                                    POST, OPTIONS                  /predict
+static                                             HEAD, OPTIONS, GET             /static/[filename]
+status                                             HEAD, OPTIONS, GET             /status
+version                                            HEAD, OPTIONS, GET             /version
+custom_webhook_CmdlineInput.health                 HEAD, OPTIONS, GET             /webhooks/rest/
+custom_webhook_CmdlineInput.receive                POST, OPTIONS                  /webhooks/rest/webhook
+Rasa Core server is up and running on http://localhost:5005
+Creating a new tracker for id 'default'.
+Received user message 'dor de cabeça' with intent '{'name': 'dor_de_cabeca', 'confidence': 0.964841365814209}' and entities '[]'
+Logged UserUtterance - tracker now has 2 events
+Current slot values: 
+	age: None
+	alergies: None
+	blood_pressure: None
+	body_temperature: None
+	continuous_medication: None
+	gender: None
+	glucose: None
+	height: None
+	migrain: None
+	other_symptoms: None
+	oxygen_level: None
+	pain_persistance: None
+	pain_scale: None
+	previous_diseases: None
+	requested_slot: None
+	weight: None
+Current tracker state [None, None, None, {}, {'prev_action_listen': 1.0, 'intent_dor_de_cabeca': 1.0}]
+There is a memorised next action '30'
+There is no active form
+Predicted next action using policy_2_MemoizationPolicy
+Predicted next action 'initial_form' with prob 1.00.
+Calling action endpoint to run action 'initial_form'.
+Action 'initial_form' ended with events '['Form(initial_form)', 'SlotSet(key: requested_slot, value: age)']'
+Bot utterance 'BotUttered(text: textr Qual é a sua idade?, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [None, None, None, {}, {'prev_action_listen': 1.0, 'intent_dor_de_cabeca': 1.0}]
+There is a memorised next action '30'
+There is an active form 'initial_form'
+Predicted next action using policy_3_FormPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'default'
+Received user message 'Qual é a sua idade? 2' with intent '{'name': 'idade', 'confidence': 0.9618468284606934}' and entities '[]'
+Logged UserUtterance - tracker now has 8 events
+Current slot values: 
+	age: None
+	alergies: None
+	blood_pressure: None
+	body_temperature: None
+	continuous_medication: None
+	gender: None
+	glucose: None
+	height: None
+	migrain: None
+	other_symptoms: None
+	oxygen_level: None
+	pain_persistance: None
+	pain_scale: None
+	previous_diseases: None
+	requested_slot: age
+	weight: None
+Current tracker state [None, None, None, {}, {'prev_action_listen': 1.0, 'intent_dor_de_cabeca': 1.0}]
+There is a memorised next action '30'
+There is an active form 'initial_form'
+Predicted next action using policy_3_FormPolicy
+Predicted next action 'initial_form' with prob 1.00.
+Calling action endpoint to run action 'initial_form'.
+Failed to validate slot age with action initial_form
+Current tracker state [None, {}, {'prev_action_listen': 1.0, 'intent_dor_de_cabeca': 1.0}, {'prev_initial_form': 1.0, 'intent_dor_de_cabeca': 1.0, 'active_form_initial_form': 1.0}, {'prev_action_listen': 1.0, 'intent_idade': 1.0, 'active_form_initial_form': 1.0}]
+There is no memorised next action
+There is an active form 'initial_form'
+Action 'action_listen' was predicted after a user message using policy_0_KerasPolicy. Predicting fallback action: action_default_fallback
+Predicted next action using policy_1_FallbackPolicy
+Predicted next action 'action_default_fallback' with prob 1.00.
+Action 'action_default_fallback' ended with events '['UserUtteranceReverted()']'
+Current tracker state [None, None, None, {}, {'prev_action_listen': 1.0, 'intent_dor_de_cabeca': 1.0}]
+There is a memorised next action '30'
+There is an active form 'initial_form'
+Predicted next action using policy_3_FormPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Rasa process starting
+Restoring parameters from models/current/nlu/intent_classifier_tensorflow_embedding.ckpt
+Available web server routes: 
+hello                                              OPTIONS, GET, HEAD             /
+list_trackers                                      OPTIONS, GET, HEAD             /conversations
+execute_action                                     OPTIONS, POST                  /conversations/[sender_id]/execute
+log_message                                        OPTIONS, POST                  /conversations/[sender_id]/messages
+predict                                            OPTIONS, POST                  /conversations/[sender_id]/predict
+respond                                            OPTIONS, HEAD, GET, POST       /conversations/[sender_id]/respond
+retrieve_story                                     OPTIONS, GET, HEAD             /conversations/[sender_id]/story
+retrieve_tracker                                   OPTIONS, GET, HEAD             /conversations/[sender_id]/tracker
+replace_events                                     OPTIONS, PUT                   /conversations/[sender_id]/tracker/events
+get_domain                                         OPTIONS, GET, HEAD             /domain
+evaluate_stories                                   OPTIONS, POST                  /evaluate
+continue_training                                  OPTIONS, POST                  /finetune
+load_model                                         OPTIONS, POST                  /model
+tracker_predict                                    OPTIONS, POST                  /predict
+static                                             OPTIONS, GET, HEAD             /static/[filename]
+status                                             OPTIONS, GET, HEAD             /status
+version                                            OPTIONS, GET, HEAD             /version
+custom_webhook_CmdlineInput.health                 OPTIONS, GET, HEAD             /webhooks/rest/
+custom_webhook_CmdlineInput.receive                OPTIONS, POST                  /webhooks/rest/webhook
+Rasa Core server is up and running on http://localhost:5005
+Creating a new tracker for id 'default'.
+Received user message 'dor de cabeça' with intent '{'name': 'dor_de_cabeca', 'confidence': 0.9474070072174072}' and entities '[]'
+Logged UserUtterance - tracker now has 2 events
+Current slot values: 
+	age: None
+	alergies: None
+	blood_pressure: None
+	body_temperature: None
+	continuous_medication: None
+	gender: None
+	glucose: None
+	height: None
+	migrain: None
+	other_symptoms: None
+	oxygen_level: None
+	pain_persistance: None
+	pain_scale: None
+	previous_diseases: None
+	requested_slot: None
+	weight: None
+Current tracker state [None, None, None, {}, {'intent_dor_de_cabeca': 1.0, 'prev_action_listen': 1.0}]
+There is a memorised next action '30'
+There is no active form
+Predicted next action using policy_2_MemoizationPolicy
+Predicted next action 'initial_form' with prob 1.00.
+Calling action endpoint to run action 'initial_form'.
+Action 'initial_form' ended with events '['Form(initial_form)', 'SlotSet(key: requested_slot, value: age)']'
+Bot utterance 'BotUttered(text: textr Qual é a sua idade?, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [None, None, None, {}, {'intent_dor_de_cabeca': 1.0, 'prev_action_listen': 1.0}]
+There is a memorised next action '30'
+There is an active form 'initial_form'
+Predicted next action using policy_3_FormPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'default'
+Received user message 'Qual é a sua idade? 2' with intent '{'name': 'idade', 'confidence': 0.9537162184715271}' and entities '[]'
+Logged UserUtterance - tracker now has 8 events
+Current slot values: 
+	age: None
+	alergies: None
+	blood_pressure: None
+	body_temperature: None
+	continuous_medication: None
+	gender: None
+	glucose: None
+	height: None
+	migrain: None
+	other_symptoms: None
+	oxygen_level: None
+	pain_persistance: None
+	pain_scale: None
+	previous_diseases: None
+	requested_slot: age
+	weight: None
+Current tracker state [None, None, None, {}, {'intent_dor_de_cabeca': 1.0, 'prev_action_listen': 1.0}]
+There is a memorised next action '30'
+There is an active form 'initial_form'
+Predicted next action using policy_3_FormPolicy
+Predicted next action 'initial_form' with prob 1.00.
+Calling action endpoint to run action 'initial_form'.
+Failed to validate slot age with action initial_form
+Current tracker state [None, {}, {'intent_dor_de_cabeca': 1.0, 'prev_action_listen': 1.0}, {'intent_dor_de_cabeca': 1.0, 'active_form_initial_form': 1.0, 'prev_initial_form': 1.0}, {'active_form_initial_form': 1.0, 'prev_action_listen': 1.0, 'intent_idade': 1.0}]
+There is no memorised next action
+There is an active form 'initial_form'
+Action 'action_listen' was predicted after a user message using policy_0_KerasPolicy. Predicting fallback action: action_default_fallback
+Predicted next action using policy_1_FallbackPolicy
+Predicted next action 'action_default_fallback' with prob 1.00.
+Action 'action_default_fallback' ended with events '['UserUtteranceReverted()']'
+Current tracker state [None, None, None, {}, {'intent_dor_de_cabeca': 1.0, 'prev_action_listen': 1.0}]
+There is a memorised next action '30'
+There is an active form 'initial_form'
+Predicted next action using policy_3_FormPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Rasa process starting
+Restoring parameters from models/current/nlu/intent_classifier_tensorflow_embedding.ckpt
+Available web server routes: 
+hello                                              GET, OPTIONS, HEAD             /
+list_trackers                                      GET, OPTIONS, HEAD             /conversations
+execute_action                                     POST, OPTIONS                  /conversations/[sender_id]/execute
+log_message                                        POST, OPTIONS                  /conversations/[sender_id]/messages
+predict                                            POST, OPTIONS                  /conversations/[sender_id]/predict
+respond                                            GET, POST, OPTIONS, HEAD       /conversations/[sender_id]/respond
+retrieve_story                                     GET, OPTIONS, HEAD             /conversations/[sender_id]/story
+retrieve_tracker                                   GET, OPTIONS, HEAD             /conversations/[sender_id]/tracker
+replace_events                                     PUT, OPTIONS                   /conversations/[sender_id]/tracker/events
+get_domain                                         GET, OPTIONS, HEAD             /domain
+evaluate_stories                                   POST, OPTIONS                  /evaluate
+continue_training                                  POST, OPTIONS                  /finetune
+load_model                                         POST, OPTIONS                  /model
+tracker_predict                                    POST, OPTIONS                  /predict
+static                                             GET, OPTIONS, HEAD             /static/[filename]
+status                                             GET, OPTIONS, HEAD             /status
+version                                            GET, OPTIONS, HEAD             /version
+custom_webhook_CmdlineInput.health                 GET, OPTIONS, HEAD             /webhooks/rest/
+custom_webhook_CmdlineInput.receive                POST, OPTIONS                  /webhooks/rest/webhook
+Rasa Core server is up and running on http://localhost:5005
+Rasa process starting
+Restoring parameters from models/current/nlu/intent_classifier_tensorflow_embedding.ckpt
+Available web server routes: 
+hello                                              HEAD, OPTIONS, GET             /
+list_trackers                                      HEAD, OPTIONS, GET             /conversations
+execute_action                                     OPTIONS, POST                  /conversations/[sender_id]/execute
+log_message                                        OPTIONS, POST                  /conversations/[sender_id]/messages
+predict                                            OPTIONS, POST                  /conversations/[sender_id]/predict
+respond                                            HEAD, OPTIONS, POST, GET       /conversations/[sender_id]/respond
+retrieve_story                                     HEAD, OPTIONS, GET             /conversations/[sender_id]/story
+retrieve_tracker                                   HEAD, OPTIONS, GET             /conversations/[sender_id]/tracker
+replace_events                                     OPTIONS, PUT                   /conversations/[sender_id]/tracker/events
+get_domain                                         HEAD, OPTIONS, GET             /domain
+evaluate_stories                                   OPTIONS, POST                  /evaluate
+continue_training                                  OPTIONS, POST                  /finetune
+load_model                                         OPTIONS, POST                  /model
+tracker_predict                                    OPTIONS, POST                  /predict
+static                                             HEAD, OPTIONS, GET             /static/[filename]
+status                                             HEAD, OPTIONS, GET             /status
+version                                            HEAD, OPTIONS, GET             /version
+custom_webhook_CmdlineInput.health                 HEAD, OPTIONS, GET             /webhooks/rest/
+custom_webhook_CmdlineInput.receive                OPTIONS, POST                  /webhooks/rest/webhook
+Rasa Core server is up and running on http://localhost:5005
+Rasa process starting
+Restoring parameters from models/current/nlu/intent_classifier_tensorflow_embedding.ckpt
+Available web server routes: 
+hello                                              OPTIONS, GET, HEAD             /
+list_trackers                                      OPTIONS, GET, HEAD             /conversations
+execute_action                                     OPTIONS, POST                  /conversations/[sender_id]/execute
+log_message                                        OPTIONS, POST                  /conversations/[sender_id]/messages
+predict                                            OPTIONS, POST                  /conversations/[sender_id]/predict
+respond                                            OPTIONS, GET, POST, HEAD       /conversations/[sender_id]/respond
+retrieve_story                                     OPTIONS, GET, HEAD             /conversations/[sender_id]/story
+retrieve_tracker                                   OPTIONS, GET, HEAD             /conversations/[sender_id]/tracker
+replace_events                                     OPTIONS, PUT                   /conversations/[sender_id]/tracker/events
+get_domain                                         OPTIONS, GET, HEAD             /domain
+evaluate_stories                                   OPTIONS, POST                  /evaluate
+continue_training                                  OPTIONS, POST                  /finetune
+load_model                                         OPTIONS, POST                  /model
+tracker_predict                                    OPTIONS, POST                  /predict
+static                                             OPTIONS, GET, HEAD             /static/[filename]
+status                                             OPTIONS, GET, HEAD             /status
+version                                            OPTIONS, GET, HEAD             /version
+custom_webhook_CmdlineInput.health                 OPTIONS, GET, HEAD             /webhooks/rest/
+custom_webhook_CmdlineInput.receive                OPTIONS, POST                  /webhooks/rest/webhook
+Rasa Core server is up and running on http://localhost:5005
+Rasa process starting
+Restoring parameters from models/current/nlu/intent_classifier_tensorflow_embedding.ckpt
+Available web server routes: 
+hello                                              HEAD, OPTIONS, GET             /
+list_trackers                                      HEAD, OPTIONS, GET             /conversations
+execute_action                                     OPTIONS, POST                  /conversations/[sender_id]/execute
+log_message                                        OPTIONS, POST                  /conversations/[sender_id]/messages
+predict                                            OPTIONS, POST                  /conversations/[sender_id]/predict
+respond                                            HEAD, OPTIONS, GET, POST       /conversations/[sender_id]/respond
+retrieve_story                                     HEAD, OPTIONS, GET             /conversations/[sender_id]/story
+retrieve_tracker                                   HEAD, OPTIONS, GET             /conversations/[sender_id]/tracker
+replace_events                                     PUT, OPTIONS                   /conversations/[sender_id]/tracker/events
+get_domain                                         HEAD, OPTIONS, GET             /domain
+evaluate_stories                                   OPTIONS, POST                  /evaluate
+continue_training                                  OPTIONS, POST                  /finetune
+load_model                                         OPTIONS, POST                  /model
+tracker_predict                                    OPTIONS, POST                  /predict
+static                                             HEAD, OPTIONS, GET             /static/[filename]
+status                                             HEAD, OPTIONS, GET             /status
+version                                            HEAD, OPTIONS, GET             /version
+custom_webhook_CmdlineInput.health                 HEAD, OPTIONS, GET             /webhooks/rest/
+custom_webhook_CmdlineInput.receive                OPTIONS, POST                  /webhooks/rest/webhook
+Rasa Core server is up and running on http://localhost:5005
+Creating a new tracker for id 'default'.
+Received user message 'dor de cabeça' with intent '{'name': 'dor_de_cabeca', 'confidence': 0.9508396983146667}' and entities '[]'
+Logged UserUtterance - tracker now has 2 events
+Current slot values: 
+	age: None
+	alergies: None
+	blood_pressure: None
+	body_temperature: None
+	continuous_medication: None
+	gender: None
+	glucose: None
+	height: None
+	migrain: None
+	other_symptoms: None
+	oxygen_level: None
+	pain_persistance: None
+	pain_scale: None
+	previous_diseases: None
+	requested_slot: None
+	weight: None
+Current tracker state [None, None, None, {}, {'prev_action_listen': 1.0, 'intent_dor_de_cabeca': 1.0}]
+There is a memorised next action '30'
+There is no active form
+Predicted next action using policy_2_MemoizationPolicy
+Predicted next action 'initial_form' with prob 1.00.
+Calling action endpoint to run action 'initial_form'.
+Action 'initial_form' ended with events '['Form(initial_form)', 'SlotSet(key: requested_slot, value: age)']'
+Bot utterance 'BotUttered(text: textr Qual é a sua idade?, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [None, None, None, {}, {'prev_action_listen': 1.0, 'intent_dor_de_cabeca': 1.0}]
+There is a memorised next action '30'
+There is an active form 'initial_form'
+Predicted next action using policy_3_FormPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'default'
+Received user message 'Qual é a sua idade? 22' with intent '{'name': 'idade', 'confidence': 0.9677616357803345}' and entities '[]'
+Logged UserUtterance - tracker now has 8 events
+Current slot values: 
+	age: None
+	alergies: None
+	blood_pressure: None
+	body_temperature: None
+	continuous_medication: None
+	gender: None
+	glucose: None
+	height: None
+	migrain: None
+	other_symptoms: None
+	oxygen_level: None
+	pain_persistance: None
+	pain_scale: None
+	previous_diseases: None
+	requested_slot: age
+	weight: None
+Current tracker state [None, None, None, {}, {'prev_action_listen': 1.0, 'intent_dor_de_cabeca': 1.0}]
+There is a memorised next action '30'
+There is an active form 'initial_form'
+Predicted next action using policy_3_FormPolicy
+Predicted next action 'initial_form' with prob 1.00.
+Calling action endpoint to run action 'initial_form'.
+Failed to validate slot age with action initial_form
+Current tracker state [None, {}, {'prev_action_listen': 1.0, 'intent_dor_de_cabeca': 1.0}, {'active_form_initial_form': 1.0, 'prev_initial_form': 1.0, 'intent_dor_de_cabeca': 1.0}, {'prev_action_listen': 1.0, 'active_form_initial_form': 1.0, 'intent_idade': 1.0}]
+There is no memorised next action
+There is an active form 'initial_form'
+Predicted next action using policy_1_FallbackPolicy
+Predicted next action 'action_default_fallback' with prob 1.00.
+Action 'action_default_fallback' ended with events '['UserUtteranceReverted()']'
+Current tracker state [None, None, None, {}, {'prev_action_listen': 1.0, 'intent_dor_de_cabeca': 1.0}]
+There is a memorised next action '30'
+There is an active form 'initial_form'
+Predicted next action using policy_3_FormPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Rasa process starting
+Added 'nlp_spacy' to component cache. Key 'nlp_spacy-pt'.
+Available web server routes: 
+hello                                              HEAD, OPTIONS, GET             /
+list_trackers                                      HEAD, OPTIONS, GET             /conversations
+execute_action                                     POST, OPTIONS                  /conversations/[sender_id]/execute
+log_message                                        POST, OPTIONS                  /conversations/[sender_id]/messages
+predict                                            POST, OPTIONS                  /conversations/[sender_id]/predict
+respond                                            POST, HEAD, OPTIONS, GET       /conversations/[sender_id]/respond
+retrieve_story                                     HEAD, OPTIONS, GET             /conversations/[sender_id]/story
+retrieve_tracker                                   HEAD, OPTIONS, GET             /conversations/[sender_id]/tracker
+replace_events                                     OPTIONS, PUT                   /conversations/[sender_id]/tracker/events
+get_domain                                         HEAD, OPTIONS, GET             /domain
+evaluate_stories                                   POST, OPTIONS                  /evaluate
+continue_training                                  POST, OPTIONS                  /finetune
+load_model                                         POST, OPTIONS                  /model
+tracker_predict                                    POST, OPTIONS                  /predict
+static                                             HEAD, OPTIONS, GET             /static/[filename]
+status                                             HEAD, OPTIONS, GET             /status
+version                                            HEAD, OPTIONS, GET             /version
+custom_webhook_CmdlineInput.health                 HEAD, OPTIONS, GET             /webhooks/rest/
+custom_webhook_CmdlineInput.receive                POST, OPTIONS                  /webhooks/rest/webhook
+Rasa Core server is up and running on http://localhost:5005
+Creating a new tracker for id 'default'.
+Received user message 'dor de cabeça' with intent '{'name': 'dor_de_cabeca', 'confidence': 0.380486200424242}' and entities '[]'
+Logged UserUtterance - tracker now has 2 events
+Current slot values: 
+	age: None
+	alergies: None
+	blood_pressure: None
+	body_temperature: None
+	continuous_medication: None
+	gender: None
+	glucose: None
+	height: None
+	migrain: None
+	other_symptoms: None
+	oxygen_level: None
+	pain_persistance: None
+	pain_scale: None
+	previous_diseases: None
+	requested_slot: None
+	weight: None
+Current tracker state [None, None, None, {}, {'intent_dor_de_cabeca': 1.0, 'prev_action_listen': 1.0}]
+There is a memorised next action '30'
+There is no active form
+Predicted next action using policy_2_MemoizationPolicy
+Predicted next action 'initial_form' with prob 1.00.
+Calling action endpoint to run action 'initial_form'.
+Action 'initial_form' ended with events '['Form(initial_form)', 'SlotSet(key: requested_slot, value: age)']'
+Bot utterance 'BotUttered(text: textr Qual é a sua idade?, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [None, None, None, {}, {'intent_dor_de_cabeca': 1.0, 'prev_action_listen': 1.0}]
+There is a memorised next action '30'
+There is an active form 'initial_form'
+Predicted next action using policy_3_FormPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'default'
+Received user message 'Qual é a sua idade? 2' with intent '{'name': 'idade', 'confidence': 0.601763508503338}' and entities '[{'start': 20, 'end': 21, 'value': '2', 'entity': 'age', 'confidence': 0.95287867547769, 'extractor': 'ner_crf'}]'
+Logged UserUtterance - tracker now has 8 events
+Current slot values: 
+	age: None
+	alergies: None
+	blood_pressure: None
+	body_temperature: None
+	continuous_medication: None
+	gender: None
+	glucose: None
+	height: None
+	migrain: None
+	other_symptoms: None
+	oxygen_level: None
+	pain_persistance: None
+	pain_scale: None
+	previous_diseases: None
+	requested_slot: age
+	weight: None
+Current tracker state [None, None, None, {}, {'intent_dor_de_cabeca': 1.0, 'prev_action_listen': 1.0}]
+There is a memorised next action '30'
+There is an active form 'initial_form'
+Predicted next action using policy_3_FormPolicy
+Predicted next action 'initial_form' with prob 1.00.
+Calling action endpoint to run action 'initial_form'.
+Action 'initial_form' ended with events '['SlotSet(key: age, value: 2)', 'SlotSet(key: requested_slot, value: alergies)']'
+Bot utterance 'BotUttered(text: textr Você possui alergia a alguma medicação? Se sim, cite a quais., data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [None, None, None, {}, {'intent_dor_de_cabeca': 1.0, 'prev_action_listen': 1.0}]
+There is a memorised next action '30'
+There is an active form 'initial_form'
+Predicted next action using policy_3_FormPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'default'
+Received user message 'Você possui alergia a alguma medicação? Se sim, cite a quais. Uma' with intent '{'name': 'alergias', 'confidence': 0.2921494674391718}' and entities '[]'
+Logged UserUtterance - tracker now has 14 events
+Current slot values: 
+	age: 2
+	alergies: None
+	blood_pressure: None
+	body_temperature: None
+	continuous_medication: None
+	gender: None
+	glucose: None
+	height: None
+	migrain: None
+	other_symptoms: None
+	oxygen_level: None
+	pain_persistance: None
+	pain_scale: None
+	previous_diseases: None
+	requested_slot: alergies
+	weight: None
+NLU confidence 0.2921494674391718 is lower than NLU threshold 0.3. 
+Current tracker state [None, None, None, {}, {'intent_dor_de_cabeca': 1.0, 'prev_action_listen': 1.0}]
+There is a memorised next action '30'
+There is an active form 'initial_form'
+Predicted next action using policy_3_FormPolicy
+Predicted next action 'initial_form' with prob 1.00.
+Calling action endpoint to run action 'initial_form'.
+Failed to validate slot alergies with action initial_form
+NLU confidence 0.2921494674391718 is lower than NLU threshold 0.3. 
+Current tracker state [None, {}, {'intent_dor_de_cabeca': 1.0, 'prev_action_listen': 1.0}, {'intent_dor_de_cabeca': 1.0, 'active_form_initial_form': 1.0, 'prev_initial_form': 1.0}, {'active_form_initial_form': 1.0, 'prev_action_listen': 1.0, 'intent_alergias': 1.0}]
+There is no memorised next action
+There is an active form 'initial_form'
+Predicted next action using policy_1_FallbackPolicy
+Predicted next action 'action_default_fallback' with prob 1.00.
+Action 'action_default_fallback' ended with events '['UserUtteranceReverted()']'
+Current tracker state [None, None, None, {}, {'intent_dor_de_cabeca': 1.0, 'prev_action_listen': 1.0}]
+There is a memorised next action '30'
+There is an active form 'initial_form'
+Predicted next action using policy_3_FormPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Rasa process starting
+Added 'nlp_spacy' to component cache. Key 'nlp_spacy-pt'.
+Available web server routes: 
+hello                                              HEAD, GET, OPTIONS             /
+list_trackers                                      HEAD, GET, OPTIONS             /conversations
+execute_action                                     POST, OPTIONS                  /conversations/[sender_id]/execute
+log_message                                        POST, OPTIONS                  /conversations/[sender_id]/messages
+predict                                            POST, OPTIONS                  /conversations/[sender_id]/predict
+respond                                            POST, HEAD, GET, OPTIONS       /conversations/[sender_id]/respond
+retrieve_story                                     HEAD, GET, OPTIONS             /conversations/[sender_id]/story
+retrieve_tracker                                   HEAD, GET, OPTIONS             /conversations/[sender_id]/tracker
+replace_events                                     PUT, OPTIONS                   /conversations/[sender_id]/tracker/events
+get_domain                                         HEAD, GET, OPTIONS             /domain
+evaluate_stories                                   POST, OPTIONS                  /evaluate
+continue_training                                  POST, OPTIONS                  /finetune
+load_model                                         POST, OPTIONS                  /model
+tracker_predict                                    POST, OPTIONS                  /predict
+static                                             HEAD, GET, OPTIONS             /static/[filename]
+status                                             HEAD, GET, OPTIONS             /status
+version                                            HEAD, GET, OPTIONS             /version
+custom_webhook_CmdlineInput.health                 HEAD, GET, OPTIONS             /webhooks/rest/
+custom_webhook_CmdlineInput.receive                POST, OPTIONS                  /webhooks/rest/webhook
+Rasa Core server is up and running on http://localhost:5005
+Creating a new tracker for id 'default'.
+Received user message 'dor de cabeça' with intent '{'name': 'dor_de_cabeca', 'confidence': 0.380486200424242}' and entities '[]'
+Logged UserUtterance - tracker now has 2 events
+Current slot values: 
+	age: None
+	alergies: None
+	blood_pressure: None
+	body_temperature: None
+	continuous_medication: None
+	gender: None
+	glucose: None
+	height: None
+	migrain: None
+	other_symptoms: None
+	oxygen_level: None
+	pain_persistance: None
+	pain_scale: None
+	previous_diseases: None
+	requested_slot: None
+	weight: None
+Current tracker state [None, None, None, {}, {'intent_dor_de_cabeca': 1.0, 'prev_action_listen': 1.0}]
+There is a memorised next action '30'
+There is no active form
+Predicted next action using policy_2_MemoizationPolicy
+Predicted next action 'initial_form' with prob 1.00.
+Calling action endpoint to run action 'initial_form'.
+Action 'initial_form' ended with events '['Form(initial_form)', 'SlotSet(key: requested_slot, value: age)']'
+Bot utterance 'BotUttered(text: textr Qual é a sua idade?, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [None, None, None, {}, {'intent_dor_de_cabeca': 1.0, 'prev_action_listen': 1.0}]
+There is a memorised next action '30'
+There is an active form 'initial_form'
+Predicted next action using policy_3_FormPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'default'
+Received user message 'Qual é a sua idade? 23' with intent '{'name': 'idade', 'confidence': 0.647538174537613}' and entities '[{'start': 20, 'end': 22, 'value': '23', 'entity': 'age', 'confidence': 0.95287867547769, 'extractor': 'ner_crf'}]'
+Logged UserUtterance - tracker now has 8 events
+Current slot values: 
+	age: None
+	alergies: None
+	blood_pressure: None
+	body_temperature: None
+	continuous_medication: None
+	gender: None
+	glucose: None
+	height: None
+	migrain: None
+	other_symptoms: None
+	oxygen_level: None
+	pain_persistance: None
+	pain_scale: None
+	previous_diseases: None
+	requested_slot: age
+	weight: None
+Current tracker state [None, None, None, {}, {'intent_dor_de_cabeca': 1.0, 'prev_action_listen': 1.0}]
+There is a memorised next action '30'
+There is an active form 'initial_form'
+Predicted next action using policy_3_FormPolicy
+Predicted next action 'initial_form' with prob 1.00.
+Calling action endpoint to run action 'initial_form'.
+Action 'initial_form' ended with events '['SlotSet(key: age, value: 23)', 'SlotSet(key: requested_slot, value: alergies)']'
+Bot utterance 'BotUttered(text: textr Você possui alergia a alguma medicação? Se sim, cite a quais., data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [None, None, None, {}, {'intent_dor_de_cabeca': 1.0, 'prev_action_listen': 1.0}]
+There is a memorised next action '30'
+There is an active form 'initial_form'
+Predicted next action using policy_3_FormPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Rasa process starting
+Added 'nlp_spacy' to component cache. Key 'nlp_spacy-pt'.
+Available web server routes: 
+hello                                              OPTIONS, HEAD, GET             /
+list_trackers                                      OPTIONS, HEAD, GET             /conversations
+execute_action                                     OPTIONS, POST                  /conversations/[sender_id]/execute
+log_message                                        OPTIONS, POST                  /conversations/[sender_id]/messages
+predict                                            OPTIONS, POST                  /conversations/[sender_id]/predict
+respond                                            HEAD, OPTIONS, POST, GET       /conversations/[sender_id]/respond
+retrieve_story                                     OPTIONS, HEAD, GET             /conversations/[sender_id]/story
+retrieve_tracker                                   OPTIONS, HEAD, GET             /conversations/[sender_id]/tracker
+replace_events                                     PUT, OPTIONS                   /conversations/[sender_id]/tracker/events
+get_domain                                         OPTIONS, HEAD, GET             /domain
+evaluate_stories                                   OPTIONS, POST                  /evaluate
+continue_training                                  OPTIONS, POST                  /finetune
+load_model                                         OPTIONS, POST                  /model
+tracker_predict                                    OPTIONS, POST                  /predict
+static                                             OPTIONS, HEAD, GET             /static/[filename]
+status                                             OPTIONS, HEAD, GET             /status
+version                                            OPTIONS, HEAD, GET             /version
+custom_webhook_CmdlineInput.health                 OPTIONS, HEAD, GET             /webhooks/rest/
+custom_webhook_CmdlineInput.receive                OPTIONS, POST                  /webhooks/rest/webhook
+Rasa Core server is up and running on http://localhost:5005
+Creating a new tracker for id 'default'.
+Received user message 'dor de cabeça' with intent '{'name': 'dor_de_cabeca', 'confidence': 0.363312071902216}' and entities '[]'
+Logged UserUtterance - tracker now has 2 events
+Current slot values: 
+	age: None
+	alergies: None
+	blood_pressure: None
+	body_temperature: None
+	continuous_medication: None
+	gender: None
+	glucose: None
+	height: None
+	migrain: None
+	other_symptoms: None
+	oxygen_level: None
+	pain_persistance: None
+	pain_scale: None
+	previous_diseases: None
+	requested_slot: None
+	weight: None
+Current tracker state [None, None, None, {}, {'prev_action_listen': 1.0, 'intent_dor_de_cabeca': 1.0}]
+There is a memorised next action '30'
+There is no active form
+Predicted next action using policy_2_MemoizationPolicy
+Predicted next action 'initial_form' with prob 1.00.
+Calling action endpoint to run action 'initial_form'.
+Action 'initial_form' ended with events '['Form(initial_form)', 'SlotSet(key: requested_slot, value: age)']'
+Bot utterance 'BotUttered(text: textr Qual é a sua idade?, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [None, None, None, {}, {'prev_action_listen': 1.0, 'intent_dor_de_cabeca': 1.0}]
+There is a memorised next action '30'
+There is an active form 'initial_form'
+Predicted next action using policy_3_FormPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'default'
+Received user message 'Qual é a sua idade? 19' with intent '{'name': 'idade', 'confidence': 0.604136643057417}' and entities '[{'start': 20, 'end': 22, 'value': '19', 'entity': 'age', 'confidence': 0.9362715415486547, 'extractor': 'ner_crf'}]'
+Logged UserUtterance - tracker now has 8 events
+Current slot values: 
+	age: None
+	alergies: None
+	blood_pressure: None
+	body_temperature: None
+	continuous_medication: None
+	gender: None
+	glucose: None
+	height: None
+	migrain: None
+	other_symptoms: None
+	oxygen_level: None
+	pain_persistance: None
+	pain_scale: None
+	previous_diseases: None
+	requested_slot: age
+	weight: None
+Current tracker state [None, None, None, {}, {'prev_action_listen': 1.0, 'intent_dor_de_cabeca': 1.0}]
+There is a memorised next action '30'
+There is an active form 'initial_form'
+Predicted next action using policy_3_FormPolicy
+Predicted next action 'initial_form' with prob 1.00.
+Calling action endpoint to run action 'initial_form'.
+Action 'initial_form' ended with events '['SlotSet(key: age, value: 19)', 'SlotSet(key: requested_slot, value: alergies)']'
+Bot utterance 'BotUttered(text: textr Você possui alergia a alguma medicação? Se sim, cite a quais., data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [None, None, None, {}, {'prev_action_listen': 1.0, 'intent_dor_de_cabeca': 1.0}]
+There is a memorised next action '30'
+There is an active form 'initial_form'
+Predicted next action using policy_3_FormPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Rasa process starting
+Restoring parameters from models/current/nlu/intent_classifier_tensorflow_embedding.ckpt
+Available web server routes: 
+hello                                              HEAD, OPTIONS, GET             /
+list_trackers                                      HEAD, OPTIONS, GET             /conversations
+execute_action                                     POST, OPTIONS                  /conversations/[sender_id]/execute
+log_message                                        POST, OPTIONS                  /conversations/[sender_id]/messages
+predict                                            POST, OPTIONS                  /conversations/[sender_id]/predict
+respond                                            POST, HEAD, OPTIONS, GET       /conversations/[sender_id]/respond
+retrieve_story                                     HEAD, OPTIONS, GET             /conversations/[sender_id]/story
+retrieve_tracker                                   HEAD, OPTIONS, GET             /conversations/[sender_id]/tracker
+replace_events                                     PUT, OPTIONS                   /conversations/[sender_id]/tracker/events
+get_domain                                         HEAD, OPTIONS, GET             /domain
+evaluate_stories                                   POST, OPTIONS                  /evaluate
+continue_training                                  POST, OPTIONS                  /finetune
+load_model                                         POST, OPTIONS                  /model
+tracker_predict                                    POST, OPTIONS                  /predict
+static                                             HEAD, OPTIONS, GET             /static/[filename]
+status                                             HEAD, OPTIONS, GET             /status
+version                                            HEAD, OPTIONS, GET             /version
+custom_webhook_CmdlineInput.health                 HEAD, OPTIONS, GET             /webhooks/rest/
+custom_webhook_CmdlineInput.receive                POST, OPTIONS                  /webhooks/rest/webhook
+Rasa Core server is up and running on http://localhost:5005
+Creating a new tracker for id 'default'.
+Received user message 'dor de cabeça' with intent '{'name': 'dor_de_cabeca', 'confidence': 0.9736942648887634}' and entities '[]'
+Logged UserUtterance - tracker now has 2 events
+Current slot values: 
+	age: None
+	alergies: None
+	blood_pressure: None
+	body_temperature: None
+	continuous_medication: None
+	gender: None
+	glucose: None
+	height: None
+	migrain: None
+	other_symptoms: None
+	oxygen_level: None
+	pain_persistance: None
+	pain_scale: None
+	previous_diseases: None
+	requested_slot: None
+	weight: None
+Current tracker state [None, None, None, {}, {'intent_dor_de_cabeca': 1.0, 'prev_action_listen': 1.0}]
+There is a memorised next action '30'
+There is no active form
+Predicted next action using policy_2_MemoizationPolicy
+Predicted next action 'initial_form' with prob 1.00.
+Calling action endpoint to run action 'initial_form'.
+Action 'initial_form' ended with events '['Form(initial_form)', 'SlotSet(key: requested_slot, value: age)']'
+Bot utterance 'BotUttered(text: textr Qual é a sua idade?, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [None, None, None, {}, {'intent_dor_de_cabeca': 1.0, 'prev_action_listen': 1.0}]
+There is a memorised next action '30'
+There is an active form 'initial_form'
+Predicted next action using policy_3_FormPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'default'
+Received user message 'Qual é a sua idade? Minha idade é 38' with intent '{'name': 'idade', 'confidence': 0.9539604187011719}' and entities '[{'start': 34, 'end': 36, 'value': '38', 'entity': 'age', 'confidence': 0.5233052640161922, 'extractor': 'ner_crf'}]'
+Logged UserUtterance - tracker now has 8 events
+Current slot values: 
+	age: None
+	alergies: None
+	blood_pressure: None
+	body_temperature: None
+	continuous_medication: None
+	gender: None
+	glucose: None
+	height: None
+	migrain: None
+	other_symptoms: None
+	oxygen_level: None
+	pain_persistance: None
+	pain_scale: None
+	previous_diseases: None
+	requested_slot: age
+	weight: None
+Current tracker state [None, None, None, {}, {'intent_dor_de_cabeca': 1.0, 'prev_action_listen': 1.0}]
+There is a memorised next action '30'
+There is an active form 'initial_form'
+Predicted next action using policy_3_FormPolicy
+Predicted next action 'initial_form' with prob 1.00.
+Calling action endpoint to run action 'initial_form'.
+Action 'initial_form' ended with events '['SlotSet(key: age, value: 38)', 'SlotSet(key: requested_slot, value: alergies)']'
+Bot utterance 'BotUttered(text: textr Você possui alergia a alguma medicação? Se sim, cite a quais., data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [None, None, None, {}, {'intent_dor_de_cabeca': 1.0, 'prev_action_listen': 1.0}]
+There is a memorised next action '30'
+There is an active form 'initial_form'
+Predicted next action using policy_3_FormPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'default'
+Received user message 'Você possui alergia a alguma medicação? Se sim, cite a quais. Sim uso remedio' with intent '{'name': 'alergias', 'confidence': 0.830916166305542}' and entities '[]'
+Logged UserUtterance - tracker now has 14 events
+Current slot values: 
+	age: 38
+	alergies: None
+	blood_pressure: None
+	body_temperature: None
+	continuous_medication: None
+	gender: None
+	glucose: None
+	height: None
+	migrain: None
+	other_symptoms: None
+	oxygen_level: None
+	pain_persistance: None
+	pain_scale: None
+	previous_diseases: None
+	requested_slot: alergies
+	weight: None
+Current tracker state [None, None, None, {}, {'intent_dor_de_cabeca': 1.0, 'prev_action_listen': 1.0}]
+There is a memorised next action '30'
+There is an active form 'initial_form'
+Predicted next action using policy_3_FormPolicy
+Predicted next action 'initial_form' with prob 1.00.
+Calling action endpoint to run action 'initial_form'.
+Failed to validate slot alergies with action initial_form
+Current tracker state [None, {}, {'intent_dor_de_cabeca': 1.0, 'prev_action_listen': 1.0}, {'active_form_initial_form': 1.0, 'intent_dor_de_cabeca': 1.0, 'prev_initial_form': 1.0}, {'active_form_initial_form': 1.0, 'prev_action_listen': 1.0, 'intent_alergias': 1.0}]
+There is no memorised next action
+There is an active form 'initial_form'
+Action 'action_listen' was predicted after a user message using policy_0_KerasPolicy. Predicting fallback action: action_default_fallback
+Predicted next action using policy_1_FallbackPolicy
+Predicted next action 'action_default_fallback' with prob 1.00.
+Action 'action_default_fallback' ended with events '['UserUtteranceReverted()']'
+Current tracker state [None, None, None, {}, {'intent_dor_de_cabeca': 1.0, 'prev_action_listen': 1.0}]
+There is a memorised next action '30'
+There is an active form 'initial_form'
+Predicted next action using policy_3_FormPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Rasa process starting
+Restoring parameters from models/current/nlu/intent_classifier_tensorflow_embedding.ckpt
+Available web server routes: 
+hello                                              GET, OPTIONS, HEAD             /
+list_trackers                                      GET, OPTIONS, HEAD             /conversations
+execute_action                                     OPTIONS, POST                  /conversations/[sender_id]/execute
+log_message                                        OPTIONS, POST                  /conversations/[sender_id]/messages
+predict                                            OPTIONS, POST                  /conversations/[sender_id]/predict
+respond                                            GET, OPTIONS, HEAD, POST       /conversations/[sender_id]/respond
+retrieve_story                                     GET, OPTIONS, HEAD             /conversations/[sender_id]/story
+retrieve_tracker                                   GET, OPTIONS, HEAD             /conversations/[sender_id]/tracker
+replace_events                                     OPTIONS, PUT                   /conversations/[sender_id]/tracker/events
+get_domain                                         GET, OPTIONS, HEAD             /domain
+evaluate_stories                                   OPTIONS, POST                  /evaluate
+continue_training                                  OPTIONS, POST                  /finetune
+load_model                                         OPTIONS, POST                  /model
+tracker_predict                                    OPTIONS, POST                  /predict
+static                                             GET, OPTIONS, HEAD             /static/[filename]
+status                                             GET, OPTIONS, HEAD             /status
+version                                            GET, OPTIONS, HEAD             /version
+custom_webhook_CmdlineInput.health                 GET, OPTIONS, HEAD             /webhooks/rest/
+custom_webhook_CmdlineInput.receive                OPTIONS, POST                  /webhooks/rest/webhook
+Rasa Core server is up and running on http://localhost:5005
+Creating a new tracker for id 'default'.
+Received user message 'dor de cabeça' with intent '{'name': 'dor_de_cabeca', 'confidence': 0.9752597808837891}' and entities '[]'
+Logged UserUtterance - tracker now has 2 events
+Current slot values: 
+	age: None
+	alergies: None
+	blood_pressure: None
+	body_temperature: None
+	continuous_medication: None
+	gender: None
+	glucose: None
+	height: None
+	migrain: None
+	other_symptoms: None
+	oxygen_level: None
+	pain_persistance: None
+	pain_scale: None
+	previous_diseases: None
+	requested_slot: None
+	weight: None
+Current tracker state [None, None, None, {}, {'prev_action_listen': 1.0, 'intent_dor_de_cabeca': 1.0}]
+There is a memorised next action '30'
+There is no active form
+Predicted next action using policy_2_MemoizationPolicy
+Predicted next action 'initial_form' with prob 1.00.
+Calling action endpoint to run action 'initial_form'.
+Action 'initial_form' ended with events '['Form(initial_form)', 'SlotSet(key: requested_slot, value: age)']'
+Bot utterance 'BotUttered(text: textr Qual é a sua idade?, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [None, None, None, {}, {'prev_action_listen': 1.0, 'intent_dor_de_cabeca': 1.0}]
+There is a memorised next action '30'
+There is an active form 'initial_form'
+Predicted next action using policy_3_FormPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'default'
+Received user message 'Qual é a sua idade? 72' with intent '{'name': 'idade', 'confidence': 0.972219705581665}' and entities '[{'start': 20, 'end': 22, 'value': '72', 'entity': 'age', 'confidence': 0.9387761148716376, 'extractor': 'ner_crf'}]'
+Logged UserUtterance - tracker now has 8 events
+Current slot values: 
+	age: None
+	alergies: None
+	blood_pressure: None
+	body_temperature: None
+	continuous_medication: None
+	gender: None
+	glucose: None
+	height: None
+	migrain: None
+	other_symptoms: None
+	oxygen_level: None
+	pain_persistance: None
+	pain_scale: None
+	previous_diseases: None
+	requested_slot: age
+	weight: None
+Current tracker state [None, None, None, {}, {'prev_action_listen': 1.0, 'intent_dor_de_cabeca': 1.0}]
+There is a memorised next action '30'
+There is an active form 'initial_form'
+Predicted next action using policy_3_FormPolicy
+Predicted next action 'initial_form' with prob 1.00.
+Calling action endpoint to run action 'initial_form'.
+Action 'initial_form' ended with events '['SlotSet(key: age, value: 72)', 'SlotSet(key: requested_slot, value: continuous_medication)']'
+Bot utterance 'BotUttered(text: textr Você usa medicação contínua? Se sim, cite quais., data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [None, None, None, {}, {'prev_action_listen': 1.0, 'intent_dor_de_cabeca': 1.0}]
+There is a memorised next action '30'
+There is an active form 'initial_form'
+Predicted next action using policy_3_FormPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'default'
+Received user message 'Você usa medicação contínua? Se sim, cite quais. Buscofem' with intent '{'name': 'medicacao', 'confidence': 0.9686654806137085}' and entities '[]'
+Logged UserUtterance - tracker now has 14 events
+Current slot values: 
+	age: 72
+	alergies: None
+	blood_pressure: None
+	body_temperature: None
+	continuous_medication: None
+	gender: None
+	glucose: None
+	height: None
+	migrain: None
+	other_symptoms: None
+	oxygen_level: None
+	pain_persistance: None
+	pain_scale: None
+	previous_diseases: None
+	requested_slot: continuous_medication
+	weight: None
+Current tracker state [None, None, None, {}, {'prev_action_listen': 1.0, 'intent_dor_de_cabeca': 1.0}]
+There is a memorised next action '30'
+There is an active form 'initial_form'
+Predicted next action using policy_3_FormPolicy
+Predicted next action 'initial_form' with prob 1.00.
+Calling action endpoint to run action 'initial_form'.
+Failed to validate slot continuous_medication with action initial_form
+Current tracker state [None, {}, {'prev_action_listen': 1.0, 'intent_dor_de_cabeca': 1.0}, {'active_form_initial_form': 1.0, 'intent_dor_de_cabeca': 1.0, 'prev_initial_form': 1.0}, {'active_form_initial_form': 1.0, 'prev_action_listen': 1.0, 'intent_medicacao': 1.0}]
+There is no memorised next action
+There is an active form 'initial_form'
+Action 'action_listen' was predicted after a user message using policy_0_KerasPolicy. Predicting fallback action: action_default_fallback
+Predicted next action using policy_1_FallbackPolicy
+Predicted next action 'action_default_fallback' with prob 1.00.
+Action 'action_default_fallback' ended with events '['UserUtteranceReverted()']'
+Current tracker state [None, None, None, {}, {'prev_action_listen': 1.0, 'intent_dor_de_cabeca': 1.0}]
+There is a memorised next action '30'
+There is an active form 'initial_form'
+Predicted next action using policy_3_FormPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Rasa process starting
+Restoring parameters from models/current/nlu/intent_classifier_tensorflow_embedding.ckpt
+Available web server routes: 
+hello                                              GET, OPTIONS, HEAD             /
+list_trackers                                      GET, OPTIONS, HEAD             /conversations
+execute_action                                     OPTIONS, POST                  /conversations/[sender_id]/execute
+log_message                                        OPTIONS, POST                  /conversations/[sender_id]/messages
+predict                                            OPTIONS, POST                  /conversations/[sender_id]/predict
+respond                                            HEAD, GET, OPTIONS, POST       /conversations/[sender_id]/respond
+retrieve_story                                     GET, OPTIONS, HEAD             /conversations/[sender_id]/story
+retrieve_tracker                                   GET, OPTIONS, HEAD             /conversations/[sender_id]/tracker
+replace_events                                     OPTIONS, PUT                   /conversations/[sender_id]/tracker/events
+get_domain                                         GET, OPTIONS, HEAD             /domain
+evaluate_stories                                   OPTIONS, POST                  /evaluate
+continue_training                                  OPTIONS, POST                  /finetune
+load_model                                         OPTIONS, POST                  /model
+tracker_predict                                    OPTIONS, POST                  /predict
+static                                             GET, OPTIONS, HEAD             /static/[filename]
+status                                             GET, OPTIONS, HEAD             /status
+version                                            GET, OPTIONS, HEAD             /version
+custom_webhook_CmdlineInput.health                 GET, OPTIONS, HEAD             /webhooks/rest/
+custom_webhook_CmdlineInput.receive                OPTIONS, POST                  /webhooks/rest/webhook
+Rasa Core server is up and running on http://localhost:5005
+Creating a new tracker for id 'default'.
+Received user message 'dor de cabeça' with intent '{'name': 'dor_de_cabeca', 'confidence': 0.9649122357368469}' and entities '[]'
+Logged UserUtterance - tracker now has 2 events
+Current slot values: 
+	age: None
+	alergies: None
+	blood_pressure: None
+	body_temperature: None
+	continuous_medication: None
+	gender: None
+	glucose: None
+	height: None
+	migrain: None
+	other_symptoms: None
+	oxygen_level: None
+	pain_persistance: None
+	pain_scale: None
+	previous_diseases: None
+	requested_slot: None
+	weight: None
+Current tracker state [None, None, None, {}, {'intent_dor_de_cabeca': 1.0, 'prev_action_listen': 1.0}]
+There is a memorised next action '30'
+There is no active form
+Predicted next action using policy_2_MemoizationPolicy
+Predicted next action 'initial_form' with prob 1.00.
+Calling action endpoint to run action 'initial_form'.
+Action 'initial_form' ended with events '['Form(initial_form)', 'SlotSet(key: requested_slot, value: age)']'
+Bot utterance 'BotUttered(text: textr Qual é a sua idade?, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [None, None, None, {}, {'intent_dor_de_cabeca': 1.0, 'prev_action_listen': 1.0}]
+There is a memorised next action '30'
+There is an active form 'initial_form'
+Predicted next action using policy_3_FormPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'default'
+Received user message 'Qual é a sua idade? 52' with intent '{'name': 'idade', 'confidence': 0.9680612087249756}' and entities '[{'start': 20, 'end': 22, 'value': '52', 'entity': 'age', 'confidence': 0.9371482217683696, 'extractor': 'ner_crf'}]'
+Logged UserUtterance - tracker now has 8 events
+Current slot values: 
+	age: None
+	alergies: None
+	blood_pressure: None
+	body_temperature: None
+	continuous_medication: None
+	gender: None
+	glucose: None
+	height: None
+	migrain: None
+	other_symptoms: None
+	oxygen_level: None
+	pain_persistance: None
+	pain_scale: None
+	previous_diseases: None
+	requested_slot: age
+	weight: None
+Current tracker state [None, None, None, {}, {'intent_dor_de_cabeca': 1.0, 'prev_action_listen': 1.0}]
+There is a memorised next action '30'
+There is an active form 'initial_form'
+Predicted next action using policy_3_FormPolicy
+Predicted next action 'initial_form' with prob 1.00.
+Calling action endpoint to run action 'initial_form'.
+Action 'initial_form' ended with events '['SlotSet(key: age, value: 52)', 'SlotSet(key: requested_slot, value: continuous_medication)']'
+Bot utterance 'BotUttered(text: textr Você usa medicação contínua? Se sim, cite quais., data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [None, None, None, {}, {'intent_dor_de_cabeca': 1.0, 'prev_action_listen': 1.0}]
+There is a memorised next action '30'
+There is an active form 'initial_form'
+Predicted next action using policy_3_FormPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'default'
+Received user message 'Você usa medicação contínua? Se sim, cite quais. buscofem' with intent '{'name': 'medicacao', 'confidence': 0.9678065180778503}' and entities '[{'start': 49, 'end': 57, 'value': 'buscofem', 'entity': 'continuous_medication', 'confidence': 0.8485591124035333, 'extractor': 'ner_crf'}]'
+Logged UserUtterance - tracker now has 14 events
+Current slot values: 
+	age: 52
+	alergies: None
+	blood_pressure: None
+	body_temperature: None
+	continuous_medication: None
+	gender: None
+	glucose: None
+	height: None
+	migrain: None
+	other_symptoms: None
+	oxygen_level: None
+	pain_persistance: None
+	pain_scale: None
+	previous_diseases: None
+	requested_slot: continuous_medication
+	weight: None
+Current tracker state [None, None, None, {}, {'intent_dor_de_cabeca': 1.0, 'prev_action_listen': 1.0}]
+There is a memorised next action '30'
+There is an active form 'initial_form'
+Predicted next action using policy_3_FormPolicy
+Predicted next action 'initial_form' with prob 1.00.
+Calling action endpoint to run action 'initial_form'.
+Action 'initial_form' ended with events '['SlotSet(key: continuous_medication, value: buscofem)', 'SlotSet(key: requested_slot, value: alergies)']'
+Bot utterance 'BotUttered(text: textr Você possui alergia a alguma medicação? Se sim, cite a quais., data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [None, None, None, {}, {'intent_dor_de_cabeca': 1.0, 'prev_action_listen': 1.0}]
+There is a memorised next action '30'
+There is an active form 'initial_form'
+Predicted next action using policy_3_FormPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'default'
+Received user message 'Você possui alergia a alguma medicação? Se sim, cite a quais. amoxilina' with intent '{'name': 'alergias', 'confidence': 0.939277172088623}' and entities '[{'start': 62, 'end': 71, 'value': 'amoxilina', 'entity': 'continuous_medication', 'confidence': 0.9297929328691892, 'extractor': 'ner_crf'}]'
+Logged UserUtterance - tracker now has 20 events
+Current slot values: 
+	age: 52
+	alergies: None
+	blood_pressure: None
+	body_temperature: None
+	continuous_medication: buscofem
+	gender: None
+	glucose: None
+	height: None
+	migrain: None
+	other_symptoms: None
+	oxygen_level: None
+	pain_persistance: None
+	pain_scale: None
+	previous_diseases: None
+	requested_slot: alergies
+	weight: None
+Current tracker state [None, None, None, {}, {'intent_dor_de_cabeca': 1.0, 'prev_action_listen': 1.0}]
+There is a memorised next action '30'
+There is an active form 'initial_form'
+Predicted next action using policy_3_FormPolicy
+Predicted next action 'initial_form' with prob 1.00.
+Calling action endpoint to run action 'initial_form'.
+Failed to validate slot alergies with action initial_form
+Current tracker state [None, {}, {'intent_dor_de_cabeca': 1.0, 'prev_action_listen': 1.0}, {'intent_dor_de_cabeca': 1.0, 'active_form_initial_form': 1.0, 'prev_initial_form': 1.0}, {'intent_alergias': 1.0, 'prev_action_listen': 1.0, 'entity_continuous_medication': 1.0, 'active_form_initial_form': 1.0}]
+There is no memorised next action
+There is an active form 'initial_form'
+Predicted next action using policy_1_FallbackPolicy
+Predicted next action 'action_default_fallback' with prob 1.00.
+Action 'action_default_fallback' ended with events '['UserUtteranceReverted()']'
+Current tracker state [None, None, None, {}, {'intent_dor_de_cabeca': 1.0, 'prev_action_listen': 1.0}]
+There is a memorised next action '30'
+There is an active form 'initial_form'
+Predicted next action using policy_3_FormPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Rasa process starting
+Restoring parameters from models/current/nlu/intent_classifier_tensorflow_embedding.ckpt
+Available web server routes: 
+hello                                              HEAD, OPTIONS, GET             /
+list_trackers                                      HEAD, OPTIONS, GET             /conversations
+execute_action                                     POST, OPTIONS                  /conversations/[sender_id]/execute
+log_message                                        POST, OPTIONS                  /conversations/[sender_id]/messages
+predict                                            POST, OPTIONS                  /conversations/[sender_id]/predict
+respond                                            POST, HEAD, OPTIONS, GET       /conversations/[sender_id]/respond
+retrieve_story                                     HEAD, OPTIONS, GET             /conversations/[sender_id]/story
+retrieve_tracker                                   HEAD, OPTIONS, GET             /conversations/[sender_id]/tracker
+replace_events                                     PUT, OPTIONS                   /conversations/[sender_id]/tracker/events
+get_domain                                         HEAD, OPTIONS, GET             /domain
+evaluate_stories                                   POST, OPTIONS                  /evaluate
+continue_training                                  POST, OPTIONS                  /finetune
+load_model                                         POST, OPTIONS                  /model
+tracker_predict                                    POST, OPTIONS                  /predict
+static                                             HEAD, OPTIONS, GET             /static/[filename]
+status                                             HEAD, OPTIONS, GET             /status
+version                                            HEAD, OPTIONS, GET             /version
+custom_webhook_CmdlineInput.health                 HEAD, OPTIONS, GET             /webhooks/rest/
+custom_webhook_CmdlineInput.receive                POST, OPTIONS                  /webhooks/rest/webhook
+Rasa Core server is up and running on http://localhost:5005
+Creating a new tracker for id 'default'.
+Received user message 'dor de cabeça' with intent '{'name': 'dor_de_cabeca', 'confidence': 0.9682084321975708}' and entities '[]'
+Logged UserUtterance - tracker now has 2 events
+Current slot values: 
+	age: None
+	alergies: None
+	blood_pressure: None
+	body_temperature: None
+	continuous_medication: None
+	gender: None
+	glucose: None
+	height: None
+	migrain: None
+	other_symptoms: None
+	oxygen_level: None
+	pain_persistance: None
+	pain_scale: None
+	previous_diseases: None
+	requested_slot: None
+	weight: None
+Current tracker state [None, None, None, {}, {'prev_action_listen': 1.0, 'intent_dor_de_cabeca': 1.0}]
+There is a memorised next action '30'
+There is no active form
+Predicted next action using policy_2_MemoizationPolicy
+Predicted next action 'initial_form' with prob 1.00.
+Calling action endpoint to run action 'initial_form'.
+Action 'initial_form' ended with events '['Form(initial_form)', 'SlotSet(key: requested_slot, value: age)']'
+Bot utterance 'BotUttered(text: textr Qual é a sua idade?, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [None, None, None, {}, {'prev_action_listen': 1.0, 'intent_dor_de_cabeca': 1.0}]
+There is a memorised next action '30'
+There is an active form 'initial_form'
+Predicted next action using policy_3_FormPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'default'
+Received user message 'Qual é a sua idade? 7' with intent '{'name': 'idade', 'confidence': 0.9771480560302734}' and entities '[{'start': 20, 'end': 21, 'value': '7', 'entity': 'age', 'confidence': 0.9371482217683696, 'extractor': 'ner_crf'}]'
+Logged UserUtterance - tracker now has 8 events
+Current slot values: 
+	age: None
+	alergies: None
+	blood_pressure: None
+	body_temperature: None
+	continuous_medication: None
+	gender: None
+	glucose: None
+	height: None
+	migrain: None
+	other_symptoms: None
+	oxygen_level: None
+	pain_persistance: None
+	pain_scale: None
+	previous_diseases: None
+	requested_slot: age
+	weight: None
+Current tracker state [None, None, None, {}, {'prev_action_listen': 1.0, 'intent_dor_de_cabeca': 1.0}]
+There is a memorised next action '30'
+There is an active form 'initial_form'
+Predicted next action using policy_3_FormPolicy
+Predicted next action 'initial_form' with prob 1.00.
+Calling action endpoint to run action 'initial_form'.
+Action 'initial_form' ended with events '['SlotSet(key: age, value: 7)', 'SlotSet(key: requested_slot, value: continuous_medication)']'
+Bot utterance 'BotUttered(text: textr Você usa medicação contínua? Se sim, cite quais., data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [None, None, None, {}, {'prev_action_listen': 1.0, 'intent_dor_de_cabeca': 1.0}]
+There is a memorised next action '30'
+There is an active form 'initial_form'
+Predicted next action using policy_3_FormPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'default'
+Received user message 'Você usa medicação contínua? Se sim, cite quais. olcadil' with intent '{'name': 'medicacao', 'confidence': 0.9808535575866699}' and entities '[{'start': 49, 'end': 56, 'value': 'olcadil', 'entity': 'continuous_medication', 'confidence': 0.8329780045991698, 'extractor': 'ner_crf'}]'
+Logged UserUtterance - tracker now has 14 events
+Current slot values: 
+	age: 7
+	alergies: None
+	blood_pressure: None
+	body_temperature: None
+	continuous_medication: None
+	gender: None
+	glucose: None
+	height: None
+	migrain: None
+	other_symptoms: None
+	oxygen_level: None
+	pain_persistance: None
+	pain_scale: None
+	previous_diseases: None
+	requested_slot: continuous_medication
+	weight: None
+Current tracker state [None, None, None, {}, {'prev_action_listen': 1.0, 'intent_dor_de_cabeca': 1.0}]
+There is a memorised next action '30'
+There is an active form 'initial_form'
+Predicted next action using policy_3_FormPolicy
+Predicted next action 'initial_form' with prob 1.00.
+Calling action endpoint to run action 'initial_form'.
+Action 'initial_form' ended with events '['SlotSet(key: continuous_medication, value: olcadil)', 'SlotSet(key: requested_slot, value: alergies)']'
+Bot utterance 'BotUttered(text: textr Você possui alergia a alguma medicação? Se sim, cite a quais., data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [None, None, None, {}, {'prev_action_listen': 1.0, 'intent_dor_de_cabeca': 1.0}]
+There is a memorised next action '30'
+There is an active form 'initial_form'
+Predicted next action using policy_3_FormPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'default'
+Received user message 'Você possui alergia a alguma medicação? Se sim, cite a quais. amoxilina' with intent '{'name': 'alergias', 'confidence': 0.9394888281822205}' and entities '[{'start': 62, 'end': 71, 'value': 'amoxilina', 'entity': 'continuous_medication', 'confidence': 0.9297929328691892, 'extractor': 'ner_crf'}]'
+Logged UserUtterance - tracker now has 20 events
+Current slot values: 
+	age: 7
+	alergies: None
+	blood_pressure: None
+	body_temperature: None
+	continuous_medication: olcadil
+	gender: None
+	glucose: None
+	height: None
+	migrain: None
+	other_symptoms: None
+	oxygen_level: None
+	pain_persistance: None
+	pain_scale: None
+	previous_diseases: None
+	requested_slot: alergies
+	weight: None
+Current tracker state [None, None, None, {}, {'prev_action_listen': 1.0, 'intent_dor_de_cabeca': 1.0}]
+There is a memorised next action '30'
+There is an active form 'initial_form'
+Predicted next action using policy_3_FormPolicy
+Predicted next action 'initial_form' with prob 1.00.
+Calling action endpoint to run action 'initial_form'.
+Failed to validate slot alergies with action initial_form
+Current tracker state [None, {}, {'prev_action_listen': 1.0, 'intent_dor_de_cabeca': 1.0}, {'prev_initial_form': 1.0, 'active_form_initial_form': 1.0, 'intent_dor_de_cabeca': 1.0}, {'intent_alergias': 1.0, 'prev_action_listen': 1.0, 'active_form_initial_form': 1.0, 'entity_continuous_medication': 1.0}]
+There is no memorised next action
+There is an active form 'initial_form'
+Predicted next action using policy_1_FallbackPolicy
+Predicted next action 'action_default_fallback' with prob 1.00.
+Action 'action_default_fallback' ended with events '['UserUtteranceReverted()']'
+Current tracker state [None, None, None, {}, {'prev_action_listen': 1.0, 'intent_dor_de_cabeca': 1.0}]
+There is a memorised next action '30'
+There is an active form 'initial_form'
+Predicted next action using policy_3_FormPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Rasa process starting
+Restoring parameters from models/current/nlu/intent_classifier_tensorflow_embedding.ckpt
+Available web server routes: 
+hello                                              OPTIONS, GET, HEAD             /
+list_trackers                                      OPTIONS, GET, HEAD             /conversations
+execute_action                                     POST, OPTIONS                  /conversations/[sender_id]/execute
+log_message                                        POST, OPTIONS                  /conversations/[sender_id]/messages
+predict                                            POST, OPTIONS                  /conversations/[sender_id]/predict
+respond                                            POST, GET, OPTIONS, HEAD       /conversations/[sender_id]/respond
+retrieve_story                                     OPTIONS, GET, HEAD             /conversations/[sender_id]/story
+retrieve_tracker                                   OPTIONS, GET, HEAD             /conversations/[sender_id]/tracker
+replace_events                                     OPTIONS, PUT                   /conversations/[sender_id]/tracker/events
+get_domain                                         OPTIONS, GET, HEAD             /domain
+evaluate_stories                                   POST, OPTIONS                  /evaluate
+continue_training                                  POST, OPTIONS                  /finetune
+load_model                                         POST, OPTIONS                  /model
+tracker_predict                                    POST, OPTIONS                  /predict
+static                                             OPTIONS, GET, HEAD             /static/[filename]
+status                                             OPTIONS, GET, HEAD             /status
+version                                            OPTIONS, GET, HEAD             /version
+custom_webhook_CmdlineInput.health                 OPTIONS, GET, HEAD             /webhooks/rest/
+custom_webhook_CmdlineInput.receive                POST, OPTIONS                  /webhooks/rest/webhook
+Rasa Core server is up and running on http://localhost:5005
+Creating a new tracker for id 'default'.
+Received user message 'dor de cabeça' with intent '{'name': 'dor_de_cabeca', 'confidence': 0.9652079343795776}' and entities '[]'
+Logged UserUtterance - tracker now has 2 events
+Current slot values: 
+	age: None
+	alergies: None
+	blood_pressure: None
+	body_temperature: None
+	continuous_medication: None
+	gender: None
+	glucose: None
+	height: None
+	migrain: None
+	other_symptoms: None
+	oxygen_level: None
+	pain_persistance: None
+	pain_scale: None
+	previous_diseases: None
+	requested_slot: None
+	weight: None
+Current tracker state [None, None, None, {}, {'prev_action_listen': 1.0, 'intent_dor_de_cabeca': 1.0}]
+There is a memorised next action '30'
+There is no active form
+Predicted next action using policy_2_MemoizationPolicy
+Predicted next action 'initial_form' with prob 1.00.
+Calling action endpoint to run action 'initial_form'.
+Action 'initial_form' ended with events '['Form(initial_form)', 'SlotSet(key: requested_slot, value: age)']'
+Bot utterance 'BotUttered(text: textr Qual é a sua idade?, data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [None, None, None, {}, {'prev_action_listen': 1.0, 'intent_dor_de_cabeca': 1.0}]
+There is a memorised next action '30'
+There is an active form 'initial_form'
+Predicted next action using policy_3_FormPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'default'
+Received user message 'Qual é a sua idade? 44' with intent '{'name': 'idade', 'confidence': 0.9683271646499634}' and entities '[{'start': 20, 'end': 22, 'value': '44', 'entity': 'age', 'confidence': 0.9360548282266286, 'extractor': 'ner_crf'}]'
+Logged UserUtterance - tracker now has 8 events
+Current slot values: 
+	age: None
+	alergies: None
+	blood_pressure: None
+	body_temperature: None
+	continuous_medication: None
+	gender: None
+	glucose: None
+	height: None
+	migrain: None
+	other_symptoms: None
+	oxygen_level: None
+	pain_persistance: None
+	pain_scale: None
+	previous_diseases: None
+	requested_slot: age
+	weight: None
+Current tracker state [None, None, None, {}, {'prev_action_listen': 1.0, 'intent_dor_de_cabeca': 1.0}]
+There is a memorised next action '30'
+There is an active form 'initial_form'
+Predicted next action using policy_3_FormPolicy
+Predicted next action 'initial_form' with prob 1.00.
+Calling action endpoint to run action 'initial_form'.
+Action 'initial_form' ended with events '['SlotSet(key: age, value: 44)', 'SlotSet(key: requested_slot, value: continuous_medication)']'
+Bot utterance 'BotUttered(text: textr Você usa medicação contínua? Se sim, cite quais., data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [None, None, None, {}, {'prev_action_listen': 1.0, 'intent_dor_de_cabeca': 1.0}]
+There is a memorised next action '30'
+There is an active form 'initial_form'
+Predicted next action using policy_3_FormPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'default'
+Received user message 'Você usa medicação contínua? Se sim, cite quais. remedio' with intent '{'name': 'medicacao', 'confidence': 0.9753785729408264}' and entities '[{'start': 49, 'end': 56, 'value': 'remedio', 'entity': 'continuous_medication', 'confidence': 0.5624670935360151, 'extractor': 'ner_crf'}]'
+Logged UserUtterance - tracker now has 14 events
+Current slot values: 
+	age: 44
+	alergies: None
+	blood_pressure: None
+	body_temperature: None
+	continuous_medication: None
+	gender: None
+	glucose: None
+	height: None
+	migrain: None
+	other_symptoms: None
+	oxygen_level: None
+	pain_persistance: None
+	pain_scale: None
+	previous_diseases: None
+	requested_slot: continuous_medication
+	weight: None
+Current tracker state [None, None, None, {}, {'prev_action_listen': 1.0, 'intent_dor_de_cabeca': 1.0}]
+There is a memorised next action '30'
+There is an active form 'initial_form'
+Predicted next action using policy_3_FormPolicy
+Predicted next action 'initial_form' with prob 1.00.
+Calling action endpoint to run action 'initial_form'.
+Action 'initial_form' ended with events '['SlotSet(key: continuous_medication, value: remedio)', 'SlotSet(key: requested_slot, value: alergies)']'
+Bot utterance 'BotUttered(text: textr Você possui alergia a alguma medicação? Se sim, cite a quais., data: {
+  "elements": null,
+  "buttons": null,
+  "attachment": null
+})'
+Current tracker state [None, None, None, {}, {'prev_action_listen': 1.0, 'intent_dor_de_cabeca': 1.0}]
+There is a memorised next action '30'
+There is an active form 'initial_form'
+Predicted next action using policy_3_FormPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
+Recreating tracker for id 'default'
+Received user message 'Você possui alergia a alguma medicação? Se sim, cite a quais. remedio2' with intent '{'name': 'alergias', 'confidence': 0.973149836063385}' and entities '[{'start': 62, 'end': 70, 'value': 'remedio2', 'entity': 'continuous_medication', 'confidence': 0.5830272412318577, 'extractor': 'ner_crf'}]'
+Logged UserUtterance - tracker now has 20 events
+Current slot values: 
+	age: 44
+	alergies: None
+	blood_pressure: None
+	body_temperature: None
+	continuous_medication: remedio
+	gender: None
+	glucose: None
+	height: None
+	migrain: None
+	other_symptoms: None
+	oxygen_level: None
+	pain_persistance: None
+	pain_scale: None
+	previous_diseases: None
+	requested_slot: alergies
+	weight: None
+Current tracker state [None, None, None, {}, {'prev_action_listen': 1.0, 'intent_dor_de_cabeca': 1.0}]
+There is a memorised next action '30'
+There is an active form 'initial_form'
+Predicted next action using policy_3_FormPolicy
+Predicted next action 'initial_form' with prob 1.00.
+Calling action endpoint to run action 'initial_form'.
+Failed to validate slot alergies with action initial_form
+Current tracker state [None, {}, {'prev_action_listen': 1.0, 'intent_dor_de_cabeca': 1.0}, {'prev_initial_form': 1.0, 'active_form_initial_form': 1.0, 'intent_dor_de_cabeca': 1.0}, {'entity_continuous_medication': 1.0, 'intent_alergias': 1.0, 'active_form_initial_form': 1.0, 'prev_action_listen': 1.0}]
+There is no memorised next action
+There is an active form 'initial_form'
+Predicted next action using policy_1_FallbackPolicy
+Predicted next action 'action_default_fallback' with prob 1.00.
+Action 'action_default_fallback' ended with events '['UserUtteranceReverted()']'
+Current tracker state [None, None, None, {}, {'prev_action_listen': 1.0, 'intent_dor_de_cabeca': 1.0}]
+There is a memorised next action '30'
+There is an active form 'initial_form'
+Predicted next action using policy_3_FormPolicy
+Predicted next action 'action_listen' with prob 1.00.
+Action 'action_listen' ended with events '[]'
