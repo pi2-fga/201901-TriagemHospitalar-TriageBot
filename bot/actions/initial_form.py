@@ -23,7 +23,7 @@ class InitialForm(FormAction):
     @staticmethod
     def required_slots(tracker: Tracker) -> List[Text]:
         """A list of required slots that the form has to fill"""
-        return ["age", "continuous_medication", "alergies"]
+        return ["age", "alergies"]
 
     def slot_mappings(self):
         # type: () -> Dict[Text: Union[Dict, List[Dict]]]
@@ -35,10 +35,6 @@ class InitialForm(FormAction):
 
         return {
             "age": self.from_entity(entity="age", intent="idade"),
-            "continuous_medication": [
-                self.from_intent(intent="negativo", value=False),
-                self.from_entity(entity="continuous_medication", intent="medicacao"),
-            ],
             "alergies": [
                 self.from_intent(intent="negativo", value=False),
                 self.from_entity(entity="alergies", intent="alergias"),
@@ -77,9 +73,4 @@ class InitialForm(FormAction):
     ) -> List[Dict]:
         """Define what the form has to do
             after all required slots are filled"""
-        age = tracker.get_slot("age")
-        continuous_medication = tracker.get_slot("continuous_medication")
-        alergies = tracker.get_slot("alergies")
-        elements = f"data {'age': {age}, 'continuos_medication': {continuous_medication}, 'alergies': {alergies}}"
-        dispatcher.utter_custom_message(elements, tracker)
         return []

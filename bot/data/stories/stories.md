@@ -32,12 +32,15 @@
     - form{"name": null}
     - utter_cadeira_de_rodas
     * negativo
-    - utter_medicao_peso_altura
-    * dados
     - utter_medicao_temperatura_oximetro
     * dados
+    - action_complete_triage_form
     - utter_medicao_pressao
     * dados
+    - action_complete_triage_form
+    - utter_medicao_peso_altura
+    * dados
+    - action_complete_triage_form
     - action_headache_risk
     - action_restart <!-- -action_restart restarts bot, cleaning slots -->
 

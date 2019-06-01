@@ -19,7 +19,6 @@ entities:
   - migrain
   - alergies
   - age
-  - continuous_medication
 
 slots:
   body_temperature:
@@ -60,16 +59,12 @@ slots:
   age:
     type: unfeaturized
     auto_fill: false
-  continuous_medication:
-    type: unfeaturized
-    auto_fill: false
   alergies:
     type: unfeaturized
     auto_fill: false
 
 actions:
 - utter_ask_age
-- utter_ask_continuous_medication
 - utter_ask_alergies
 - utter_ask_pain_scale
 - utter_ask_other_symptoms
@@ -98,8 +93,6 @@ forms:
 templates:
   utter_ask_age:
     - text: "textr Qual é a sua idade?"
-  utter_ask_continuous_medication:
-    - text: "textr Você usa medicação contínua? Se sim, cite quais."
   utter_ask_alergies:
     - text: "textr Você possui alergia a alguma medicação? Se sim, cite a quais."
   utter_ask_pain_scale:
@@ -111,11 +104,7 @@ templates:
   utter_ask_pain_persistance:
   - text: "text Qual é a persistência da dor?"
   utter_slots_values:
-  - text: "Values: {body_temperature}\n
-           - age: {age}\n
-           - weight: {weight}\n
-           - height: {height}\n
-           - alergies: {alergies}"
+  - text: "data age {age} alergies {alergies} ."
   utter_erro_escala_de_dor:
     - text: "pain_scale Valor enviado foi inválido"
   utter_erro_persistencia_dor:
