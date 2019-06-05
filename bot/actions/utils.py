@@ -22,8 +22,12 @@ def is_body_temperature_normal(temperature):
 def is_blood_pressure_normal(pressure):
     pressure = json.loads(pressure)
 
-    if (int(pressure[0]) >= 100 and int(pressure[1]) > 60 and
-            int(pressure[0]) <= 130 and int(pressure[1]) < 85):
+    if (
+        int(pressure[0]) >= 100
+        and int(pressure[1]) > 60
+        and int(pressure[0]) <= 130
+        and int(pressure[1]) < 85
+    ):
         return True
     else:
         return False

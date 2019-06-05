@@ -16,8 +16,10 @@
   * sim
   - utter_medicao_temperatura_oximetro
   * dados
+  - action_complete_triage_form
   - utter_medicao_pressao
   * dados
+  - action_complete_triage_form
   - action_headache_risk
   - action_restart <!-- -action_restart restarts bot, cleaning slots -->
 
