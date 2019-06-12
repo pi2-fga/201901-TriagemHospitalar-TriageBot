@@ -31,7 +31,7 @@ train-nlu:
 	python -m rasa_nlu.train -c nlu_config.yml --data data/intents/ -o models --fixed_model_name nlu --project current --verbose
 
 train-core:
-	python -m rasa_core.train -d domain.yml -s data/stories/ -o models/current/dialogue -c policies.yml
+	python -m rasa_core.train -d domain.yml -s data/stories/ -o models/current/dialogue -c policies.yml --augmentation 100
 
 run-api:
 	python -m rasa_core.run -d models/current/dialogue -u models/current/nlu --endpoints endpoints.yml --debug --enable_api

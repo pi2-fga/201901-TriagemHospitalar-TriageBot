@@ -11,6 +11,7 @@ intents:
 - medicacao
 - alergias
 - age_number
+- dados_salvos
 
 entities:
   - pain_scale
@@ -19,6 +20,7 @@ entities:
   - migrain
   - alergies
   - age
+  - blood_oxygen_level
 
 slots:
   body_temperature:
@@ -62,7 +64,10 @@ slots:
   alergies:
     type: unfeaturized
     auto_fill: false
-
+  blood_oxygen_level:
+    type: unfeaturized
+    auto_fill: false
+  
 actions:
 - utter_ask_age
 - utter_ask_alergies
@@ -122,7 +127,7 @@ templates:
   utter_cadeira_de_rodas:
     - text: "yes_or_no Você é usuário de cadeira de rodas?"
   utter_medicao_peso_altura:
-    - text: "info Posicione seus pés na marca e espere o sinal, como mostrado a abaixo, para medirmos seu peso e altura."
+    - text: "info Posicione seus pés na marca e espere o sinal, como mostrado abaixo, para medirmos seu peso e altura."
   utter_medicao_temperatura_oximetro:
     - text: "info Posicione o seu braço, como mostrado abaixo, para medirmos seus dados vitais."
   utter_medicao_pressao:

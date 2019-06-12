@@ -21,7 +21,7 @@ class TriageForm(Action):
         Gets user entry and registers slots there are in it
         """
         message = tracker.latest_message["text"]
-        message = message.split("estes são meus dados: ", 1)[1]
+        message = message.split("estes são meus sinais vitais ", 1)[1]
         slot_keys_values = ast.literal_eval(message)
         slots = []
 

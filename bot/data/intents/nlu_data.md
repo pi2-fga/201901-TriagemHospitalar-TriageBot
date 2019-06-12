@@ -148,3 +148,7 @@
 - Você possui alergia a alguma medicação? Se sim, cite a quais. Tenho alergia a [remédio](alergies)
 - Você possui alergia a alguma medicação? Se sim, cite a quais. Tenho alergia a [alergie_name](alergies)
 - Você possui alergia a alguma medicação? Se sim, cite a quais. Tenho alergia a [alergie_name](alergies)
+
+##intent:dados_salvos
+- Os dados foram salvos com sucesso na aplicação da estação da triagem.
+- Os dados foram salvos com sucesso na aplicação da estação.
