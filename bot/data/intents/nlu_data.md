@@ -5,7 +5,8 @@
   - Enxaqueca
   - Estou com enxaqueca
   - Cefaleia
-  - dor de cabeça e enjoo
+  - dor de cabeça e [enjoo](other_symptoms)
+  - dor de cabeça e [vomito](other_symptoms)
 
 ## intent:queimadura
   - Queimei minha perna
@@ -129,8 +130,17 @@
  ## regex:medication_name
  - ([a-z]{50})
 
+ ## intent:dor_torax
+   - dor no peito
+   - Estou com dor no peito
+   - dor torácica
+   - peso no peito
 
- ## regex:alergie_name
+ ## intent:dados_recebidos
+   - dados iniciais recebidos
+   - dados recebidos
+
+## regex:alergie_name
  - ([a-z]{60})
 
 ##intent:alergias

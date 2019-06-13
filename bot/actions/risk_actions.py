@@ -14,7 +14,6 @@ class HeadacheRisk(Action):
     @staticmethod
     def other_symptoms_db():
         # type: () -> List[Text]
-        """Database of supported cuisines"""
         return [
             "nausea",
             "naúsea",

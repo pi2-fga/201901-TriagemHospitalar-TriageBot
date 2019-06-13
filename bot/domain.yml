@@ -11,6 +11,7 @@ intents:
 - medicacao
 - alergias
 - age_number
+- dados_recebidos
 
 entities:
   - pain_scale

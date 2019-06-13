@@ -14,12 +14,14 @@
   - form{"name": null}
   - utter_cadeira_de_rodas
   * sim
-  - utter_medicao_temperatura_oximetro
-  * dados
-  - action_complete_triage_form
   - utter_medicao_pressao
   * dados
   - action_complete_triage_form
+  - utter_medicao_temperatura_oximetro
+  * dados
+  - action_complete_triage_form
+  - utter_slots_values
+  * dados_recebidos
   - action_headache_risk
   - action_restart <!-- -action_restart restarts bot, cleaning slots -->
 
@@ -43,6 +45,8 @@
     - utter_medicao_peso_altura
     * dados
     - action_complete_triage_form
+    - utter_slots_values
+    * dados_recebidos
     - action_headache_risk
     - action_restart <!-- -action_restart restarts bot, cleaning slots -->
 
