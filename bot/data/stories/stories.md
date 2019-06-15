@@ -34,6 +34,7 @@
     * dados
     - action_complete_triage_form
     - action_eletrocardiogram_check
+    * dados_recebidos
     - action_chestpain_risk
     - action_restart <!-- -action_restart restarts bot, cleaning slots -->
 

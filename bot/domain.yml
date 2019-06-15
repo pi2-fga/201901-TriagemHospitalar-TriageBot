@@ -91,6 +91,7 @@ actions:
 - utter_cadeira_de_rodas
 - utter_medicao
 - utter_erro_idade
+- utter_sinal
 - action_complete_triage_form
 - action_headache_risk
 - action_eletrocardiogram_check
@@ -137,8 +138,10 @@ templates:
   utter_risco_azul:
     - text: "risk blue"
   utter_eletrocardiograma:
-    - text: "info Aguarde para realização de mais exames."
+    - text: "info eletrocardiogram"
   utter_medicao:
     - text: "measurements Hora de fazer uns exames iniciais."
   utter_erro_idade:
     - text: "text A idade que você forneceu não é valida, tente novamente."
+  utter_sinal:
+    - text: "signal Envio de sinal."
