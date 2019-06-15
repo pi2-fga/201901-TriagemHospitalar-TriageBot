@@ -50,3 +50,37 @@ class HeadacheRisk(Action):
         else:
             dispatcher.utter_template("utter_risco_verde", tracker)
         return []
+
+
+class ChestPainRisk(Action):
+    """Sets pacient risk according to chestpain symptoms"""
+
+    def name(self):
+        # type: () -> Text
+        """Unique identifier of the form"""
+
+        return "action_chestpain_risk"
+
+    def run(self, dispatcher, tracker, domain):
+        """
+        Uses slot values to set user risk
+        """
+        infarction = tracker.get_slot("infarction")
+        diabetes = tracker.get_slot("diabetes")
+        pain_scale = tracker.get_slot("pain_scale")
+        pain_persistance = tracker.get_slot("pain_persistance")
+        age = int(tracker.get_slot("age")) > 60
+        is_pain_scale_high = int(pain_scale) > 7
+
+        pressure = tracker.get_slot("blood_pressure")
+        oxygen_level = tracker.get_slot("blood_oxygen_level")
+        temperature = tracker.get_slot("body_temperature")
+        vitals = are_vital_signs_normal(pressure, oxygen_level, temperature)
+
+        if (is_pain_scale_high and (infarction or diabetes or age)) or (
+            is_pain_scale_high and pain_persistance is "constant" or not vitals
+        ):
+            dispatcher.utter_template("utter_risco_vermelho", tracker)
+        else:
+            dispatcher.utter_template("utter_risco_amarelo", tracker)
+        return []

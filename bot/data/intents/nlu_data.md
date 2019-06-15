@@ -8,6 +8,13 @@
   - dor de cabeça e [enjoo](other_symptoms)
   - dor de cabeça e [vomito](other_symptoms)
 
+## intent:dor_torax
+  - dor no peito
+  - Estou com dor no peito
+  - dor torácica
+  - peso no peito
+
+
 ## intent:queimadura
   - Queimei minha perna
   - Me queimei
