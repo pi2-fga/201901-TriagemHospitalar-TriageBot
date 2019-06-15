@@ -54,7 +54,5 @@ class EletrocardiogramNeed(Action):
         oxygen_level = tracker.get_slot("blood_oxygen_level")
         temperature = tracker.get_slot("body_temperature")
         vitals = are_vital_signs_normal(pressure, oxygen_level, temperature)
-
-        if int(age) > 60 and vitals:
-            dispatcher.utter_template("utter_eletrocardiograma", tracker)
+        dispatcher.utter_template("utter_eletrocardiograma", tracker)
         return []

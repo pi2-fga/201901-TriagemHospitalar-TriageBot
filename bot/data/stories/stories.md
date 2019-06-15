@@ -28,6 +28,8 @@
     - chestpain_form
     - form{"name": "chestpain_form"}
     - form{"name": null}
+    - utter_slots_values
+    * dados_recebidos
     - utter_medicao
     * dados
     - action_complete_triage_form

@@ -13,6 +13,8 @@
   - Estou com dor no peito
   - dor torácica
   - peso no peito
+  - dor no peto
+  - peso no peto
 
 
 ## intent:queimadura
@@ -146,6 +148,7 @@
  ## intent:dados_recebidos
    - dados iniciais recebidos
    - dados recebidos
+   - Os dados foram salvos na aplicação da estação da triagem.
 
 ## regex:alergie_name
  - ([a-z]{60})

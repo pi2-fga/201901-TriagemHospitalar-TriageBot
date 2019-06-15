@@ -44,7 +44,8 @@ class HeadacheRisk(Action):
         vitals = are_vital_signs_normal(pressure, oxygen_level, temperature)
 
         if (is_pain_scale_high and not migrain and has_other_symptoms) or (
-            is_pain_scale_high and pain_persistance is "constant" or not vitals
+            (is_pain_scale_high and pain_persistance is "constant") or
+            not vitals
         ):
             dispatcher.utter_template("utter_risco_amarelo", tracker)
         else:
@@ -78,7 +79,8 @@ class ChestPainRisk(Action):
         vitals = are_vital_signs_normal(pressure, oxygen_level, temperature)
 
         if (is_pain_scale_high and (infarction or diabetes or age)) or (
-            is_pain_scale_high and pain_persistance is "constant" or not vitals
+            (is_pain_scale_high and pain_persistance is "constant") or
+            not vitals
         ):
             dispatcher.utter_template("utter_risco_vermelho", tracker)
         else:
