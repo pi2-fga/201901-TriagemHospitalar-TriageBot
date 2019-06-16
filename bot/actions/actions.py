@@ -2,10 +2,12 @@
 import ast
 from rasa_core_sdk.events import SlotSet
 from rasa_core_sdk import Action
-from .headache_form import HeadacheForm
-from .risk_actions import HeadacheRisk, ChestPainRisk
+from .forms.headache_form import HeadacheForm
+from .risk_actions import HeadacheRisk, ChestPainRisk, AbdominalPainRisk, FluLikeRisk
 from .initial_form import InitialForm
-from .chestpain_form import ChestPainForm
+from .forms.chestpain_form import ChestPainForm
+from .forms.abdominalpain_form import AbdominalPainForm
+from .forms.flulike_form import FluLikeForm
 from .utils import are_vital_signs_normal
 
 

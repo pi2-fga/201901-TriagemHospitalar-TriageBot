@@ -13,7 +13,8 @@ intents:
 - age_number
 - dados_recebidos
 - dor_torax
-- queimadura
+- dor_abdomens
+- sintomas_gripais
 
 entities:
   - pain_scale
@@ -70,6 +71,9 @@ slots:
   diabetes:
     type: unfeaturized
     auto_fill: false
+  pregnancy:
+    type: unfeaturized
+    auto_fill: false
 
 actions:
 - utter_ask_age
@@ -80,6 +84,7 @@ actions:
 - utter_ask_pain_persistance
 - utter_ask_infarction
 - utter_ask_diabetes
+- utter_ask_pregnancy
 - utter_slots_values
 - utter_erro_escala_de_dor
 - utter_erro_persistencia_dor
@@ -96,11 +101,15 @@ actions:
 - action_headache_risk
 - action_eletrocardiogram_check
 - action_chestpain_risk
+- action_abdominal_pain_risk
+- action_flu_like_risk
 
 forms:
 - headache_form
 - initial_form
 - chestpain_form
+- abdominalpain_form
+- flulike_form
 
 templates:
   utter_ask_age:
@@ -119,10 +128,12 @@ templates:
   - text: "yes_or_no Algum médico já o diagnosticou com diabetes?"
   utter_ask_infarction:
   - text: "yes_or_no Você já sofreu de infarto do miocárdio?"
+  utter_ask_pregnancy:
+  - text: "yes_or_no Existe possibilidade de gravidez?"
   utter_wheelchair:
     - text: "yes_or_no Você é usuário de cadeira de rodas?"
   utter_slots_values:
-  - text: "data age {age} alergies {alergies} diabetes {diabetes} infarction {infarction} migrain {migrain}."
+  - text: "data age {age} alergies {alergies} diabetes {diabetes} infarction {infarction} migrain {migrain} other_symptoms {other_symptoms}."
   utter_erro_escala_de_dor:
     - text: "pain_scale Valor enviado foi inválido"
   utter_erro_persistencia_dor:
