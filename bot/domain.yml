@@ -138,7 +138,7 @@ templates:
   utter_risco_azul:
     - text: "risk blue"
   utter_eletrocardiograma:
-    - text: "info eletrocardiogram"
+    - text: "eletrocardiogram eletrocardiogram"
   utter_medicao:
     - text: "measurements Hora de fazer uns exames iniciais."
   utter_erro_idade:
