@@ -15,6 +15,8 @@ intents:
 - dor_torax
 - dor_abdomens
 - sintomas_gripais
+- trauma
+- causa
 
 entities:
   - pain_scale
@@ -26,6 +28,7 @@ entities:
   - infarction
   - diabetes
   - cause
+  - body_part
 
 slots:
   body_temperature:
@@ -78,6 +81,9 @@ slots:
   cause:
     type: unfeaturized
     auto_fill: false
+  body_part:
+    type: unfeaturized
+    auto_fill: false
 
 actions:
 - utter_ask_age
@@ -89,6 +95,8 @@ actions:
 - utter_ask_infarction
 - utter_ask_diabetes
 - utter_ask_pregnancy
+- utter_ask_bleeding
+- utter_ask_cause
 - utter_slots_values
 - utter_erro_escala_de_dor
 - utter_erro_persistencia_dor
@@ -107,6 +115,7 @@ actions:
 - action_chestpain_risk
 - action_abdominal_pain_risk
 - action_flu_like_risk
+- action_trauma_risk
 
 forms:
 - headache_form
@@ -114,6 +123,8 @@ forms:
 - chestpain_form
 - abdominalpain_form
 - flulike_form
+- trauma_form
+
 
 templates:
   utter_ask_age:
@@ -136,6 +147,10 @@ templates:
   - text: "yes_or_no Existe possibilidade de gravidez?"
   utter_wheelchair:
     - text: "yes_or_no Você é usuário de cadeira de rodas?"
+  utter_ask_bleeding:
+    - text: "yes_or_no Apresenta sangramento?"
+  utter_ask_cause:
+    - text: "text O que causou o ferimento?"
   utter_slots_values:
   - text: "data age {age} alergies {alergies} diabetes {diabetes} infarction {infarction} migrain {migrain} other_symptoms {other_symptoms}."
   utter_erro_escala_de_dor:

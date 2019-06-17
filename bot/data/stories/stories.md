@@ -70,6 +70,22 @@
     - action_flu_like_risk
     - action_restart <!-- -action_restart restarts bot, cleaning slots -->
 
+## story trauma, categorização de risco
+  * trauma
+    - initial_form
+    - form{"name": "initial_form"}
+    - form{"name": null}
+    - trauma_form
+    - form{"name": "trauma_form"}
+    - form{"name": null}
+    - utter_medicao
+    * dados
+    - action_complete_triage_form
+    - utter_slots_values
+    * dados_recebidos
+    - action_trauma_risk
+    - action_restart <!-- -action_restart restarts bot, cleaning slots -->
+
 ## story intoxicação exógena ou tentativa de suicídio
   * intoxicacao
     - utter_risco_vermelho

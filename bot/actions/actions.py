@@ -8,6 +8,7 @@ from .initial_form import InitialForm
 from .forms.chestpain_form import ChestPainForm
 from .forms.abdominalpain_form import AbdominalPainForm
 from .forms.flulike_form import FluLikeForm
+from .forms.trauma_form import TraumaForm
 from .utils import are_vital_signs_normal
 
 

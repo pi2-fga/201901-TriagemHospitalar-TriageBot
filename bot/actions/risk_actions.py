@@ -44,8 +44,7 @@ class HeadacheRisk(Action):
         vitals = are_vital_signs_normal(pressure, oxygen_level, temperature)
 
         if (is_pain_scale_high and not migrain and has_other_symptoms) or (
-            (is_pain_scale_high and (pain_persistance is "constant")) or
-            not vitals
+            (is_pain_scale_high and (pain_persistance is "constant")) or not vitals
         ):
             dispatcher.utter_template("utter_risco_amarelo", tracker)
         else:
@@ -79,8 +78,7 @@ class ChestPainRisk(Action):
         vitals = are_vital_signs_normal(pressure, oxygen_level, temperature)
 
         if (is_pain_scale_high and (infarction or diabetes or age)) or (
-            (is_pain_scale_high and (pain_persistance is "constant")) or
-            not vitals
+            (is_pain_scale_high and (pain_persistance is "constant")) or not vitals
         ):
             dispatcher.utter_template("utter_risco_vermelho", tracker)
         else:
@@ -118,20 +116,13 @@ class AbdominalPainRisk(Action):
             "vomitando",
             "inchaço",
             "inchado",
-            "irradiação"
+            "irradiação",
         ]
 
     @staticmethod
     def prostacao_db():
         # type: () -> List[Text]
-        return [
-            "cansaço",
-            "prostração",
-            "prostrado",
-            "prostrada",
-            "cansado",
-            "cansada"
-        ]
+        return ["cansaço", "prostração", "prostrado", "prostrada", "cansado", "cansada"]
 
     def run(self, dispatcher, tracker, domain):
         """
@@ -151,12 +142,14 @@ class AbdominalPainRisk(Action):
         vitals = are_vital_signs_normal(pressure, oxygen_level, temperature)
 
         if (is_pain_scale_high and has_other_symptoms) or (
-            (is_pain_scale_high and (pain_persistance is "constant")) or
-            not vitals or pregnancy
+            (is_pain_scale_high and (pain_persistance is "constant"))
+            or not vitals
+            or pregnancy
         ):
             dispatcher.utter_template("utter_risco_vermelho", tracker)
-        elif ((vitals and age > 60) or ((other_symptoms in self.prostacao_db())
-                                        and int(pain_scale) > 3)):
+        elif (vitals and age > 60) or (
+            (other_symptoms in self.prostacao_db()) and int(pain_scale) > 3
+        ):
             dispatcher.utter_template("utter_risco_amarelo", tracker)
         else:
             dispatcher.utter_template("utter_risco_verde", tracker)
@@ -184,6 +177,49 @@ class FluLikeRisk(Action):
         vitals = are_vital_signs_normal(pressure, oxygen_level, temperature)
 
         if not vitals or int(age) >= 60:
+            dispatcher.utter_template("utter_risco_verde", tracker)
+        else:
+            dispatcher.utter_template("utter_risco_azul", tracker)
+        return []
+
+
+class TraumaRisk(Action):
+    """Sets pacient risk according to headache symptoms"""
+
+    def name(self):
+        # type: () -> Text
+        """Unique identifier of the form"""
+
+        return "action_trauma_risk"
+
+    @staticmethod
+    def body_part_db():
+        # type: () -> List[Text]
+        return ["cabeça", "estômago", "barriga"]
+
+    def run(self, dispatcher, tracker, domain):
+        """
+        Uses slot values to set user risk
+        """
+        pain_scale = tracker.get_slot("pain_scale")
+        body_part = tracker.get_slot("body_part")
+        cause = tracker.get_slot("cause")
+        bleeding = tracker.get_slot("bleeding")
+        is_pain_scale_high = int(pain_scale) > 7
+
+        pressure = tracker.get_slot("blood_pressure")
+        oxygen_level = tracker.get_slot("blood_oxygen_level")
+        temperature = tracker.get_slot("body_temperature")
+        vitals = are_vital_signs_normal(pressure, oxygen_level, temperature)
+
+        if (
+            is_pain_scale_high
+            or (body_part in self.body_part_db())
+            or bleeding
+            or not vitals
+        ):
+            dispatcher.utter_template("utter_risco_amarelo", tracker)
+        elif int(pain_scale) > 3:
             dispatcher.utter_template("utter_risco_verde", tracker)
         else:
             dispatcher.utter_template("utter_risco_azul", tracker)

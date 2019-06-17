@@ -38,6 +38,51 @@
   - To com dor na barriga
   - To com a barriga irritada
 
+## intent:trauma
+  - [Cai](cause) da escada
+  - Bati o [pé](body_part)
+  - [Cai](cause) no chão
+  - Fui [mordido](cause)
+  - Fui [mordido](cause) por uma pessoa
+  - Fui [mordido](cause) por um cavalo
+  - Fui [mordido](cause) por um cachorro
+  - Bati o [dedo](body_part)
+  - bati o [dedo](body_part)
+  - machuquei meu [braço](body_part)
+  - machuquei o [braço](body_part)
+  - torci o [tornozelo](body_part)
+  - bati a [perna](body_part)
+  - machuquei a [perna](body_part)
+  - machuquei o [pé](body_part)
+  - levei um soco
+  - levei um chute
+  - levei um chute no [estômago](body_part)
+  - levei um soco no [estômago](body_part)
+  - levei uma pancada na [barriga](body_part)
+  - bati a [cabeça](body_part)
+  - sofri um acidente de [carro](cause)
+  - fui [atropelado](cause)
+
+## intent:cause
+  - queda
+  - eu cai
+  - atropelamento
+  - fui atropelado
+  - cai da bicicleta
+  - cai no chão
+  - queda no chão
+  - queda de bicicleta
+  - jogo de futebol
+  - jogo
+  - luta
+  - briga
+  - acidente
+  - pancada
+  - queda
+  - acidente
+  - acidente de carro
+  - briga
+
 
 ## intent:sintomas_gripais
   - tosse
@@ -156,6 +201,9 @@
   - a dor é [constante](pain_persistance:constant)
   - a dor [não vai embora](pain_persistance:constant)
   - a dor [não para](pain_persistance:constant)
+  - [vai e vem](pain_persistance:not_constant)
+  - a dor [vai e vem](pain_persistance:not_constant)
+  - some as [vezes](pain_persistance:not_constant)
 
 ## intent:intoxicacao
   - eu tomei (substancia)
