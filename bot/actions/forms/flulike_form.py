@@ -39,7 +39,7 @@ class FluLikeForm(FormAction):
                 self.from_entity(entity="other_symptoms", intent="sintomas_gripais"),
                 self.from_intent(intent="negativo", value=False),
                 self.from_text(),
-            ],
+            ]
         }
 
     def submit(

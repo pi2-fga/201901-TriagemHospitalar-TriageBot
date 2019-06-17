@@ -33,6 +33,10 @@
   - dor no lado esquerdo da barriga
   - dor na barriga e [cansaço](other_symptoms)
   - dor no umbigo
+  - Estou com dor na barriga
+  - Estou com dor de barriga
+  - To com dor na barriga
+  - To com a barriga irritada
 
 
 ## intent:sintomas_gripais

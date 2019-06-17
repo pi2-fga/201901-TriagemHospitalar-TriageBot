@@ -23,8 +23,7 @@ class AbdominalPainForm(FormAction):
     @staticmethod
     def required_slots(tracker: Tracker) -> List[Text]:
         """A list of required slots that the form has to fill"""
-        return ["pregnancy", "pain_scale", "pain_persistance",
-                "other_symptoms"]
+        return ["pregnancy", "pain_scale", "pain_persistance", "other_symptoms"]
 
     def slot_mappings(self):
         # type: () -> Dict[Text: Union[Dict, List[Dict]]]

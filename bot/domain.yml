@@ -25,6 +25,7 @@ entities:
   - age
   - infarction
   - diabetes
+  - cause
 
 slots:
   body_temperature:
@@ -72,6 +73,9 @@ slots:
     type: unfeaturized
     auto_fill: false
   pregnancy:
+    type: unfeaturized
+    auto_fill: false
+  cause:
     type: unfeaturized
     auto_fill: false
 
