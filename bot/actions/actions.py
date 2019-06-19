@@ -3,7 +3,13 @@ import ast
 from rasa_core_sdk.events import SlotSet
 from rasa_core_sdk import Action
 from .forms.headache_form import HeadacheForm
-from .risk_actions import HeadacheRisk, ChestPainRisk, AbdominalPainRisk, FluLikeRisk
+from .risk_actions import (
+    HeadacheRisk,
+    ChestPainRisk,
+    AbdominalPainRisk,
+    FluLikeRisk,
+    TraumaRisk,
+)
 from .initial_form import InitialForm
 from .forms.chestpain_form import ChestPainForm
 from .forms.abdominalpain_form import AbdominalPainForm

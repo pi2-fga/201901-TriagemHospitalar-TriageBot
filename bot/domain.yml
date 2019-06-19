@@ -1,5 +1,10 @@
 intents:
 - dor_de_cabeca
+- dor_torax
+- dor_abdomen
+- trauma
+- causa
+- sintomas_gripais
 - outros_sintomas
 - sim
 - negativo
@@ -12,11 +17,6 @@ intents:
 - alergias
 - age_number
 - dados_recebidos
-- dor_torax
-- dor_abdomens
-- sintomas_gripais
-- trauma
-- causa
 
 entities:
   - pain_scale
@@ -29,6 +29,7 @@ entities:
   - diabetes
   - cause
   - body_part
+  - bleeding
 
 slots:
   body_temperature:
@@ -82,6 +83,9 @@ slots:
     type: unfeaturized
     auto_fill: false
   body_part:
+    type: unfeaturized
+    auto_fill: false
+  bleeding:
     type: unfeaturized
     auto_fill: false
 
