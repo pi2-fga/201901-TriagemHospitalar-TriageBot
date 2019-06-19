@@ -5,12 +5,61 @@
   - Enxaqueca
   - Estou com enxaqueca
   - Cefaleia
-  - dor de cabeça e enjoo
+  - dor de cabeça e [enjoo](other_symptoms)
+  - dor de cabeça e [vomito](other_symptoms)
 
-## intent:queimadura
-  - Queimei minha perna
-  - Me queimei
-  - Queimei meu rosto
+## intent:dor_torax
+  - dor no peito
+  - dor no petio
+  - Estou com dor no peito
+  - dor torácica
+  - peso no peito
+  - dor no peto
+  - peso no peto
+
+## intent:dor_abdomen
+  - dor na barriga
+  - dor de barriga
+  - irritação na barriga
+  - dor no pé da barriga
+  - dor no estômago
+  - cólica
+  - cólica intestinal
+  - cólica menstrual
+  - dor no bucho
+  - dor de lado
+  - dor desviada
+  - dor no lado direito da barriga
+  - dor no lado esquerdo da barriga
+  - dor na barriga e [cansaço](other_symptoms)
+  - dor no umbigo
+  - Estou com dor na barriga
+  - Estou com dor de barriga
+  - To com dor na barriga
+  - To com a barriga irritada
+
+## intent:sintomas_gripais
+  - tosse
+  - Tosse
+  - Tosse e dor de garganta
+  - Estou com resfriado
+  - Estou gripado
+  - Estou com dor de garganta
+  - Estou tossindo muito
+  - Estou com muita dor de garganta
+  - Estou com febre e dor de garganta
+  - Estou tossindo sem conseguir respirar
+  - Estou tossindo e com dor no corpo
+  - Estou com tosse e cansaço
+  - Estou tossindo e com fraqueza
+  - Estou com tosse e dor nos músculos
+  - Estou com calafrios e tosse
+  - Estou gripada
+  - Estou resfriado
+  - Estou resfriada
+  - gripe
+  - resfriado
+  - Tosse e nariz escorrendo
 
 ## intent:outros_sintomas <!--- The label of the intent -->
   - nausea
@@ -23,6 +72,23 @@
   - estou com tontura
   - estou enjoada
   - dor na nuca
+  - suor
+  - suor frio
+  - suando frio
+  - irradiação
+  - cansaço
+  - diarreia
+  - diarréia
+  - vômito
+  - Estou me sentindo [cansado](other_symptoms:cansaço)
+  - Estou me sentindo [cansada](other_symptoms:cansaço)
+  - Estou me sentindo [prostrado](other_symptoms:cansaço)
+  - Estou me sentindo [prostrada](other_symptoms:cansaço)
+  - Tô [cansada](other_symptoms:cansaço)
+  - Estou [vomitando](other_symptoms:vômito)
+  - Estou com [diarreia](other_symptoms:diarreia)
+  - inchaço na barriga
+  - Estou me sentindo [inchado](other_symptoms:inchaço)
 
 ## intent: sim
   - sim
@@ -34,6 +100,8 @@
   - nada
   - nadinha
   - de forma alguma
+  - nenhum
+  - nenhuma
 
 ## regex:vital
   - ([0-9]{2}.[0-9])
@@ -87,6 +155,9 @@
   - a dor é [constante](pain_persistance:constant)
   - a dor [não vai embora](pain_persistance:constant)
   - a dor [não para](pain_persistance:constant)
+  - [vai e vem](pain_persistance:not_constant)
+  - a dor [vai e vem](pain_persistance:not_constant)
+  - some as [vezes](pain_persistance:not_constant)
 
 ## intent:intoxicacao
   - eu tomei (substancia)
@@ -129,8 +200,18 @@
  ## regex:medication_name
  - ([a-z]{50})
 
+ ## intent:dor_torax
+   - dor no peito
+   - Estou com dor no peito
+   - dor torácica
+   - peso no peito
 
- ## regex:alergie_name
+ ## intent:dados_recebidos
+   - dados iniciais recebidos
+   - dados recebidos
+   - Os dados foram salvos na aplicação da estação da triagem.
+
+## regex:alergie_name
  - ([a-z]{60})
 
 ##intent:alergias
