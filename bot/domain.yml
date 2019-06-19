@@ -1,5 +1,10 @@
 intents:
 - dor_de_cabeca
+- dor_torax
+- dor_abdomen
+- trauma
+- causa
+- sintomas_gripais
 - outros_sintomas
 - sim
 - negativo
@@ -20,6 +25,11 @@ entities:
   - migrain
   - alergies
   - age
+  - infarction
+  - diabetes
+  - cause
+  - body_part
+  - bleeding
 
 slots:
   body_temperature:
@@ -28,7 +38,7 @@ slots:
   gender:
     type: unfeaturized
     auto_fill: false
-  weight:
+  body_mass:
     type: unfeaturized
     auto_fill: false
   height:
@@ -60,6 +70,24 @@ slots:
   alergies:
     type: unfeaturized
     auto_fill: false
+  infarction:
+    type: unfeaturized
+    auto_fill: false
+  diabetes:
+    type: unfeaturized
+    auto_fill: false
+  pregnancy:
+    type: unfeaturized
+    auto_fill: false
+  cause:
+    type: unfeaturized
+    auto_fill: false
+  body_part:
+    type: unfeaturized
+    auto_fill: false
+  bleeding:
+    type: unfeaturized
+    auto_fill: false
 
 actions:
 - utter_ask_age
@@ -68,6 +96,11 @@ actions:
 - utter_ask_other_symptoms
 - utter_ask_migrain
 - utter_ask_pain_persistance
+- utter_ask_infarction
+- utter_ask_diabetes
+- utter_ask_pregnancy
+- utter_ask_bleeding
+- utter_ask_cause
 - utter_slots_values
 - utter_erro_escala_de_dor
 - utter_erro_persistencia_dor
@@ -77,16 +110,25 @@ actions:
 - utter_risco_verde
 - utter_risco_azul
 - utter_cadeira_de_rodas
-- utter_medicao_peso_altura
-- utter_medicao_pressao
-- utter_medicao_temperatura_oximetro
+- utter_medicao
 - utter_erro_idade
+- utter_sinal
 - action_complete_triage_form
 - action_headache_risk
+- action_eletrocardiogram_check
+- action_chestpain_risk
+- action_abdominal_pain_risk
+- action_flu_like_risk
+- action_trauma_risk
 
 forms:
 - headache_form
 - initial_form
+- chestpain_form
+- abdominalpain_form
+- flulike_form
+- trauma_form
+
 
 templates:
   utter_ask_age:
@@ -101,8 +143,20 @@ templates:
   - text: "yes_or_no Algum médico já o diagnosticou com enxaqueca?"
   utter_ask_pain_persistance:
   - text: "text Qual é a persistência da dor?"
+  utter_ask_diabetes:
+  - text: "yes_or_no Algum médico já o diagnosticou com diabetes?"
+  utter_ask_infarction:
+  - text: "yes_or_no Você já sofreu de infarto do miocárdio?"
+  utter_ask_pregnancy:
+  - text: "yes_or_no Existe possibilidade de gravidez?"
+  utter_wheelchair:
+    - text: "yes_or_no Você é usuário de cadeira de rodas?"
+  utter_ask_bleeding:
+    - text: "yes_or_no Apresenta sangramento?"
+  utter_ask_cause:
+    - text: "text O que causou o ferimento?"
   utter_slots_values:
-  - text: "data age {age} alergies {alergies} ."
+  - text: "data age {age} alergies {alergies} diabetes {diabetes} infarction {infarction} migrain {migrain} other_symptoms {other_symptoms}."
   utter_erro_escala_de_dor:
     - text: "pain_scale Valor enviado foi inválido"
   utter_erro_persistencia_dor:
@@ -117,13 +171,11 @@ templates:
     - text: "risk green"
   utter_risco_azul:
     - text: "risk blue"
-  utter_cadeira_de_rodas:
-    - text: "yes_or_no Você é usuário de cadeira de rodas?"
-  utter_medicao_peso_altura:
-    - text: "info Posicione seus pés na marca e espere o sinal, como mostrado abaixo, para medirmos seu peso e altura."
-  utter_medicao_temperatura_oximetro:
-    - text: "info Posicione o seu braço, como mostrado abaixo, para medirmos seus dados vitais."
-  utter_medicao_pressao:
-    - text: "info Posicione seu braço na braçadeira, como mostrado abaixo, para medirmos sua pressão."
+  utter_eletrocardiograma:
+    - text: "eletrocardiogram eletrocardiogram"
+  utter_medicao:
+    - text: "measurements Hora de fazer uns exames iniciais."
   utter_erro_idade:
     - text: "text A idade que você forneceu não é valida, tente novamente."
+  utter_sinal:
+    - text: "signal Envio de sinal."

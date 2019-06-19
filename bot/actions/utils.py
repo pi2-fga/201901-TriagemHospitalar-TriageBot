@@ -13,7 +13,7 @@ def are_vital_signs_normal(blood_pressure, oxygen_level, body_temperature):
 
 
 def is_body_temperature_normal(temperature):
-    if temperature >= 36 and temperature <= 37:
+    if temperature >= 36 and temperature <= 38:
         return True
     else:
         return False

@@ -6,6 +6,7 @@ volumes:
 services:
   # ================================= Bot =====================================
   bot:
+    container_name: bot
     image: bot
     build:
       context: .
