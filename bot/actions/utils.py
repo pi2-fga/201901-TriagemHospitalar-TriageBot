@@ -1,4 +1,5 @@
 import json
+import ast
 
 
 def are_vital_signs_normal(blood_pressure, oxygen_level, body_temperature):
@@ -20,7 +21,7 @@ def is_body_temperature_normal(temperature):
 
 
 def is_blood_pressure_normal(pressure):
-    pressure = json.loads(pressure)
+    pressure = ast.literal_eval(pressure)
 
     if (
         int(pressure[0]) >= 100
