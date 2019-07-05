@@ -59,11 +59,7 @@ class EletrocardiogramNeed(Action):
         Gets user entry and registers slots there are in it
         """
         age = tracker.get_slot("age")
-        pressure = tracker.get_slot("blood_pressure")
-        oxygen_level = tracker.get_slot("blood_oxygen_level")
-        temperature = tracker.get_slot("body_temperature")
-        vitals = are_vital_signs_normal(pressure, oxygen_level, temperature)
-        if int(age) >= 60 and vitals:
+        if int(age) >= 60:
             dispatcher.utter_template("utter_eletrocardiograma", tracker)
         else:
             dispatcher.utter_template("utter_sinal", tracker)
